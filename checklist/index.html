@@ -46,14 +46,14 @@ color:var(--dim);font-size:12.5px}
 <body><div class=wrap>
 <p class=sub><a href="../">← 返回档案首页</a></p>
 <h1>验收清单</h1>
-<p class=sub>抽奖系统档案索引站 · 第 2 轮 · 更新 2026-11-08 · 仓库 <code>github.com/huqun845-cpu/lottery-index</code>（main）</p>
+<p class=sub>抽奖系统档案索引站 · 第 3 轮 · 更新 2026-11-08 · 仓库 <code>github.com/huqun845-cpu/lottery-index</code>（main）</p>
 <p class=sub>线上地址 <a href="https://huqun845-cpu.github.io/lottery-index/">https://huqun845-cpu.github.io/lottery-index/</a></p>
 <div class=bar>
-<div class="pill ok">已通过<b>14</b></div>
-<div class="pill todo">待验证<b>2</b></div>
+<div class="pill ok">已通过<b>19</b></div>
+<div class="pill todo">待验证<b>3</b></div>
 <div class="pill risk">风险<b>2</b></div>
 <div class="pill fail">未通过<b>0</b></div>
-<div class=pill>合计<b>18</b></div>
+<div class=pill>合计<b>24</b></div>
 </div>
 <h2>A. 部署产物</h2>
 <table>
@@ -195,6 +195,52 @@ color:var(--dim);font-size:12.5px}
 <td class=ev>站点应能体现「33 → 13 → 5」三种口径</td>
 <td><span class="tag risk">风险</span></td>
 <td class=ev>5 个主干仓已于本轮全部上线，但 projects.json 仍按 33 库组织。影响：访客在站点看到的 choujiang-core-go 等仓库名，实际应到 a-choujiang 里找；14 个空壳仓尤其误导。规避：D2 已完成，下一轮应把站点口径切到 5 主干仓并保留 33 库的映射关系</td>
+</tr>
+</table>
+<h2>E. 五系统源码实测对比（第 3 轮）</h2>
+<table>
+<tr><th>编号</th><th>项目</th><th>标准</th><th>状态</th><th>证据</th></tr>
+<tr>
+<td class=id>E1</td>
+<td class=item>五仓玩法库同源</td>
+<td class=ev>能否证明五个系统的玩法实现来自同一份代码</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>五仓各有 52 个 screen*.js，命名完全一致且都在 static/js/screenjs/。按同名文件比对 MD5：b↔c 52/52、b↔d 52/52、c↔d 52/52 字节完全相同；a↔d 44/52；e↔d 46/52。结论：b/c/d 是同一份玩法库的三个副本</td>
+</tr>
+<tr>
+<td class=id>E2</td>
+<td class=item>各仓真实自研量（去重源码行）</td>
+<td class=ev>排除重复内容后，谁才真的写了代码</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>去重后独有行：a 255,516（Go 102,295 / Vue 49,154 / C++ 48,014）、b 44,687、c 32,456、e 11,230、d 仅 1,585。d 是素材库不是产品；a 是唯一有自研后端+后台的。五仓合并去重 735,494 行</td>
+</tr>
+<tr>
+<td class=id>E3</td>
+<td class=item>仓库体积被 .git 虚高</td>
+<td class=ev>体积不能被当成工作量</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>du -sh 各仓 .git：a 425MB/945.6MB(45%)、b 598MB/2342.6MB(26%)、c 494MB/1360.7MB(36%)、d 231MB/475.7MB(49%)、e 214MB/485.8MB(44%)</td>
+</tr>
+<tr>
+<td class=id>E4</td>
+<td class=item>c-shule 存在套娃副本</td>
+<td class=ev>同一站点的重复拷贝应被识别，不能当成玩法数量</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>c-shule 全库 206 个 screen*.js，按文件名去重后仅 52 个；hd.shulehudong.com/ 目录下又套一层同名目录。故「53 个玩法」实为 52 份实现 + 两份整站拷贝</td>
+</tr>
+<tr>
+<td class=id>E5</td>
+<td class=item>d-siixun README 的「97 个玩法」</td>
+<td class=ev>站点/文档里的数量口径要能被复现</td>
+<td><span class="tag todo">待验证</span></td>
+<td class=ev>实测 D-原版平台JS 只有 52 个 screen*.js；E-互动生产版/js 有 135 个 webpack 混淆 chunk，可能含更多玩法但无可读证据。测法：解混淆后按玩法入口计数，或跑起来数菜单项</td>
+</tr>
+<tr>
+<td class=id>E6</td>
+<td class=item>对比报告与 Beyond Compare 可视验证</td>
+<td class=ev>结论要能落地成文档 + 可重复的肉眼验证</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>docs/五系统源码对比.md 已写（8 节）；Beyond Compare 已开 a/.../static/js/screenjs ⇄ d/.../D-原版平台JS，窗口标题「screenjs &lt;--&gt; D-原版平台JS - 文件夹比较」，预期 44 白 8 红</td>
 </tr>
 </table>
 <div class=foot>本页由 <code>tools/gen_checklist_page.py</code> 从 <code>docs/验收清单.json</code> 生成，请勿手改 HTML。状态只有四种：已通过 / 待验证 / 风险 / 未通过，且必须带证据。</div>
