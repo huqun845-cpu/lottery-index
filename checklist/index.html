@@ -46,14 +46,14 @@ color:var(--dim);font-size:12.5px}
 <body><div class=wrap>
 <p class=sub><a href="../">← 返回档案首页</a></p>
 <h1>验收清单</h1>
-<p class=sub>抽奖系统档案索引站 · 第 3 轮 · 更新 2026-11-08 · 仓库 <code>github.com/huqun845-cpu/lottery-index</code>（main）</p>
+<p class=sub>抽奖系统档案索引站 · 第 4 轮 · 更新 2026-11-08 · 仓库 <code>github.com/huqun845-cpu/lottery-index</code>（main）</p>
 <p class=sub>线上地址 <a href="https://huqun845-cpu.github.io/lottery-index/">https://huqun845-cpu.github.io/lottery-index/</a></p>
 <div class=bar>
-<div class="pill ok">已通过<b>20</b></div>
-<div class="pill todo">待验证<b>3</b></div>
+<div class="pill ok">已通过<b>23</b></div>
+<div class="pill todo">待验证<b>4</b></div>
 <div class="pill risk">风险<b>2</b></div>
 <div class="pill fail">未通过<b>0</b></div>
-<div class=pill>合计<b>25</b></div>
+<div class=pill>合计<b>29</b></div>
 </div>
 <h2>A. 部署产物</h2>
 <table>
@@ -233,7 +233,7 @@ color:var(--dim);font-size:12.5px}
 <td class=item>d-siixun README 的「97 个玩法」</td>
 <td class=ev>站点/文档里的数量口径要能被复现</td>
 <td><span class="tag todo">待验证</span></td>
-<td class=ev>实测 D-原版平台JS 只有 52 个 screen*.js；E-互动生产版/js 有 135 个 webpack 混淆 chunk，可能含更多玩法但无可读证据。测法：解混淆后按玩法入口计数，或跑起来数菜单项</td>
+<td class=ev>实测 D-原版平台JS 只有 52 个 screen*.js；E-互动生产版/js 有 135 个 webpack 混淆 chunk。本轮追加三种验证手段均失败：(1) 按 screen* 命名计数 (2) beautified 反编译后的 chunk 里搜 screen[a-z0-9_]* / play / 中文玩法名 —— 无玩法注册表 (3) 搜 playList/gameList/screens/lotteryList/actList 等清单键 —— 无命中。120 个 chunk 提及 screen 字样但无清单。测法：跑起来数菜单项，或找后端活动配置表</td>
 </tr>
 <tr>
 <td class=id>E6</td>
@@ -248,6 +248,38 @@ color:var(--dim);font-size:12.5px}
 <td class=ev>结论必须出现在对外页面上，且公网内容与数据源一致</td>
 <td><span class="tag ok">已通过</span></td>
 <td class=ev>commit 1ee0d81 已 push 到 huqun845-cpu/lottery-index main；公网 https://huqun845-cpu.github.io/lottery-index/checklist/ 轮询 3 次后更新：10204 字节 → 12922 字节，正文含 E1~E6、52/52、735,494；首页 HTTP 200 且仍有 checklist/ 入口</td>
+</tr>
+</table>
+<h2>F. 第 4 轮：口径切 5 主干仓 + 对比页上线</h2>
+<table>
+<tr><th>编号</th><th>项目</th><th>标准</th><th>状态</th><th>证据</th></tr>
+<tr>
+<td class=id>F1</td>
+<td class=item>五系统对比页</td>
+<td class=ev>结论要能作为独立页面访问，且由生成器产出不手改</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>tools/gen_compare_page.py 从 docs/五系统源码对比.md 渲染出 compare/index.html：22,695 字节、7 个表格、33 行映射、无残留 md 语法（|--- / ** / ``` 均为 0）；连跑两次输出字节一致（幂等）</td>
+</tr>
+<tr>
+<td class=id>F2</td>
+<td class=item>站点口径由 33 库切到 5 主干仓</td>
+<td class=ev>访客第一眼看到的是 5 个主干仓，33 库仍可查</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>首页 sub 文案改为「材料已归并为 5 个主干仓（原 33 个库，映射见『五系统对比』页）」，新增「五系统对比」标签页；对比页给出 33→5 映射表，其中实测 23 项、仅命名推断 10 项（推断项在页面上用橙色标签标出）</td>
+</tr>
+<tr>
+<td class=id>F3</td>
+<td class=item>部署目录一致性（含一次自查事故）</td>
+<td class=ev>部署产物必须与源目录一致，不能上线错文件</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>事故：用 cp 一次拷两个同名 index.html 到同一目录，导致 lottery-index-deploy/index.html 被对比页覆盖（2280 → 22641 字节）。已发现并修正：重拷源 index.html，diff 确认 2280 字节一致、含「五系统对比」2 处。教训：多源 cp 到同目录会按 basename 相互覆盖，必须逐个拷并 diff 验证</td>
+</tr>
+<tr>
+<td class=id>F4</td>
+<td class=item>compare/ 页面公网可访问</td>
+<td class=ev>对外页面必须 curl 到 200 且内容为本次版本</td>
+<td><span class="tag todo">待验证</span></td>
+<td class=ev>本轮尚未推送；测法：push 后 curl https://huqun845-cpu.github.io/lottery-index/compare/ 期待 200 且正文含「33 个旧库」与「735,494」</td>
 </tr>
 </table>
 <div class=foot>本页由 <code>tools/gen_checklist_page.py</code> 从 <code>docs/验收清单.json</code> 生成，请勿手改 HTML。状态只有四种：已通过 / 待验证 / 风险 / 未通过，且必须带证据。</div>

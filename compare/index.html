@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>五系统源码实测对比 · 抽奖系统索引</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#f5f5f7; color:#1c1c1e;
+    font:15px/1.7 -apple-system,"PingFang SC","Helvetica Neue",Arial,sans-serif; }
+  .top { position:sticky; top:0; z-index:9; background:rgba(255,255,255,.86);
+    backdrop-filter:blur(12px); border-bottom:1px solid #e5e5ea; padding:10px 20px; }
+  .top a { color:#0b5cd5; text-decoration:none; font-size:14px; }
+  .top .sep { color:#c7c7cc; margin:0 8px; }
+  .wrap { max-width:1100px; margin:0 auto; padding:28px 20px 80px; }
+  h1 { font-size:26px; margin:0 0 8px; }
+  .lead { color:#6b6b70; font-size:14px; margin-bottom:24px; }
+  h2 { font-size:19px; margin:34px 0 12px; padding-top:6px; border-top:1px solid #e5e5ea; }
+  h2:first-of-type { border-top:none; }
+  h3 { font-size:16px; margin:22px 0 8px; }
+  .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:10px;
+    overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.07); font-size:13.5px; margin:10px 0 18px; }
+  th { background:#fafafa; text-align:left; font-size:12.5px; color:#6b6b70; font-weight:600;
+    padding:10px 12px; border-bottom:1px solid #ececf0; white-space:nowrap; }
+  td { padding:10px 12px; border-bottom:1px solid #f2f2f5; vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .num { font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; }
+  .strong { font-weight:700; color:#0b5cd5; }
+  .note { color:#6b6b70; font-size:12.5px; }
+  .hub code { font-size:13px; font-weight:600; }
+  .loc { font-size:12px; color:#8e8e93; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:10px; font-size:11.5px; font-weight:600; }
+  .tag.ok { color:#0f7b3e; background:#e6f6ec; }
+  .tag.guess { color:#8a4b00; background:#fff1e0; }
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.92em;
+    background:#f2f2f5; padding:1px 5px; border-radius:4px; }
+  pre.code { background:#1c1c1e; color:#e8e8ed; padding:14px 16px; border-radius:10px;
+    overflow-x:auto; font-size:12.5px; line-height:1.6; }
+  pre.code code { background:none; color:inherit; padding:0; }
+  blockquote { margin:12px 0; padding:10px 14px; background:#fff8e6; border-left:3px solid #f0b429;
+    border-radius:0 8px 8px 0; color:#5c4a00; font-size:13.5px; }
+  ul,ol { padding-left:22px; margin:8px 0 14px; }
+  li { margin:4px 0; }
+  .doc-h1 { border-top:none; }
+  .disclaimer { background:#fff; border-radius:10px; padding:14px 16px; font-size:13px;
+    color:#6b6b70; box-shadow:0 1px 3px rgba(0,0,0,.06); margin:18px 0; }
+  footer { margin-top:36px; text-align:center; font-size:12px; color:#8e8e93; }
+</style>
+</head>
+<body>
+<div class="top"><a href="../">← 返回抽奖系统索引</a><span class="sep">/</span><a href="../checklist/">验收清单</a></div>
+<div class="wrap">
+
+  <h1>五系统源码实测对比</h1>
+  <div class="lead">2026-11-08 全量扫描：55,898 个文件 / 5.6 GB / 735,494 行去重源码。所有数字来自磁盘实测，不采信各仓 README。</div>
+
+  <h2>一、5 个主干仓总览</h2>
+  <div class="scroll"><table>
+    <thead><tr>
+      <th>主干仓</th><th>技术栈</th><th class="num">文件</th><th class="num">体积</th>
+      <th class="num">.git</th><th class="num">玩法 JS</th><th class="num">去重源码行</th>
+      <th class="num">独有代码行</th><th>一句话</th>
+    </tr></thead>
+    <tbody>
+<tr>
+  <td class="hub"><code>a-choujiang</code><div class="loc">抽奖系统 · 自研全栈</div></td>
+  <td>Go 后端 + Vue 后台 + 大屏运行时</td>
+  <td class="num">4,310</td>
+  <td class="num">945.6 MB</td>
+  <td class="num">421 MB</td>
+  <td class="num">52</td>
+  <td class="num">416,243</td>
+  <td class="num strong">255,516</td>
+  <td class="note">唯一自研后端的仓</td>
+</tr>
+<tr>
+  <td class="hub"><code>b-stargather</code><div class="loc">星聚互动 · 插件化</div></td>
+  <td>Node + 42 个服务端插件 + 桌面端</td>
+  <td class="num">42,928</td>
+  <td class="num">2,342.6 MB</td>
+  <td class="num">598 MB</td>
+  <td class="num">52</td>
+  <td class="num">345,956</td>
+  <td class="num strong">44,687</td>
+  <td class="note">体量最大，素材占八成</td>
+</tr>
+<tr>
+  <td class="hub"><code>c-shule</code><div class="loc">蜀乐互动 · 整站镜像</div></td>
+  <td>纯静态整站（含两份套娃副本）</td>
+  <td class="num">5,525</td>
+  <td class="num">1,360.7 MB</td>
+  <td class="num">494 MB</td>
+  <td class="num">52</td>
+  <td class="num">193,203</td>
+  <td class="num strong">32,456</td>
+  <td class="note">206 个玩法文件去重后 52</td>
+</tr>
+<tr>
+  <td class="hub"><code>d-siixun</code><div class="loc">思讯 · 原版玩法库</div></td>
+  <td>玩法基准库 + 素材</td>
+  <td class="num">1,215</td>
+  <td class="num">475.7 MB</td>
+  <td class="num">231 MB</td>
+  <td class="num">52</td>
+  <td class="num">258,600</td>
+  <td class="num strong">1,585</td>
+  <td class="note">独有代码仅 1.6 千行 = 素材库</td>
+</tr>
+<tr>
+  <td class="hub"><code>e-import-games</code><div class="loc">导入抽奖 · 三版复原</div></td>
+  <td>Python 工具链 + 三版导入实验</td>
+  <td class="num">1,920</td>
+  <td class="num">485.8 MB</td>
+  <td class="num">214 MB</td>
+  <td class="num">52</td>
+  <td class="num">174,757</td>
+  <td class="num strong">11,230</td>
+  <td class="note">教学型复原工程</td>
+</tr>
+    </tbody>
+  </table></div>
+  <div class="disclaimer">
+    <b>「独有代码行」</b>＝该内容在另外四个仓里一个字节都找不到，才算自己写的。
+    这列比体积有说服力：<code>d-siixun</code> 只有 1,585 行，说明它是素材库不是产品；
+    <code>a-choujiang</code> 有 25.5 万行，是五个里唯一自研后端和后台的。
+  </div>
+
+  <h2>二、33 个旧库 → 5 个主干仓</h2>
+  <p class="note">站点原先按 33 个仓库组织，从本轮起以此表为准。<b>实测 23 项 / 推断 10 项</b>——
+  「推断」表示磁盘上没找到同名目录，只能按命名惯例归属，尚未逐项核实。</p>
+  <div class="scroll"><table>
+    <thead><tr><th>旧库名</th><th>归属主干仓</th><th>依据</th><th>说明</th></tr></thead>
+    <tbody>
+<tr><td><code>choujiang-core-go</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（01-系统代码/01-核心-抽奖系统-干净版）</td></tr>
+<tr><td><code>choujiang-screen-web</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">命名前缀</td></tr>
+<tr><td><code>choujiang-admin-vue</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">命名前缀</td></tr>
+<tr><td><code>choujiang-native-qt</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">命名前缀</td></tr>
+<tr><td><code>choujiang-docs</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">命名前缀</td></tr>
+<tr><td><code>choujiang-history-archive</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">命名前缀</td></tr>
+<tr><td><code>desktop-local-test</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（03-素材与备份/06-桌面本地测试）</td></tr>
+<tr><td><code>prototype-screen-ui</code></td><td><code>a-choujiang</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（03-素材与备份/04-大屏UI原型）</td></tr>
+<tr><td><code>recon-siixun-hudong</code></td><td><code>a-choujiang</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>stargather-v2</code></td><td><code>b-stargather</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（01-源码与交付/05-stargather-v2）</td></tr>
+<tr><td><code>xingju-system-src</code></td><td><code>b-stargather</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（07-星聚互动-完整系统/01-系统源码）</td></tr>
+<tr><td><code>xingju-demo-data</code></td><td><code>b-stargather</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（02-演示数据）</td></tr>
+<tr><td><code>xingju-game-lib</code></td><td><code>b-stargather</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（05-游戏源码库）</td></tr>
+<tr><td><code>xingju-archive</code></td><td><code>b-stargather</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（03-交付产物）</td></tr>
+<tr><td><code>xingju-magiccube</code></td><td><code>b-stargather</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（01-源码与交付/08-魔方效果）</td></tr>
+<tr><td><code>lottery-admin</code></td><td><code>b-stargather</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>regold-lottery</code></td><td><code>b-stargather</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>purple-lottery</code></td><td><code>b-stargather</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>shule-site-mirror</code></td><td><code>c-shule</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（09-蜀乐互动整站）</td></tr>
+<tr><td><code>shule-source-code</code></td><td><code>c-shule</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（K-蜀乐互动大屏游戏源码）</td></tr>
+<tr><td><code>games-a-fun</code></td><td><code>d-siixun</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>games-b-instant</code></td><td><code>d-siixun</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>games-c-annual</code></td><td><code>d-siixun</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（C-年会版·玩法模块）</td></tr>
+<tr><td><code>games-d-original-js</code></td><td><code>d-siixun</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（D-原版平台JS）</td></tr>
+<tr><td><code>games-e-prod</code></td><td><code>d-siixun</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（E-互动生产版）</td></tr>
+<tr><td><code>games-f-standalone</code></td><td><code>d-siixun</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>games-g-demo-assets</code></td><td><code>d-siixun</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（G-玩法演示素材）</td></tr>
+<tr><td><code>games-h-dice</code></td><td><code>d-siixun</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>games-i-standalone</code></td><td><code>d-siixun</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>games-j-video-rebuild</code></td><td><code>d-siixun</code></td><td><span class="tag guess">推断</span></td><td class="note">推断（仅命名）</td></tr>
+<tr><td><code>import-games-full</code></td><td><code>e-import-games</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（导入抽奖-完整复原）</td></tr>
+<tr><td><code>import-games-pixel</code></td><td><code>e-import-games</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（导入抽奖-像素级独立版）</td></tr>
+<tr><td><code>import-games-bare-js</code></td><td><code>e-import-games</code></td><td><span class="tag ok">实测</span></td><td class="note">路径实测（导入抽奖-裸游戏-纯JS）</td></tr>
+    </tbody>
+  </table></div>
+  <div class="disclaimer">
+    <b>注意：33 → 5 不是一一对应。</b>games-*（10 项）在 a/c/d 三个仓的 10-游戏合集 里都有副本，
+    所以同一份玩法代码在三个仓里都能找到（MD5 完全一致）。
+  </div>
+
+  <h2>三、完整对比报告</h2>
+  <article>
+<h1 class="doc-h1">五个抽奖系统源码实测对比</h1>
+<blockquote>测量时间：2026-11-08　测量对象：<code>/Users/a123/lottery-systems-5/</code> 下 5 个主干仓</blockquote>
+<blockquote>方法：只读扫描（文件数 / 体积 / 扩展名 / 未压缩源码行数 / 跨仓 MD5 比对），脚本 <code>/tmp/scan_lottery.py</code></blockquote>
+<blockquote><strong>本文所有数字均为本轮实测，不是照抄各仓 README。</strong> 与 README 冲突处在第 6 节列出。</blockquote>
+<p>---</p>
+<h2>0. 一句话结论</h2>
+<p><strong>五个「不同」的系统，玩的是同一套 52 个玩法。</strong></p>
+<p><code>b-stargather</code>、<code>c-shule</code>、<code>d-siixun</code> 三家的玩法 JS <strong>52 个文件、52 个字节级完全相同</strong>；</p>
+<p><code>a-choujiang</code> 改了 8 个（44 个相同），<code>e-import-games</code> 改了 6 个（46 个相同）。</p>
+<p>真正的差异在<strong>外壳</strong>：后端语言、后台形态、部署方式。玩法层是全行业共用的一份。</p>
+<p>---</p>
+<h2>1. 体积与规模</h2>
+<div class="scroll"><table><thead><tr><th>仓</th><th>文件数</th><th>体积</th><th>其中 <code>.git</code></th><th>玩法 JS</th><th>去重后源码行</th></tr></thead><tbody><tr><td>a-choujiang</td><td>4,310</td><td>945.6 MB</td><td>425 MB (45%)</td><td>52</td><td>416,243</td></tr><tr><td>b-stargather</td><td>42,928</td><td>2,342.6 MB</td><td>598 MB (26%)</td><td>52</td><td>345,956</td></tr><tr><td>c-shule</td><td>5,525</td><td>1,360.7 MB</td><td>494 MB (36%)</td><td>52</td><td>193,203</td></tr><tr><td>d-siixun</td><td>1,215</td><td>475.7 MB</td><td>231 MB (49%)</td><td>52</td><td>258,600</td></tr><tr><td>e-import-games</td><td>1,920</td><td>485.8 MB</td><td>214 MB (44%)</td><td>52</td><td>174,757</td></tr></tbody></table></div>
+<blockquote>体积里有 26%–49% 是 git 历史，不是能用的代码。b-stargather 的 2.3 GB 主要是 40,615 张 jpg + 438 个 mp4 素材。</blockquote>
+<p>---</p>
+<h2>2. 玩法库同源（核心发现）</h2>
+<p>五个仓里 <code>screen*.js</code> 的<strong>命名完全一致，各 52 个</strong>，且都放在 <code>static/js/screenjs/</code> 这一层：</p>
+<pre class="code"><code>screencore.js  screenjumprace.js  screenmls.js  screenxxx.js ...</code></pre>
+<p>两两比对（同名文件内容 MD5）：</p>
+<div class="scroll"><table><thead><tr><th>对比</th><th>同名文件</th><th>内容<strong>完全相同</strong></th></tr></thead><tbody><tr><td>b-stargather ↔ c-shule</td><td>52</td><td><strong>52</strong></td></tr><tr><td>b-stargather ↔ d-siixun</td><td>52</td><td><strong>52</strong></td></tr><tr><td>c-shule ↔ d-siixun</td><td>52</td><td><strong>52</strong></td></tr><tr><td>a-choujiang ↔ d-siixun</td><td>52</td><td>44</td></tr><tr><td>a-choujiang ↔ e-import-games</td><td>52</td><td>49</td></tr><tr><td>b-stargather ↔ e-import-games</td><td>52</td><td>46</td></tr></tbody></table></div>
+<p><strong>怎么读这张表：</strong></p>
+<ul>
+<li>b / c / d 三家是<strong>同一份代码的三个副本</strong>，一个字都没改。</li>
+<li>a-choujiang 改动了 8 个玩法（<code>screencore.js</code> 30,373 B vs 原版 29,323 B，说明它动过引擎核心）。</li>
+<li>e-import-games 改了 6 个，属于&quot;复原过程中修补&quot;。</li>
+<li>玩法命名（<code>screenjumprace</code> / <code>screenmls</code> …）是思讯（d-siixun）的命名风格，<strong>说明这份库的源头就是 d</strong>。</li>
+</ul>
+<p><strong>推论：</strong> 谁号称&quot;自己有 50 多个玩法&quot;，实际竞争壁垒都不在玩法，而在后台、账号体系、结算和部署。</p>
+<p>---</p>
+<h2>3. 谁是真自己写的：去重后的「独有代码」</h2>
+<p>把每个文件算 MD5，同一个内容在多仓出现只算一次（压缩/混淆文件排除）：</p>
+<div class="scroll"><table><thead><tr><th>仓</th><th>去重源码行</th><th><strong>独有行</strong></th><th>跨仓共享行</th><th>独有部分构成</th></tr></thead><tbody><tr><td>a-choujiang</td><td>416,243</td><td><strong>255,516</strong></td><td>160,727</td><td>Go 102,295 · Vue 49,154 · C++ 48,014</td></tr><tr><td>b-stargather</td><td>345,956</td><td>44,687</td><td>301,269</td><td>JS 41,384 · Python 2,265</td></tr><tr><td>c-shule</td><td>193,203</td><td>32,456</td><td>160,747</td><td>JS 30,362 · Python 2,094</td></tr><tr><td>e-import-games</td><td>174,757</td><td>11,230</td><td>163,527</td><td>JS 5,615 · Python 5,615</td></tr><tr><td>d-siixun</td><td>258,600</td><td><strong>1,585</strong></td><td>257,015</td><td>JS 977 · Vue 608</td></tr></tbody></table></div>
+<p>五仓合并去重：<strong>735,494 行</strong>（1,536 份唯一源码文件，其中 1,366 份只出现在一个仓里）。</p>
+<p><strong>结论：</strong></p>
+<ul>
+<li><strong>a-choujiang 是唯一有自研后端和后台的</strong>：10.2 万行 Go、4.9 万行 Vue、4.8 万行 C++，占了它 61% 的代码量，且其它仓完全没有。</li>
+<li><strong>d-siixun 自带代码几乎为零（1,585 行）</strong> —— 它不是产品，是&quot;素材库 + 原版参考&quot;。</li>
+<li>b 与 c 的独有代码各 3–4 万行，量级相当，属于同一代产品线的两个贴牌。</li>
+</ul>
+<p>---</p>
+<h2>4. 各自的真实形态</h2>
+<div class="scroll"><table><thead><tr><th>仓</th><th>形态</th><th>技术栈证据</th><th>能独立跑吗</th><th>适合谁</th></tr></thead><tbody><tr><td>a-choujiang</td><td>自研全栈大屏系统（Go 后端 + Vue 后台 + 55 个玩法页）</td><td><code>go.mod</code>、Vue SPA、C++ 大屏播放器</td><td>需要 Go 环境 + 数据库</td><td>想自建、能读 Go 的团队</td></tr><tr><td>b-stargather</td><td>商业成品：42 个服务端插件 + 桌面端（含 Electron）</td><td><code>package.json</code>、42 个 <code>plugins/*</code>（每插件一条业务线）</td><td>需要 Node 环境</td><td>开箱交付，插件式扩展</td></tr><tr><td>c-shule</td><td>整站镜像（858 个 html，多域名多份拷贝）</td><td>无工程文件，纯静态</td><td>起个静态服务器就能看</td><td>学界面/抄页面，不能当产品</td></tr><tr><td>d-siixun</td><td>原版玩法与素材库</td><td>无工程文件</td><td>只能当&quot;大屏运行时&quot;</td><td>当参考基准，验证别的仓改了啥</td></tr><tr><td>e-import-games</td><td>三版复原实验（v1 完整复原 / v2 / 像素级独立版）</td><td><code>requirements.txt</code> + Python 工具链</td><td>需要 Python</td><td>做&quot;导入/还原&quot;工具的场景</td></tr></tbody></table></div>
+<p>---</p>
+<h2>5. 数据里挖出来的三个坑</h2>
+<ol>
+<li><strong>仓库体积不能当工作量看</strong>：<code>.git</code> 占 26%–49%。b 有 2.3 GB，但去重后源码 34.6 万行，比 a 还少 7 万行。</li>
+<li><strong>c-shule 有套娃副本</strong>：<code>hd.shulehudong.com/</code> 里面又套了一层 <code>hd.shulehudong.com/</code>，所以它 206 个 <code>screen*.js</code> 去重后只剩 <strong>52 个</strong>。整站被复制了两份。</li>
+<li><strong>d-siixun README 说&quot;97 个玩法&quot;，本轮复现不出来</strong>：实测命名规范可点的只有 52 个 <code>screen*.js</code>；<code>E-互动生产版/js</code> 另有 135 个 webpack 混淆 chunk，里面可能还藏着别的玩法，但没有可读证据。<strong>口径存疑，未采信。</strong></li>
+</ol>
+<p>---</p>
+<h2>6. 与各仓 README 的出入（诚实记录）</h2>
+<div class="scroll"><table><thead><tr><th>项目</th><th>README 说法</th><th>实测</th><th>差异原因</th></tr></thead><tbody><tr><td>a 的体积</td><td>520.1 MB</td><td>945.6 MB</td><td>README 不含 <code>.git</code>（425 MB）</td></tr><tr><td>b 的体积</td><td>2.3 GB</td><td>2,342.6 MB</td><td>一致</td></tr><tr><td>d 玩法数</td><td>97 个</td><td>52 个（可确认）</td><td>见第 5 节第 3 点，口径不明</td></tr><tr><td>b 插件数</td><td>42 个</td><td>45 个目录 = 42 业务 + 3 个 <code>_</code> 前缀模板</td><td>计数口径</td></tr><tr><td>c 玩法</td><td>53 个</td><td>52 个唯一（206 个文件）</td><td>1 处命名差异 + 套娃重复</td></tr></tbody></table></div>
+<p>---</p>
+<h2>7. 怎么复现</h2>
+<pre class="code"><code># 1) 规模与跨仓重复扫描
+python3 /tmp/scan_lottery.py           # 输出 /tmp/lottery_scan.json
+
+# 2) 玩法同源检验（按名字取文件，算 md5 比对）
+#    见本文第 2 节脚本逻辑：正则 ^screen[a-z0-9_]+\.js$，五仓各取一份，两两比 md5
+
+# 3) 用 Beyond Compare 肉眼看
+open -a &quot;/Users/a123/Applications/Beyond Compare.app&quot; \
+  &quot;/Users/a123/lottery-systems-5/a-choujiang/02-大屏玩法/01-核心-抽奖系统-干净版/05-素材库/运行时-www/static/js/screenjs&quot; \
+  &quot;/Users/a123/lottery-systems-5/d-siixun/01-原版玩法与库/10-游戏合集/D-原版平台JS&quot;
+# 预期：52 行配对，44 行白色（相同），8 行红色（a 改过）</code></pre>
+<p>---</p>
+<h2>8. 本轮测量的局限（别当成全知）</h2>
+<ul>
+<li>判定同源用的是<strong>文件名 + MD5</strong>，只能证明&quot;这份文件没动过&quot;，不能证明&quot;没有别处另写的实现&quot;。</li>
+<li>行数统计排除了平均行长 &gt;300 字符的压缩文件，所以混淆过的 135 个 chunk 不计入 —— 也就是说 <strong>b/c 的真实业务量可能被低估</strong>。</li>
+<li>a 的 48,014 行 C++ <strong>来源未确认</strong>，可能是第三方播放器/解码库，不能直接算它&quot;自研&quot;。</li>
+<li>玩法数 52 是&quot;能按命名规则识别出的大屏玩法&quot;，不含后台活动、签到、投票等其它玩法形态。</li>
+</ul>
+  </article>
+
+  <footer>数据源：docs/五系统源码对比.md ＋ 本页由 tools/gen_compare_page.py 生成，请勿手改 HTML</footer>
+</div>
+</body>
+</html>
