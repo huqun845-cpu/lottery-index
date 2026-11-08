@@ -1,0 +1,578 @@
+[
+ {
+  "tier": "A",
+  "name": "倒计时",
+  "code": "countdown",
+  "where": "侧栏",
+  "reuse": "shouye",
+  "todo": "大屏静态页加计时器",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "我的奖品",
+  "code": "myprize",
+  "where": "手机端",
+  "reuse": "photowall",
+  "todo": "个人中奖列表，按用户过滤",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "超级弹幕",
+  "code": "super_barrage",
+  "where": "手机端",
+  "reuse": "msg",
+  "todo": "弹幕放大/置顶特效",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "赞赞赞",
+  "code": "zan",
+  "where": "大屏主区",
+  "reuse": "msg",
+  "todo": "点赞计数 + 飘心动效",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "跑马灯",
+  "code": "lamp",
+  "where": "大屏主区",
+  "reuse": "msg",
+  "todo": "横向滚动条",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "滚动头像",
+  "code": "avatar",
+  "where": "大屏主区",
+  "reuse": "photowall",
+  "todo": "头像循环滚动",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "横版摇一摇",
+  "code": "horizontal",
+  "where": "大屏主区",
+  "reuse": "dgshake",
+  "todo": "横版摇一摇布局",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "竖版摇一摇",
+  "code": "vertical",
+  "where": "大屏主区",
+  "reuse": "dgshake",
+  "todo": "竖版摇一摇布局",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "左右滑屏",
+  "code": "lrslide",
+  "where": "大屏主区",
+  "reuse": "clickrace",
+  "todo": "把「点击」换成「滑动」计数",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "滑屏转圈",
+  "code": "circletouch",
+  "where": "大屏主区",
+  "reuse": "clickrace",
+  "todo": "滑屏转圈计分",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "眼疾手快",
+  "code": "hecombine",
+  "where": "大屏主区",
+  "reuse": "clickrace",
+  "todo": "眼疾手快，加判定阈值",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "好运狂犇",
+  "code": "boomy",
+  "where": "大屏主区",
+  "reuse": "bike",
+  "todo": "竞速皮，改文案与素材",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "点亮Logo",
+  "code": "lightup",
+  "where": "大屏主区",
+  "reuse": "lightfire",
+  "todo": "点亮进度条",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "敲敲乐",
+  "code": "beat",
+  "where": "大屏主区",
+  "reuse": "clickrace",
+  "todo": "敲击计数",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "打赏",
+  "code": "reward",
+  "where": "手机端",
+  "reuse": "photocj",
+  "todo": "复用 T3 付费礼物链路",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "业绩目标",
+  "code": "target",
+  "where": "大屏主区",
+  "reuse": "shouye",
+  "todo": "数字增长动画",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "观点PK",
+  "code": "opinion",
+  "where": "大屏主区",
+  "reuse": "vote",
+  "todo": "两方对立计票",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "表决",
+  "code": "ballot",
+  "where": "大屏主区",
+  "reuse": "vote",
+  "todo": "表决通过率",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "提问墙",
+  "code": "faq",
+  "where": "大屏主区",
+  "reuse": "msg",
+  "todo": "提问去重与排序",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "留言墙",
+  "code": "leave",
+  "where": "大屏主区",
+  "reuse": "msg",
+  "todo": "留言墙，同 msg 结构",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "嘉宾展示",
+  "code": "honored",
+  "where": "大屏主区",
+  "reuse": "photowall",
+  "todo": "嘉宾卡片轮播",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "祝福锦鲤",
+  "code": "koi",
+  "where": "侧栏",
+  "reuse": "lantern",
+  "todo": "祝福锦鲤，复用许愿类",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "签到有礼",
+  "code": "present",
+  "where": "手机端",
+  "reuse": "sign",
+  "todo": "签到即抽奖",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "年会签到",
+  "code": "annual",
+  "where": "侧栏",
+  "reuse": "sign",
+  "todo": "年会主题签到皮肤",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "签到欢迎页",
+  "code": "welcome",
+  "where": "不上屏",
+  "reuse": "sign",
+  "todo": "签到欢迎页",
+  "days": 0.5
+ },
+ {
+  "tier": "A",
+  "name": "码上有礼",
+  "code": "scan",
+  "where": "侧栏",
+  "reuse": "normalcj",
+  "todo": "扫码入口 + 发奖规则",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "排座抽奖",
+  "code": "seatdraw",
+  "where": "大屏主区",
+  "reuse": "namelist",
+  "todo": "按座位号分区抽取",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "弹幕抽奖",
+  "code": "danmaku",
+  "where": "大屏主区",
+  "reuse": "msg",
+  "todo": "弹幕文字作为抽奖池",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "射击游戏",
+  "code": "shoot",
+  "where": "大屏主区",
+  "reuse": "airplane",
+  "todo": "射击判定",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "积分游戏",
+  "code": "points",
+  "where": "大屏主区",
+  "reuse": "rankreport",
+  "todo": "积分累加与展示",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "对抗竞技",
+  "code": "sport",
+  "where": "大屏主区",
+  "reuse": "tug",
+  "todo": "两队对抗计分",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "积分赛",
+  "code": "ranking",
+  "where": "大屏主区",
+  "reuse": "rankreport",
+  "todo": "积分榜与晋级判定",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "签到树",
+  "code": "tree",
+  "where": "侧栏",
+  "reuse": "sign",
+  "todo": "签到树视觉",
+  "days": 1.0
+ },
+ {
+  "tier": "A",
+  "name": "节奏大师",
+  "code": "rhythm",
+  "where": "大屏主区",
+  "reuse": "clickrace",
+  "todo": "节拍对齐 + 判定窗口",
+  "days": 1.5
+ },
+ {
+  "tier": "A",
+  "name": "淘汰赛",
+  "code": "eliminate",
+  "where": "大屏主区",
+  "reuse": "namelist",
+  "todo": "多轮淘汰赛制",
+  "days": 1.5
+ },
+ {
+  "tier": "B",
+  "name": "幸运100%",
+  "code": "lucky",
+  "where": "侧栏",
+  "reuse": "normalcj",
+  "todo": "100% 中奖规则",
+  "days": 1.0
+ },
+ {
+  "tier": "B",
+  "name": "福利抽奖",
+  "code": "welfare",
+  "where": "大屏主区",
+  "reuse": "normalcj",
+  "todo": "福利抽奖，多档奖品",
+  "days": 1.5
+ },
+ {
+  "tier": "B",
+  "name": "摇奖机",
+  "code": "tiger",
+  "where": "大屏主区",
+  "reuse": "dzp",
+  "todo": "老虎机滚轮动画",
+  "days": 2.0
+ },
+ {
+  "tier": "B",
+  "name": "炫光抽奖",
+  "code": "tornado",
+  "where": "大屏主区",
+  "reuse": "dzp",
+  "todo": "炫光旋转抽奖",
+  "days": 2.0
+ },
+ {
+  "tier": "B",
+  "name": "开盲盒",
+  "code": "box",
+  "where": "大屏主区",
+  "reuse": "dzp",
+  "todo": "盲盒开箱动画",
+  "days": 2.0
+ },
+ {
+  "tier": "B",
+  "name": "锦鲤附体",
+  "code": "dice",
+  "where": "大屏主区",
+  "reuse": "dzp",
+  "todo": "掷骰子动画与点数判定",
+  "days": 2.0
+ },
+ {
+  "tier": "B",
+  "name": "刮刮乐",
+  "code": "scratch",
+  "where": "大屏主区",
+  "reuse": "dzp",
+  "todo": "刮擦遮罩交互（canvas）",
+  "days": 2.0
+ },
+ {
+  "tier": "B",
+  "name": "祝福抽奖",
+  "code": "blessdraw",
+  "where": "大屏主区",
+  "reuse": "normalcj",
+  "todo": "祝福语输入 + 抽奖",
+  "days": 2.0
+ },
+ {
+  "tier": "B",
+  "name": "启动仪式",
+  "code": "launching",
+  "where": "大屏主区",
+  "reuse": "shouye",
+  "todo": "启动仪式动画编排",
+  "days": 2.0
+ },
+ {
+  "tier": "B",
+  "name": "押宝抽奖",
+  "code": "lotdraw",
+  "where": "大屏主区",
+  "reuse": "normalcj",
+  "todo": "押注与赔率结算",
+  "days": 2.5
+ },
+ {
+  "tier": "B",
+  "name": "奖券抽奖",
+  "code": "ticketdraw",
+  "where": "大屏主区",
+  "reuse": "normalcj",
+  "todo": "奖券码生成与核销",
+  "days": 2.5
+ },
+ {
+  "tier": "B",
+  "name": "签名墙",
+  "code": "writing",
+  "where": "侧栏",
+  "reuse": "photowall",
+  "todo": "笔迹采集与轨迹回放",
+  "days": 2.5
+ },
+ {
+  "tier": "B",
+  "name": "3D抽奖",
+  "code": "three",
+  "where": "大屏主区",
+  "reuse": "dzp",
+  "todo": "3D 抽奖需要三维层",
+  "days": 3.0
+ },
+ {
+  "tier": "B",
+  "name": "漫画头像",
+  "code": "cartoon",
+  "where": "不上屏",
+  "reuse": "photocj",
+  "todo": "头像风格迁移，需要图像模型",
+  "days": 3.0
+ },
+ {
+  "tier": "B",
+  "name": "虚拟角色",
+  "code": "virtual",
+  "where": "不上屏",
+  "reuse": "photowall",
+  "todo": "虚拟形象生成",
+  "days": 3.0
+ },
+ {
+  "tier": "C",
+  "name": "你演我猜",
+  "code": "act",
+  "where": "侧栏",
+  "reuse": "—",
+  "todo": "你演我猜词库与轮转",
+  "days": 3.0
+ },
+ {
+  "tier": "C",
+  "name": "抢答",
+  "code": "rush",
+  "where": "侧栏",
+  "reuse": "—",
+  "todo": "抢答题库与抢答时序",
+  "days": 3.0
+ },
+ {
+  "tier": "C",
+  "name": "语音夺宝",
+  "code": "voice",
+  "where": "大屏主区",
+  "reuse": "—",
+  "todo": "语音识别 + 抢答判定",
+  "days": 4.0
+ },
+ {
+  "tier": "C",
+  "name": "欢乐淘宝",
+  "code": "hunter",
+  "where": "大屏主区",
+  "reuse": "—",
+  "todo": "淘宝玩法，商品与抢购",
+  "days": 4.0
+ },
+ {
+  "tier": "C",
+  "name": "弹珠机",
+  "code": "pachinko",
+  "where": "大屏主区",
+  "reuse": "—",
+  "todo": "弹珠物理模拟",
+  "days": 4.0
+ },
+ {
+  "tier": "C",
+  "name": "活动微站",
+  "code": "h5site",
+  "where": "不上屏",
+  "reuse": "—",
+  "todo": "活动微站，多页聚合",
+  "days": 4.0
+ },
+ {
+  "tier": "C",
+  "name": "电子签约",
+  "code": "contract",
+  "where": "侧栏",
+  "reuse": "—",
+  "todo": "电子签约，签名留证",
+  "days": 4.0
+ },
+ {
+  "tier": "C",
+  "name": "欢乐棋牌",
+  "code": "ccard",
+  "where": "大屏主区",
+  "reuse": "—",
+  "todo": "棋牌规则引擎",
+  "days": 5.0
+ },
+ {
+  "tier": "C",
+  "name": "抢歌游戏",
+  "code": "sing",
+  "where": "大屏主区",
+  "reuse": "—",
+  "todo": "曲库 + 抢麦 + 评分",
+  "days": 5.0
+ },
+ {
+  "tier": "C",
+  "name": "订货会",
+  "code": "sale",
+  "where": "大屏主区",
+  "reuse": "—",
+  "todo": "订货会，商品与订单",
+  "days": 5.0
+ },
+ {
+  "tier": "C",
+  "name": "拍卖会",
+  "code": "auction",
+  "where": "大屏主区",
+  "reuse": "—",
+  "todo": "拍卖会，竞价与落槌",
+  "days": 5.0
+ },
+ {
+  "tier": "D",
+  "name": "位置限制",
+  "code": "location",
+  "where": "不上屏",
+  "reuse": "—",
+  "todo": "后台开关，大屏无页",
+  "days": 0.5
+ },
+ {
+  "tier": "D",
+  "name": "版权信息",
+  "code": "copyright",
+  "where": "不上屏",
+  "reuse": "shouye",
+  "todo": "页脚文案配置",
+  "days": 0.5
+ },
+ {
+  "tier": "D",
+  "name": "活动流程",
+  "code": "flow",
+  "where": "手机端",
+  "reuse": "shouye",
+  "todo": "流程步骤配置",
+  "days": 1.0
+ }
+]

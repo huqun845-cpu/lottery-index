@@ -1,0 +1,3530 @@
+[
+ {
+  "rel": "01-核心-抽奖系统-干净版/AGENTS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "AGENTS.md — 开发约定（所有会话必读）",
+  "summary": "互动直播/抽奖系统，单机版。一套后端，两种前端形态：",
+  "lines": 108,
+  "kb": 4.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/CHANGELOG.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Changelog",
+  "summary": "本文件记录蜀乐互动大屏（单机版）的重要变更。日期使用 YYYY-MM-DD。",
+  "lines": 75,
+  "kb": 21.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/CLAUDE.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAUDE.md — 抽奖系统项目指令",
+  "summary": "@AGENTS.md",
+  "lines": 144,
+  "kb": 6.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "互动大屏 · 单机版",
+  "summary": "单机一体化大屏互动系统：Go 单二进制后端 + Qt 原生启动器 + 大屏前端资源（www）。",
+  "lines": 121,
+  "kb": 6.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/.github/PULL_REQUEST_TEMPLATE/pr_cn.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "pr_cn",
+  "summary": "",
+  "lines": 50,
+  "kb": 1.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/.github/PULL_REQUEST_TEMPLATE/pr_en.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "pr_en",
+  "summary": "",
+  "lines": 51,
+  "kb": 1.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/AGENTS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "AGENTS",
+  "summary": "",
+  "lines": 14,
+  "kb": 1.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/CHANGELOG.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Changelog",
+  "summary": "",
+  "lines": 3490,
+  "kb": 287.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/CHANGELOG.zh_CN.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "更新日志",
+  "summary": "",
+  "lines": 628,
+  "kb": 42.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/README.en_US.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "README.en_US",
+  "summary": "git clone https://github.com/soybeanjs/soybean-admin.git",
+  "lines": 250,
+  "kb": 16.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "管理后台（SPA）",
+  "summary": "管理后台界面，接入现有 Go 单二进制（零 Python 改动、守护链语义不动、单文件交付不变）。",
+  "lines": 78,
+  "kb": 4.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/admin-spa/docs/v3.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "soybean-admin v3.0 实现方案",
+  "summary": "soybean-admin v2.x 是纯前端 SPA 模板：Vue 3 + Vite + Naive UI + Pinia + UnoCSS + elegant-router，后端能力完全依赖 Apifox 在线 mock 或用户自备服务",
+  "lines": 586,
+  "kb": 67.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/AI-使用指南.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "怎么让 AI 在这个项目里不胡说（一页纸）",
+  "summary": "先跑 ~/.openhands/tools/check，把输出贴给我，再开始。",
+  "lines": 89,
+  "kb": 2.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/AI-避坑手册.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "AI 使用避坑手册（本轮实测失败记录）",
+  "summary": "如 ooooooooo'✅ 已改')、s = s.replace(...) 重复十几遍。本轮坏了 3 次。",
+  "lines": 202,
+  "kb": 6.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/API-CONSOLE.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "API-CONSOLE.md — 老后台 `/_console/api/*` 接口手册",
+  "summary": "调用 consoleCSRFCheck 的处理器：system/settings、system/accounts、auth/password、auth/logout、neiding/、exclude/、peipao/、winners/sta",
+  "lines": 372,
+  "kb": 22.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/API-GAP.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "接口对不上清单（TASK-006）",
+  "summary": "结论：前后端没有发现真正的接口错配。新后台调用的 81 条路径全部能在服务端命中，老后台调用的 6 条也全部实现。",
+  "lines": 48,
+  "kb": 3.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/ARCHITECTURE-COLLISION-2026-10-29.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "架构建议 × 现状对撞（2026-10-29）",
+  "summary": "好消息：模块边界其实已经存在，只是没这样命名。",
+  "lines": 139,
+  "kb": 10.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/AUDIT-后端后台安全-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "后端 + 后台安全审计报告",
+  "summary": "发现 2 个中危问题（未登录可写账号、无凭据 WS 可写），均已修复并带回归测试（见第十节）。另有 4 个低危/加固建议。",
+  "lines": 643,
+  "kb": 27.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/AUDIT-数据库双轨现状-2026-11-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "数据库现状审计：SQLite + JSON 双轨（2026-11-06）",
+  "summary": "活动、名单、奖项、玩法配置、中奖源数据、素材引用、轮次全部存在 JSON 文件里。",
+  "lines": 276,
+  "kb": 11.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/AUDIT-整改需求对照-2026-11-05.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "整改需求 → 现有代码 对照审计（2026-11-05）",
+  "summary": "现实现 3 态（idle/rolling/result）。缺\"已暂停\"\"待确认\"\"已取消\"。",
+  "lines": 341,
+  "kb": 17.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/AUDIT-线上站点结构分析-2026-11-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "线上站点结构分析：`hd.shulehudong.com`（2026-11-06）",
+  "summary": "这是「蜀乐互动」SaaS 活动平台的线上后台，与本地 /Users/a123/抽奖系统-干净版",
+  "lines": 262,
+  "kb": 11.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/AUDIT-需求基线对照-2026-10-28.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "后端审计 · 需求基线 V1.0 逐条对照（2026-10-28）",
+  "summary": "具体说，需求基线里最被担心的三件事，现状是：",
+  "lines": 538,
+  "kb": 33.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/BACKEND-AUDIT-2026-10-21.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "后端/后台盘点（2026-10-21）",
+  "summary": "后端/后台能力面比看板完整：轮次、二维码、奖品库、素材库、名单库都有页面，写入普遍走临时文件 + rename。真正该做的不是补接口，而是把「备份恢复」安全网和「公网登录」补正确。",
+  "lines": 67,
+  "kb": 5.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/BUILD-QT.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "BUILD-QT — Qt 桌面端构建手册",
+  "summary": "适用目录：native-qt/。目标产物：",
+  "lines": 98,
+  "kb": 4.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/CLEANUP-旧副本清理-2026-11-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "旧副本清理报告（2026-11-06）",
+  "summary": "主库的 203 个未推送提交已用 git bundle --all 全量备份并校验通过（10 个 ref，\"records a complete history\"，129M），主库本身零改动。随后对全部 13 个候选副本做了内容级差异比对，",
+  "lines": 176,
+  "kb": 13.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/CONTRACTS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CONTRACTS.md — 接口与运行契约",
+  "summary": "两种形态读同一套数据文件，不允许各自维护一份状态。",
+  "lines": 209,
+  "kb": 21.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/DECISIONS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "DECISIONS — 主控决策记录",
+  "summary": "本文件记录“做什么、为何做、是否可回退”；接口和运行形态以 [CONTRACTS.md](CONTRACTS.md) 为准，执行状态见 [TASKS.md](TASKS.md)。以下均为 2026-10-20 主控明确拍板，不表示相应代码已",
+  "lines": 506,
+  "kb": 58.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/DEEP-DIVE-DATAFLOW-20261029.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "数据流深挖：中奖记录的真正权威源 — 2026-10-29",
+  "summary": "此前判断：winnerGames 与 syncWinnerStatusToJSON 硬编码 11 个玩法，系统有 55 个，漏 44 个。",
+  "lines": 125,
+  "kb": 6.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/DOC-CLAIMS-2026-10-21.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "AI 文档断言清单与验证模板（2026-10-21）",
+  "summary": "claimid:",
+  "lines": 197,
+  "kb": 14.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/ENV-MAP.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "本机环境地图（AI 会话开场必读）",
+  "summary": "originSplit 机制：127.0.0.1 访问 /console/ 会 302 跳 localhost，反向则被判定「仅本机访问」。",
+  "lines": 135,
+  "kb": 4.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/EVENTS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "事件协议契约（EVENTS.md）",
+  "summary": "",
+  "lines": 147,
+  "kb": 10.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/GAMES-FIELDS-BACKLOG.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "玩法配置字段取证 backlog",
+  "summary": "这份清单是调查任务，不是 v1 契约。共 1712 个 (玩法,字段)，来自实际 cfg 种子文件，尚未通过本次通用页面注入匹配规则建立消费证据。统一标记“无证据”表示缺少已核实的消费关系，不表示字段不存在或无用。“仅猜测”须有待验证假说，",
+  "lines": 1733,
+  "kb": 94.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/GAMES.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "GAMES.md — 52 个玩法底账",
+  "summary": "ls 05-素材库/运行时-www/screen | grep -vx frame | wc -l   # 52（frame 是外框容器页，不是玩法）",
+  "lines": 90,
+  "kb": 10.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/MERGE-CLAUDE-QODER-20261022.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Claude 与 Qoder 开发成果融合记录",
+  "summary": "日期：2026-10-22（Asia/KualaLumpur）。基线：Claude 源码快照，Git HEAD 为 ed22cb9，保留该快照全部在途开发成果；逐项吸收 Qoder 独有修复。融合在独立副本完成，原目录、8790 服务和生产",
+  "lines": 47,
+  "kb": 5.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/OBJECT-LEVEL-COLLISION-2026-10-29.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "对象级架构对撞：它的「核心对象」vs 我们的实物",
+  "summary": "我们不是纯数据库系统，是混合存储：",
+  "lines": 223,
+  "kb": 12.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/OpenHands官方文档全解析-533页.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "OpenHands 官方文档全解析（533 页逐页分析）",
+  "summary": "183 个占位页几乎全是 Cloud API 参考条目（Get Org Members、Delete Org 这种），",
+  "lines": 1011,
+  "kb": 63.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/OpenHands最强使用教程.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "OpenHands 最强使用教程（实测版）",
+  "summary": "网上流传的教程大量把经典 OpenHands（Docker 单容器版，端口 3000）",
+  "lines": 481,
+  "kb": 15.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/P0-数据盘点-2026-11-07.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "SQLite 主库 P0：数据盘点（2026-11-07）",
+  "summary": "只读盘点，未改任何数据。来源：测试副本 data-ui（857 个文件，83 MB）和代码引用；真实目录 dist/蜀乐抽奖-mac/data（2 个活动，state 207 项）只列了文件名，生产 HK 未碰。迁移前必须在生产数据上重跑一",
+  "lines": 55,
+  "kb": 3.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/PLAN-SQLite唯一主库-2026-11-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "SQLite 唯一主库：一劳永逸方案（v2，2026-11-06）",
+  "summary": "CREATE UNIQUE INDEX uqwinneronce",
+  "lines": 195,
+  "kb": 11.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/PLAN-STAGE-DRAW.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "大屏舞台与抽奖引擎升级总方案",
+  "summary": "1. 9 段公共样式在 52 个静态页各复制一份；importcj 的 6 段被 TASK-032 改过颜色，已与全站分叉。",
+  "lines": 198,
+  "kb": 24.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/PLAN-对标思讯-完善方案-2026-11-07.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "对标思讯互动：完善方案（2026-11-07）",
+  "summary": "✅ 已核实完毕（2026-11-07），结论见顶部更正 2：",
+  "lines": 89,
+  "kb": 5.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/PROJECT-OVERVIEW.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "项目档案 · 蜀乐互动抽奖系统",
+  "summary": "Qt 版打包成 .app 双击即开，适合不熟悉电脑的现场人员。",
+  "lines": 293,
+  "kb": 10.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/PROJECT-TRUTH-2026-10-29.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "项目全景真相（2026-10-29 实测版）",
+  "summary": "这是一套年会/订货会现场抽奖系统，由三部分组成：Go 后端（原 Python/Django 版的移植）、",
+  "lines": 329,
+  "kb": 16.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/QT-TODO.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "QT-TODO — Qt 桌面端未完成清单",
+  "summary": "Qt 唯一未覆盖的是 normalcj（见 P1-1）。",
+  "lines": 75,
+  "kb": 4.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/QT-WIN-UI-DESIGN.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Qt 原生版（局域网 Win 电脑）重新设计 · UI 方案",
+  "summary": "1. 连后端改为\"可配置局域网 IP\"（改 main.cpp 校验，允许 192.168.x.x，加 --server http://<win-ip>:8790，后端监听 0.0.0.0）",
+  "lines": 165,
+  "kb": 9.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/Qt核心模块验收矩阵.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Qt 核心模块验收矩阵",
+  "summary": "按「业务能否闭环」盘点，不看页面或按钮是否存在。证据截至 2026-11-07，全部来自本机测试实例，生产数据未参与。",
+  "lines": 75,
+  "kb": 4.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/RECON-旧副本侦察-2026-11-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "旧副本清理 · 主智能体侦察结论（2026-11-06）",
+  "summary": "主库 git 历史起点是 2026-10-20「初始提交」。而：",
+  "lines": 155,
+  "kb": 8.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/REQUIREMENTS-BACKLOG.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "需求实施清单（REQUIREMENTS BACKLOG）",
+  "summary": "1. 判定口径：✅ 已实现 / 🟡 部分实现 / ❌ 缺失，以审计报告证据为准。",
+  "lines": 941,
+  "kb": 81.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/SCREEN-ANALYSIS-2026-10-27.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "大舞台 / 大屏幕 分析报告",
+  "summary": "日期：2026-10-27 ｜ 分析对象：本机 /Users/a123/抽奖系统-干净版 内全部大屏形态",
+  "lines": 148,
+  "kb": 7.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/STATE-CONTRACT.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "state 契约（STATE-CONTRACT.md）",
+  "summary": "奖品页 prizeform；素材弹窗 material",
+  "lines": 232,
+  "kb": 16.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/TASK-003-SOURCES.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-003 来源核对与验收",
+  "summary": "本次只新增契约和核对工具，不迁移运行时代码，不修改素材或 state。证据以仓库当前源码与种子配置为准，未启动 HTTP 服务，也未执行 Go/Qt 构建；因此以下是静态契约验收，不是运行验收。",
+  "lines": 177,
+  "kb": 14.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/TASKS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASKS.md — 任务看板",
+  "summary": "从本仓库现场打了一个 Windows 包，命令只有一条：python3 packaging/packstandalonewin.py --stage-www。",
+  "lines": 135,
+  "kb": 72.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/TEAM.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统开发团队 · 配置单",
+  "summary": "团队名：抽奖系统开发组",
+  "lines": 105,
+  "kb": 5.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-CURRENT-STATE-ANALYSIS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统当前 UI 深度分析报告",
+  "summary": "download、password、builtin(login/403/404/500)",
+  "lines": 99,
+  "kb": 6.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-DEEP-REVIEW.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统 UI 深层评审（吃透 · 理解 · 分析 · 评价 · 优化 · 扩展）",
+  "summary": "┌─ 大屏层（55 玩法，浏览器）",
+  "lines": 159,
+  "kb": 9.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-DEEP-WALKTHROUGH.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统 UI 深度走查（每个菜单 → 页面 → 按钮/弹窗/字段，挖到最深）",
+  "summary": "? '从内置名单库匹配（按姓名 / 手机号，加入黑名单）'",
+  "lines": 760,
+  "kb": 14.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-DESIGN-HANDOFF.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "UI 设计移交说明书",
+  "summary": "这是一个年会抽奖现场系统。主持人旁边有一个人（操盘手）用笔记本控制，",
+  "lines": 236,
+  "kb": 11.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-FIELDS-ALL.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "每个页面弹窗字段全表（吃透到字段级）",
+  "summary": "（无弹窗——纯表格/列表页）",
+  "lines": 385,
+  "kb": 12.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-MENU-MAP.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统 · 每个菜单点开后是什么样（菜单全图）",
+  "summary": "活动管理 activity",
+  "lines": 133,
+  "kb": 6.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-OPTIMIZATION-PLAN.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统 UI 优化需求与方案文档",
+  "summary": "两批需求均已实现，验证口径：pnpm typecheck + pnpm build 绿 → buildadminspa.sh 内嵌 → ADMINBASE=<隔离实例> SHULEREQUIRESHOT=1 gate.sh 输出 GATE ",
+  "lines": 117,
+  "kb": 7.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI-T10-SPACING-RADIUS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "T10 判定：spacing(195) / radius(98) 硬编码是否为真缺陷",
+  "summary": "日期：2026-10-26 ｜ 方法：不看源码数字，只测浏览器渲染结果",
+  "lines": 67,
+  "kb": 2.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UI面板功能实测验收-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "UI 面板功能实测验收（2026-10-26）",
+  "summary": "33 个 SPA 页面全部 200，写操作真实落盘生效。",
+  "lines": 136,
+  "kb": 5.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/UNIFIED-SCREEN-ANALYSIS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "统一大屏幕 · 后端深度分析报告",
+  "summary": "1. 控制面极简：后端只认识 6 个抽象指令（start / stop / close / next / prev / reload），不关心玩法差异。",
+  "lines": 587,
+  "kb": 41.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/VERSION-UNIFIED-20261022.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "版本收拢结果（2026-10-22）",
+  "summary": "只保留一个日常运行版本：统一版。",
+  "lines": 61,
+  "kb": 4.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/WINNERS-CODE-REVIEW-20261029.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "代码审查：winners 同步链路 — 2026-10-29",
+  "summary": "internal/djdb/winner.go WinnerSync 删除分支：",
+  "lines": 182,
+  "kb": 8.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/WINNERS-GUARD-REALDATA-VERIFY-20261030.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "空源保护 · 真实数据验证记录（2026-10-30）",
+  "summary": "单元测试用的是合成数据（a1 活动、自造 rows）。部署上线后必须回答一个问题：",
+  "lines": 80,
+  "kb": 4.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/WINNERS-SYNC-GUARD-FIX-20261029.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "P0/P1 修复实施记录：对账删除保护 + 玩法发现统一 — 2026-10-29",
+  "summary": "len(want)==0 的全局保护被否决——它挡不住「JSON 只剩部分记录」造成的部分误删。改为每个玩法独立判定源可信度：",
+  "lines": 143,
+  "kb": 6.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/design/DESIGN-STATEMENT.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统 · 设计陈述",
+  "summary": "它有三张脸，服务同一批数据：",
+  "lines": 255,
+  "kb": 13.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-API-02.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-API-02 验证记录",
+  "summary": "claimid: API-02",
+  "lines": 72,
+  "kb": 3.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-AUD-01.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-AUD-01 验证记录",
+  "summary": "claimid: AUD-01",
+  "lines": 71,
+  "kb": 2.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-AUD-02.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-AUD-02 验证记录",
+  "summary": "claimid: AUD-02",
+  "lines": 92,
+  "kb": 2.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-AUD-03.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-AUD-03 验证记录",
+  "summary": "claimid: AUD-03",
+  "lines": 80,
+  "kb": 2.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-AUD-04.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-AUD-04 验证记录",
+  "summary": "claimid: AUD-04",
+  "lines": 104,
+  "kb": 3.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-AUD-05.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-AUD-05 验证记录",
+  "summary": "claimid: AUD-05",
+  "lines": 77,
+  "kb": 3.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-AUD-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-AUD-06 验证记录",
+  "summary": "claimid: AUD-06",
+  "lines": 101,
+  "kb": 4.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-TASK-01.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-TASK-01 验证记录",
+  "summary": "claimid: TASK-01",
+  "lines": 81,
+  "kb": 3.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/doc-audit/CLAIM-TASK-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CLAIM-TASK-06 验证记录",
+  "summary": "claimid: TASK-06",
+  "lines": 118,
+  "kb": 5.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/00-总览.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "缺口改造方案总览（13 份）",
+  "summary": "合计 4344 行、784 条「文件:行号」证据。",
+  "lines": 66,
+  "kb": 4.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/01-draw-pending-confirm.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "缺口 A 改造方案：开奖「待确认」状态机",
+  "summary": "本方案对应说明书 §15.2（抽奖任务状态机）与 §4.2 第 6 条 / §4.3 开奖确认机制 / §4.5 重抽。",
+  "lines": 416,
+  "kb": 24.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/02-draw-pause-resume.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "GAP-02 抽奖「暂停 / 继续」改造方案",
+  "summary": "1. 现场操作员在抽奖动画进行中（rolling）可「暂停」：大屏画面冻结（名字停止滚动、装饰动画/背景视频停），但中奖者已定、名额已扣、结果不丢——暂停只冻结「表现时序」，不中止「抽奖任务」。",
+  "lines": 260,
+  "kb": 25.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/03-device-signal-source.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "GAP-03 设备与信号源（说明书 §10）从零建设方案",
+  "summary": "为说明书 §10 要求的「设备与信号源」补一套从零建设的能力，覆盖说明书列出的六个子块：",
+  "lines": 364,
+  "kb": 33.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/04-activity-game-winner-rules.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "04 · 活动×游戏 独立获胜者规则（说明书 §7.5）改造方案",
+  "summary": "说明书 §7.5 要求：每一个「活动×游戏」组合各存一份获胜者规则，且历史场次必须锁住当时的规则快照（日后改规则不得改写历史）。规则覆盖 10 个维度：",
+  "lines": 380,
+  "kb": 30.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/05-stage-scene-editor.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "05 · 可视化舞台场景编辑器（说明书 §8.4）改造方案",
+  "summary": "为说明书 §8.4「可视化舞台场景编辑器」出改造方案。说明书要求的能力集合（任务书转述）：",
+  "lines": 414,
+  "kb": 35.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/06-activity-state-machine.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "GAP-06 · 活动全状态机（§15.1）与活动详情 6 标签页（§3.3）改造方案",
+  "summary": "按说明书 §15.1 与 §3.3，把「活动」从单一 draft 布尔升级为全生命周期状态机，并补齐活动详情 6 标签页在网页端的空白。",
+  "lines": 315,
+  "kb": 22.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/07-activity-wizard.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "GAP-07 · 6 步新建活动向导 改造方案",
+  "summary": "把说明书 §3.2 的「6 步新建活动向导」落地，让用户在一个连续流程里完成活动创建与初始化：",
+  "lines": 257,
+  "kb": 21.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/08-workbench-checklist-monitor.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "GAP-08 工作台「现场检查清单 + 运行监控」改造方案",
+  "summary": "1. 在 Qt 工作台（WorkbenchPage）内新增两个独立页：",
+  "lines": 239,
+  "kb": 25.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/09-candidate-snapshot-ruleversion.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "09 · 候选池快照摘要 + 规则版本（改造方案）",
+  "summary": "1. 可追溯的候选池快照摘要：每次正式开奖落一份「本次实际参与抽取的人员范围」摘要——人员集合的确定性哈希、人数、各维剔除明细（黑名单/禁赛/例外、排除、陪跑、虚拟用户）、取池来源。满足 §6.5「正式开始时系统必须生成可追溯的候选池快照，",
+  "lines": 260,
+  "kb": 24.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/10-material-version-trash.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "10 素材版本历史 + 回收站 改造方案",
+  "summary": "在现有素材中心（图片/音频/视频，登记册 + 引用检测 + 上传/替换/删除）之上，补齐说明书 §9.2 要求但当前完全缺失的两项治理能力：",
+  "lines": 249,
+  "kb": 21.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/11-dept-report-export.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "11 部门报表 / PDF 报告 / 库存报表 改造方案",
+  "summary": "把说明书 §11.4 要求、当前缺失或仅有数据无报表的报表能力补齐。§11.4 共 7 张报表 + PDF 报告 + 打印，现状逐条如下（判定口径：有无数据源、有无报表页/导出）：",
+  "lines": 370,
+  "kb": 31.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/12-db-admin-backup-policy.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "12 数据库管理页 + 自动备份策略 + 运行维护 改造方案",
+  "summary": "在现有「备份 / 快照 / 恢复」能力（VACUUM INTO + /launcher/backup/，已可用）之上，补齐说明书要求但当前完全缺失的三块治理能力，并明确它们与「SQLite 唯一主库」迁移的关系：",
+  "lines": 350,
+  "kb": 38.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/gap-plans/13-custom-shortcuts.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "13 自定义快捷键 改造方案",
+  "summary": "把现有硬编码、写死在源码里、不可改的快捷键，升级为用户可配置的快捷键：",
+  "lines": 460,
+  "kb": 38.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "AI Engineering OS V8 — 项目 Wiki 包",
+  "summary": "本包提供 141 个 Markdown Wiki 页面、30 个章节、5 份初始 ADR，覆盖原对话定义的完整目录。内容采用中文，保留英文协议字段、标识符和技术名称。",
+  "lines": 113,
+  "kb": 5.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/VALIDATION.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "交付校验记录",
+  "summary": "校验日期：2026-09-26。文档包版本：1.0.0。",
+  "lines": 44,
+  "kb": 2.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/01-getting-started/glossary.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "术语表",
+  "summary": "Goal 表示业务目标；Initiative 表示可评估成效的计划；Epic 是任务集合；Task 是最小可验收工作；Run 是一次执行尝试。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/01-getting-started/overview.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "项目概览",
+  "summary": "AI Engineering OS V8 管理从业务目标到软件交付、生产反馈和下一轮决策的完整过程。本文档是设计基线，尚不代表存在可运行的平台实现。",
+  "lines": 28,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/01-getting-started/quick-start.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "首次试点：从需求到 PR",
+  "summary": "使用“任务列表按状态筛选”作为低风险试点，不接入生产数据。参与者至少包括开发负责人和独立验收者。",
+  "lines": 33,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/01-getting-started/requirements.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "接入条件",
+  "summary": "平台接入依赖 Git 仓库、可复现构建、非生产测试环境和明确的代码负责人。无自动测试的旧项目可以接入只读扫描，不能直接获得自动合并权限。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/02-product/experiments.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "产品实验设计",
+  "summary": "实验立项同时定义用户收益和风险。优先选择可回滚的小范围干预，避免为未经验证的假设大规模改造。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/02-product/goals.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "目标与 OKR",
+  "summary": "Goal 必须包含问题、基线、目标、统计口径、观察窗口、负责人和预算。示例 GOAL-2026-Q4-03：将导入成功率由示例基线 95.2% 提升至至少 99%。",
+  "lines": 31,
+  "kb": 1.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/02-product/hypotheses.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "假设驱动开发",
+  "summary": "Hypothesis 必须可证伪。示例 HYP-018：流式解析使测试数据集的峰值内存下降至少 60%，吞吐下降不超过 10%。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/02-product/opportunities.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "机会发现与客服反馈",
+  "summary": "Opportunity 表示有证据支持的用户问题。反馈、客服工单、失败日志与产品事件先去重和分类，再进入需求池。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/02-product/vision.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "产品愿景与边界",
+  "summary": "V8 的目标是让研发活动可追溯、可验证、可恢复，并能说明交付是否改善用户结果。Company Brain 维护目标、预算、风险和决策记录。",
+  "lines": 29,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/03-architecture/architecture-principles.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "架构原则",
+  "summary": "证据优先、任务原子化、执行隔离、策略强制、关注结果和人工治理构成共同原则。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/03-architecture/components.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "组件职责与技术基线",
+  "summary": "建议以模块化单体控制面起步，Runner 独立部署。参考基线选择 Vue 3、TypeScript、FastAPI、PostgreSQL、Redis、NATS JetStream 与 S3 兼容存储；选型处于提案状态。",
+  "lines": 52,
+  "kb": 2.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/03-architecture/data-flow.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "端到端数据流",
+  "summary": "业务对象通过稳定 ID 关联。规格批准后，Scheduler 领取 READY 任务，冻结上下文并创建 Run。",
+  "lines": 34,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/03-architecture/dependency-graph.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "依赖图与变更影响",
+  "summary": "同时维护 Task DAG、模块依赖图和跨仓库契约图。Task DAG 用于调度；代码图用于判断测试范围，两者不能混为一体。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/03-architecture/overview.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "九层总体架构",
+  "summary": "系统由 Strategy、Product、Specification、Engineering Control Plane、Agent Runtime、Execution、Verification、Release & Production、I",
+  "lines": 71,
+  "kb": 2.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/04-specification/acceptance-criteria.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "验收条件与 Spec-to-Test",
+  "summary": "每个验收条件描述可观察行为，并明确失败边界。以 Given、When、Then 编写正常、异常、权限和容量场景。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/04-specification/change-request.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "变更请求流程",
+  "summary": "CR 用于处理执行中的需求变动，避免 Agent 静默扩大范围。记录原因、旧版和新版规格以及依赖影响。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/04-specification/executable-spec.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "可执行规格与编译器",
+  "summary": "Specification Compiler 将已批准 PRD、UX Spec、ADR、API Contract 和 DB Schema 汇总为版本化验证清单。它不保证把全部自然语言正确转成测试。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/04-specification/spec-system.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "规格与版本管理",
+  "summary": "Spec 是开发、QA 和审查共同使用的需求基线，包含目标、范围、非目标、输入输出、规则、UX、API、数据、权限、性能和验收条件。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/05-tasks/definition-of-done.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "工程完成标准",
+  "summary": "ACCEPTED 必须同时满足规格、实现、验证、审查与证据要求。平台展示可以使用“已验收”，不要新增含义不明确的 DONE。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/05-tasks/task-graph.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "任务 DAG 与 Scheduler",
+  "summary": "Scheduler 只调度依赖已 ACCEPTED、规格批准、预算可用、资源可用且权限完整的 READY 任务。RELEASED 也是已验收依赖。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/05-tasks/task-model.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "任务数据模型",
+  "summary": "Task 表示一个可验收目标，Run 表示执行尝试。重试创建新 Run，不复制 Task；任务目标和执行日志分别保存。",
+  "lines": 50,
+  "kb": 1.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/05-tasks/task-status.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "任务状态机",
+  "summary": "固定状态为 BACKLOG、READY、BLOCKED、RUNNING、IMPLEMENTED、TESTING、REVIEW、ACCEPTED、RELEASED、FAILED。运行暂停和取消记录在 Run 生命周期中。",
+  "lines": 59,
+  "kb": 2.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/06-agents/agent-gateway.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Agent Gateway 与 MCP Gateway",
+  "summary": "Agent Gateway 把不同执行器转换为统一 Job、Event、Result、Evidence 协议。MCP Gateway 管理外部工具连接和组织级授权。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/06-agents/agent-protocol.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Agent 协议 v1",
+  "summary": "AgentJob 指定固定输入和执行边界；AgentEvent 描述运行进度；AgentResult 提供候选输出；Evidence 由验证服务确认。所有消息携带 schemaversion。",
+  "lines": 72,
+  "kb": 2.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/06-agents/agent-types.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "角色目录",
+  "summary": "Product 与 UX 输出产品和体验规格；Planner 拆解依赖；Architect 提供 ADR；Tech Lead 协调契约；Frontend、Backend、Database 负责限定范围实现。",
+  "lines": 36,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/06-agents/capabilities.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "能力声明与工具注册",
+  "summary": "能力是可执行动作的许可，如 readcode、writecode、runtest、gitcommit、openpr。能力必须携带资源范围，不能只检查名称。",
+  "lines": 29,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/06-agents/overview.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Agent 执行体系",
+  "summary": "Agent 由角色、版本化提示词、模型策略、工具能力、文件范围和预算组成。Cursor 是人工工作台；Claude Code、Roo Code 和其他执行器通过适配层接入。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/06-agents/permissions.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Agent 权限和凭据",
+  "summary": "使用短期 Capability Token，包含 tenantid、projectid、runid、capabilities、resourcescope、leaseepoch、expiresat 和 audience。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/07-model-router/benchmark.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "模型与 Agent 基准",
+  "summary": "建立 backend-debug、vue-refactor、sql-migration、unit-test、api-contract 等代表性任务集，以客观测试评估候选模型。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/07-model-router/overview.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "模型路由流程",
+  "summary": "Router 按任务能力、上下文容量、风险、数据驻留、延迟和成本选模型。可用模型来自受控注册表，不在文档里固定供应商最新版本或价格。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/07-model-router/policies.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "路由策略与重试",
+  "summary": "cheap-fast 用于低风险整理；coding-high 用于实现；architect-high 用于跨模块设计；long-context 用于大范围阅读；review-independent 用于独立审查。",
+  "lines": 29,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/07-model-router/scorecard.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Agent 评分卡",
+  "summary": "Scorecard 汇总配置级表现，标识模型版本、Agent 模板、工具版本、任务类别和样本窗口。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/08-workflows/visual-designer.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "可视化设计器",
+  "summary": "设计器编辑的唯一产物是版本化 DSL。画布位置是展示元数据，不改变执行语义。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/08-workflows/workflow-dsl.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "工作流 DSL v1",
+  "summary": "DSL 是设计契约，不是现有 CLI 可直接执行的配置。只允许注册 action、条件和受限表达式；禁止任意脚本通过配置直接获得宿主权限。",
+  "lines": 83,
+  "kb": 2.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/08-workflows/workflow-engine.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "持久工作流引擎",
+  "summary": "Workflow 定义可重复执行的步骤 DAG，WorkflowRun 固定定义版本，StepRun 记录每次尝试。进程重启后从持久状态恢复。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/08-workflows/workflow-templates.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "标准流程模板",
+  "summary": "Feature、Bugfix、Hotfix、Security、Migration、Release 共享验证与审计规则，但检查范围按风险变化。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/09-context/context-engine.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "上下文引擎",
+  "summary": "按全局规则、项目架构、模块、任务、近期差异和运行证据六层构建输入。检索材料为信息来源，不具有改变系统权限的效力。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/09-context/context-pack.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Context Pack 格式",
+  "summary": "Context Pack 是一次 Run 的输入快照，包含 task.md、spec.md、architecture.md、related-files.txt、api.md、schema.md、tests.md 和 diff.md。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/09-context/engineering-memory.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "工程记忆与 Prompt Registry",
+  "summary": "长期记忆存放决策、事故、回归、性能和安全经验。Prompt Registry 保存 planner/v1、backend/v1 等不可变模板版本。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/09-context/repo-map.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "仓库接入与 Repo Map",
+  "summary": "仓库导入支持托管 Git、SSH 和本地 Git 的适配设计。扫描只记录技术栈、模块、入口、依赖、测试、构建和所有者。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/10-git/branching.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "分支策略",
+  "summary": "沿用原设计的 main、develop、feature/TASK-ID：main 对应稳定发布基线，develop 用于已验收集成，任务分支从固定 develop 提交建立。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/10-git/commit-standard.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "提交与来源记录",
+  "summary": "提交首行采用中文简短概括，可保留 feat、fix、docs 等类型和英文模块名；已有项目遵循原历史语言。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/10-git/merge-queue.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "合并队列",
+  "summary": "队列串行或按安全批次集成，验证任务分支与目标分支组合后的结果。单个分支通过不能证明组合通过。",
+  "lines": 33,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/10-git/pull-request.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "PR 与独立审查",
+  "summary": "PR 描述包含问题、最终行为、Spec 和 Task、验证证据、风险、迁移及回滚方法。Review 结合差异、相关上下文和测试，不能只机械扫描 diff。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/10-git/worktree.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Worktree 生命周期",
+  "summary": "每个写任务使用独立分支、worktree 和 Runner。worktree 共享 Git 对象库，所以还必须通过沙箱隔离凭据、网络和宿主目录。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/e2e.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "端到端与模拟用户",
+  "summary": "核心用户旅程为创建项目、导入仓库、创建任务、启动 Agent、查看证据、审批 PR 和查看发布。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/flaky-tests.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "不稳定测试管理",
+  "summary": "同一提交、环境和输入下间歇失败的测试记录为疑似 flaky，不能靠重复运行掩盖真实回归。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/integration-test.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "集成与契约测试",
+  "summary": "覆盖 PostgreSQL 事务、消息重复投递、对象存储和 SCM 适配器之间的真实交互。跨租户和并发竞态是核心场景。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/mutation-testing.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "变异测试",
+  "summary": "对关键权限、状态机和预算逻辑采用变异测试，检查测试能否识别条件取反、边界移动和异常处理缺失。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/performance.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "性能回归",
+  "summary": "在固定环境对比同一负载、数据规模和预热条件。记录 p50、p95、p99、吞吐、错误率、CPU、内存、数据库查询及前端体积。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/testing-strategy.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "风险驱动验证矩阵",
+  "summary": "基础检查为 Lint、Typecheck、Unit、Integration 和 Build。API、数据库、身份、支付和生产配置改动增加对应契约、安全、迁移、恢复和性能检查。",
+  "lines": 52,
+  "kb": 2.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/unit-test.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "单元测试",
+  "summary": "验证纯逻辑、边界和错误分支，优先测试状态转换、权限判断、金额或预算计算以及幂等键冲突。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/11-qa/vrt.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "视觉回归和可访问性",
+  "summary": "视觉测试发现布局、字体、溢出和交互状态回归；可访问性检查覆盖键盘、焦点、语义和对比度。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/12-evidence/evidence-model.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "证据模型与可信边界",
+  "summary": "Evidence 是由验证服务登记的不可变材料索引，包括主体、Run、提交、规格、环境、工具版本、结果、URI、摘要及生成时间。",
+  "lines": 62,
+  "kb": 2.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/12-evidence/release-evidence.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "发布证据",
+  "summary": "Release Evidence 证明即将部署的制品与审查通过的源代码及测试材料一致。它补充任务证据，不能仅打包若干任务的 PASS。",
+  "lines": 28,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/12-evidence/task-evidence.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "任务证据包",
+  "summary": "每个 Task 的证据按 Run 分组，保存 unit.xml、integration.xml、coverage.json、build.log、security.json、diff.patch、screenshots 和 result.js",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/13-security/sandbox.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "执行沙箱",
+  "summary": "Runner 执行任意仓库脚本时使用隔离环境，worktree 仅提供工作目录隔离。共享宿主 Docker socket 可能导致宿主控制权，默认不挂载。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/13-security/secrets.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Secret Vault 与 Broker",
+  "summary": "凭据保存在专用秘密管理系统，控制面保存引用。Runner 只获得完成当前动作的短期凭据。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/13-security/security-gates.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "安全门禁",
+  "summary": "检查覆盖 SAST、依赖漏洞、秘密、镜像、IaC、认证授权、API 和必要 DAST。检查范围由风险和变更类型决定。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/13-security/security-model.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "安全模型与威胁边界",
+  "summary": "主要威胁包括恶意仓库代码、提示注入、跨租户访问、工具权限扩大、供应链污染和凭据泄漏。模型输出与仓库文本均不可信。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/13-security/security-operations.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "运行期安全响应",
+  "summary": "持续关联 CVE、身份异常、秘密暴露、IAM 漂移和可疑请求，定位受影响服务、版本和租户。",
+  "lines": 33,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/14-release/canary.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "灰度发布",
+  "summary": "建议初始阶梯为 5%、25%、50%、100%，实际窗口和阈值由服务 SLO、流量及实验设计批准。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/14-release/feature-flags.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "功能开关",
+  "summary": "Flag 将部署和功能启用分离，按环境、租户、用户或地区决定曝光。每个开关有负责人、默认值、到期日和删除任务。",
+  "lines": 33,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/14-release/release-manifest.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Release Manifest",
+  "summary": "Manifest 固定 releaseid、integratedsha、artifactdigests、taskids、PR、migrationids、configdigest、flagsnapshot、evidenceids、rollba",
+  "lines": 52,
+  "kb": 1.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/14-release/release-process.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "发布与晋级",
+  "summary": "流程为 DEV → TEST → STAGING → CANARY → PRODUCTION。CANARY 是生产中的小比例发布阶段，不是另一个复制数据库的固定环境。",
+  "lines": 33,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/14-release/rollback.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "回滚操作手册",
+  "summary": "触发条件包括错误率或延迟超过已批准阈值、严重权限回归、数据完整性问题和关键用户流程失效。发布负责人或事故指挥负责决策。",
+  "lines": 33,
+  "kb": 1.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/15-environments/dev.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "开发环境",
+  "summary": "开发环境用于快速反馈，可使用本地或个人临时环境；仅放置合成数据和开发凭据。",
+  "lines": 31,
+  "kb": 0.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/15-environments/production.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "生产环境边界",
+  "summary": "Production 只接受通过 Release Controller 的授权部署和受控应急操作。基础设施、数据库和秘密按最小权限分离。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/15-environments/staging.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "预生产环境",
+  "summary": "Staging 接近生产拓扑、网络和配置结构，采用脱敏数据及独立凭据，用于晋级和恢复演练。",
+  "lines": 30,
+  "kb": 0.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/15-environments/test.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "测试与 Preview 环境",
+  "summary": "每个 CI Run 或 PR 创建隔离命名空间、数据库 schema 和对象前缀。Preview 用于体验和浏览器验收。",
+  "lines": 31,
+  "kb": 0.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/16-observability/logging.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "结构化日志",
+  "summary": "每条日志包含 UTC 时间、级别、服务、事件、traceid 和业务关联 ID。错误记录稳定错误码和脱敏上下文。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/16-observability/metrics.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "指标与告警",
+  "summary": "工程指标包括排队时长、Run 失败率、租约过期率、门禁失败率、证据缺失率、预算预留差异和发布回滚率。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/16-observability/overview.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "可观测性架构",
+  "summary": "使用 OpenTelemetry 关联日志、指标和链路，Prometheus、Grafana、Loki、Tempo、Sentry 是参考组件。最终部署版本和配置由实施项目锁定。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/16-observability/slo.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "SLO 与错误预算",
+  "summary": "参考控制 API SLO：30 天有效请求成功率至少 99.9%，p95 延迟低于 300ms。该数值是待团队批准的设计目标，不是当前性能事实。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/16-observability/tracing.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "分布式链路",
+  "summary": "一次任务从 API、Scheduler、Workflow、Gateway、Runner 到 Evidence 和 Release 形成可追踪链路。长任务使用链接 span 或分段追踪。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/17-incidents/incident-process.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "事故响应流程",
+  "summary": "状态为 OPEN → INVESTIGATING → MITIGATING → MONITORING → RESOLVED → POSTMORTEM。重大事故暂停相关常规发布。",
+  "lines": 34,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/17-incidents/incident-roles.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "事故角色与授权",
+  "summary": "Incident Commander 负责决策；Diagnostics 负责验证假设；Rollback Operator 执行授权恢复；Recorder 记录；Comms 负责批准后的对外沟通。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/17-incidents/postmortem.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "复盘与预防任务",
+  "summary": "复盘记录影响、时间线、根因、处置、恢复结果、做得好的部分、缺口和行动项。重点是减少复发。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/17-incidents/rca.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "根因分析",
+  "summary": "RCA 从症状、影响范围和时间线出发，关联 Release、Commit、Diff、Trace、数据库和外部依赖，区分触发条件与潜在缺陷。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/18-analytics/business-metrics.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "业务结果与 Outcome Gate",
+  "summary": "Initiative 的最终状态为 SUCCESS、FAILED 或 INCONCLUSIVE，由产品负责人根据预设指标、护栏、成本和证据决定。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/18-analytics/engineering-metrics.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "工程效能",
+  "summary": "关注从 READY 到 ACCEPTED 的周期、变更失败率、恢复时间、返工率和人工干预率。Agent 生成代码量只作为辅助记录。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/18-analytics/experiments.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "实验分析与因果边界",
+  "summary": "分析从预先登记的主要指标和随机化单位开始。区分实验曝光、实际使用和结果事件。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/18-analytics/product-metrics.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "产品指标",
+  "summary": "围绕用户目标定义完成率、失败率、耗时、留存和漏斗。平台自身可统计用户从创建任务到验收 PR 的完成率。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/19-cost/ai-cost.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "AI 用量与价格",
+  "summary": "每次模型调用记录输入、输出、缓存及其他供应商计费项，关联模型版本、任务和尝试。价格表版本化维护。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/19-cost/budgets.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "预算与硬上限",
+  "summary": "采用预留、计量、结算和释放四阶段。建议 70% 告警、90% 复核后续路由、100% 停止新增执行；具体比例由预算负责人批准。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/19-cost/cost-model.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "成本模型",
+  "summary": "成本覆盖模型调用、Runner、CI、云资源、数据库、存储、流量和可观测性，按组织、项目、Initiative、Task、Run 归集。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/19-cost/finops.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "FinOps 运营",
+  "summary": "FinOps Agent 提出减少闲置 Runner、过期 Preview、重复构建和无效重试的建议，由资源负责人决定。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/20-knowledge/adr.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "ADR 管理流程",
+  "summary": "ADR 专门记录有长期影响的技术决策，正文统一保存在 30-adr 目录，本页说明管理方式。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/20-knowledge/decisions.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Decision Ledger",
+  "summary": "每个重要决定记录问题、选项、依据、负责人、日期、预期结果、复查日期和实际结果。",
+  "lines": 31,
+  "kb": 0.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/20-knowledge/knowledge-graph.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "知识图谱",
+  "summary": "节点包括 Goal、Customer、Feedback、Feature、Spec、Service、API、Table、Task、PR、Release、Incident、Metric 和 ADR。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/20-knowledge/technical-debt.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "技术债与持续架构",
+  "summary": "Debt 记录约束、原因、影响、维护利息、风险、修复成本和负责人。持续检查循环依赖、复杂度、重复代码、API 膨胀和数据库热点。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/21-governance/approvals.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "人工审批与职责分离",
+  "summary": "战略、预算突破、生产发布、破坏性迁移、安全例外、重大架构及合规决定保留人工审批。审批面向具体操作和证据。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/21-governance/audit.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "审计记录",
+  "summary": "记录主体、动作、资源、决定、策略版本、审批引用、请求 ID、时间及关键前后摘要，覆盖成功、拒绝和失败。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/21-governance/compliance.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "数据与合规策略",
+  "summary": "按公开、内部、机密和受限数据分类，分别定义驻留、保留、访问、导出和删除规则。具体期限由组织与适用要求确定。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/21-governance/policies.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Policy as Code",
+  "summary": "策略决定动作是否允许、需要哪些检查和审批。策略执行点覆盖 API、Scheduler、Gateway、Secret Broker、Evidence Gate 和 Release Controller。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/21-governance/rbac.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "RBAC 与对象授权",
+  "summary": "组织、项目和环境构成授权范围。人和 Agent 使用不同主体身份；Owner、Admin、Tech Lead、Developer、QA、DevOps、Viewer 为参考角色。",
+  "lines": 48,
+  "kb": 1.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/22-database/erd.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "实体关系图",
+  "summary": "Organization 拥有 Projects、Users 与 Roles；Project 拥有 Repository、Goal、Spec、Task、Workflow 和 Environment。",
+  "lines": 60,
+  "kb": 2.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/22-database/migrations.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "数据库迁移",
+  "summary": "采用 expand → migrate → contract：先增加兼容结构，分批迁移数据，再在旧实例退出后删除旧结构。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/22-database/overview.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "持久化设计",
+  "summary": "PostgreSQL 保存业务事实和审计索引；Redis 仅承担可重建缓存与短期协调；对象存储保存日志、截图、测试报告和制品。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/22-database/tables.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "核心表与约束",
+  "summary": "核心实体覆盖身份、项目、产品、规格、任务、执行、模型、工作流、Git、测试、证据、发布、事故、指标、成本、决策和知识。",
+  "lines": 76,
+  "kb": 3.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/23-api/agent-api.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Agent 与 Run API",
+  "summary": "Agent Template 是版本化配置；AgentRun 是一次实际执行。模板更新不影响正在运行的任务。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/23-api/auth-api.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "身份 API",
+  "summary": "建议 Web 使用 OIDC 登录与服务端会话，Agent 使用短期服务身份；不自行实现密码存储和任意长期管理员 Token。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/23-api/overview.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "API 统一约定",
+  "summary": "以下为拟定 /api/v1 契约，供实现和联调使用；当前文档包不提供运行中的 API。JSON 字段采用 snakecase。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/23-api/project-api.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "项目与仓库 API",
+  "summary": "项目创建与仓库导入分开：创建是短事务，导入扫描为异步作业。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/23-api/task-api.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "任务 API",
+  "summary": "Task 创建、运行、状态推进和证据查询是不同操作。客户端不能直接 PATCH status=ACCEPTED 绕过门禁。",
+  "lines": 78,
+  "kb": 2.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/23-api/workflow-api.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "工作流 API",
+  "summary": "定义发布和实例启动使用不同资源，避免编辑定义悄悄改变已运行流程。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/24-events/event-bus.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "事件总线与可靠投递",
+  "summary": "采用至少一次投递，消费者必须幂等。参考实现使用 NATS JetStream 持久流；平台不声称跨系统全局 exactly-once。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/24-events/event-contract.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "事件契约 v1",
+  "summary": "Envelope 包含 eventid、eventtype、schemaversion、occurredat、tenantid、projectid、aggregateid、aggregateversion、correlationid、cau",
+  "lines": 66,
+  "kb": 2.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/24-events/event-topics.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "事件目录",
+  "summary": "统一使用 project.created、spec.created、spec.approved、task.created、task.ready、task.started、task.completed、task.failed 等事件。task",
+  "lines": 31,
+  "kb": 1.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/25-frontend/architecture.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "前端架构",
+  "summary": "参考 Web Console 采用 Vue 3、TypeScript、Vite、Pinia、Tailwind CSS、ECharts 与 Monaco。按业务域组织页面、API 客户端和组件。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/25-frontend/components.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "共享交互组件",
+  "summary": "共享 StatusBadge、RunTimeline、EvidenceTable、DiffViewer、ApprovalPanel、CostMeter、LogViewer 和 TenantSwitcher。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/25-frontend/pages.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "控制台页面树",
+  "summary": "导航包括 Executive、Goals、Product、Opportunities、Experiments、Roadmap、Engineering、Tasks、Agents、Workflows、QA Lab、Releases、Enviro",
+  "lines": 29,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/25-frontend/state-management.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "状态与实时同步",
+  "summary": "服务器保存业务事实；Pinia 保存当前租户、筛选和界面状态；请求缓存负责远端数据，避免多份状态相互覆盖。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/26-backend/architecture.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "后端架构",
+  "summary": "控制面起步采用模块化单体 API 与独立后台进程，Runner 保持独立信任边界。参考实现使用 FastAPI，业务逻辑不依赖 HTTP 框架。",
+  "lines": 33,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/26-backend/jobs.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "后台作业与恢复",
+  "summary": "后台作业包括 outbox 发布、租约巡检、预算结算、证据清理、仓库扫描、指标聚合、死信处理和环境回收。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/26-backend/modules.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "模块与所有权",
+  "summary": "Identity、Projects、Repositories、Product、Specs、Tasks、Workflow、Scheduler、Agents、Router、Context、QA、Evidence、Release、Incident",
+  "lines": 29,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/26-backend/services.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "应用服务与事务",
+  "summary": "关键用例包括 CreateTask、ClaimTask、StartRun、RecordEvidence、AcceptTask、CreateRelease 和 PromoteRelease。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/27-deployment/docker.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "容器与本地拓扑",
+  "summary": "开发拓扑包含 Web、API、Scheduler/Worker、PostgreSQL、Redis、持久消息服务和对象存储；Runner 单独执行。本文规定部署设计，不附可启动应用镜像。",
+  "lines": 33,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/27-deployment/kubernetes.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Kubernetes 扩展方案",
+  "summary": "当需要多租户 Runner 池、自动伸缩与故障隔离时引入 Kubernetes。MVP 不把集群作为强制前提。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/27-deployment/nginx.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "反向代理与连接",
+  "summary": "反向代理负责 TLS 终止、请求大小限制、超时、WebSocket 转发和可信代理头。API 仍负责认证与授权。",
+  "lines": 30,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/27-deployment/production.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "生产上线与恢复演练",
+  "summary": "生产上线前具备不可变制品、环境配置、备份恢复、监控、值守、授权和回滚方案。部署由 Release 工作流驱动。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/28-development/agent-rules.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "项目级 Agent 规则",
+  "summary": "每次开始读取 AGENTS.md、当前任务、规格和相关模块；只在批准范围内修改；计划外行为通过 CR 处理。",
+  "lines": 34,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/28-development/coding-standard.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "代码与文档规范",
+  "summary": "新项目注释、文档字符串和文档采用中文，标识符采用英文；已有项目遵循原风格。类型、错误和接口应有明确边界。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/28-development/contribution.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "贡献与文档维护",
+  "summary": "每次贡献关联 Task 或文档问题，并由相应模块负责人审查。docs/wiki 是文档唯一维护源，发布版从此生成。",
+  "lines": 33,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/28-development/local-setup.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "本地开发与仓库结构",
+  "summary": "本包仅含 Wiki 与文档工具；以下目录是平台实施建议：apps/web-console、apps/api、services、packages、infrastructure、workflows、prompts、policies、benchm",
+  "lines": 31,
+  "kb": 1.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/28-development/testing.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "开发验证流程",
+  "summary": "验证分为本地快速反馈、CI 必需门禁和发布候选完整检查。命令列表由实施仓库实际脚本定义。",
+  "lines": 32,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/29-roadmap/MVP.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "MVP 范围与验收",
+  "summary": "MVP 打通 Project → Repository → Spec → Task → Agent → Worktree → Test → Evidence → PR；保留基本 RBAC、审计、预算和沙箱。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/29-roadmap/future.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Phase 3–10 与后续能力",
+  "summary": "按依赖逐步交付运行时、工作流、QA、Git、发布、生产、产品分析与高级治理，不把阶段编号理解为固定日程。",
+  "lines": 47,
+  "kb": 2.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/29-roadmap/phase-0.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Phase 0：基础工程",
+  "summary": "交付 Monorepo、身份集成、PostgreSQL 迁移、依赖环境、事件 outbox、CI 和文档校验。负责人为平台技术负责人。",
+  "lines": 31,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/29-roadmap/phase-1.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Phase 1：项目与仓库",
+  "summary": "交付 Projects、Repository Import、只读 Repo Scan、技术栈识别和 Repo Map。依赖 Phase 0。",
+  "lines": 33,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/29-roadmap/phase-2.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "Phase 2：规格与任务引擎",
+  "summary": "交付版本化 Spec、Task 状态机、Task DAG、Scheduler 和预算预留。依赖稳定仓库基线。",
+  "lines": 33,
+  "kb": 0.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/30-adr/ADR-001-modular-control-plane.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "ADR-001：模块化控制面与隔离执行",
+  "summary": "状态：PROPOSED。上下文：V8 覆盖领域多，但早期规模、团队和可靠性指标尚未确定。过早拆微服务增加部署与一致性成本。",
+  "lines": 30,
+  "kb": 1.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/30-adr/ADR-002-state-and-events.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "ADR-002：关系事实源与至少一次事件",
+  "summary": "状态：PROPOSED。上下文：任务状态、预算和外部副作用需要可恢复一致性，消息系统不能代替业务约束。",
+  "lines": 30,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/30-adr/ADR-003-evidence-and-release.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "ADR-003：不可变证据与制品晋级",
+  "summary": "状态：PROPOSED。上下文：Agent 可能错误报告完成，不同提交的检查结果可能混用，环境重建可能改变制品。",
+  "lines": 32,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/30-adr/ADR-004-agent-adapters.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "ADR-004：工具适配层与平台编排边界",
+  "summary": "状态：PROPOSED。上下文：原方案将 Roo Code 描述为编排器，同时又提出统一 Control Plane；两者需要明确责任。",
+  "lines": 31,
+  "kb": 1.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/30-adr/ADR-005-document-baseline.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "ADR-005：统一 V8 文档口径",
+  "summary": "状态：PROPOSED。上下文：原对话中的导航编号、目录编号、DONE、INPROGRESS 和 pr.opened 存在不同版本写法。",
+  "lines": 33,
+  "kb": 1.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/30-adr/index.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "ADR 索引",
+  "summary": "本目录保存初始架构提案，尚未代表团队批准。实现前由技术负责人、数据、安全和运维角色评估具体约束。",
+  "lines": 31,
+  "kb": 1.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/CHANGELOG.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CHANGELOG",
+  "summary": "本版本发布的是 Markdown Wiki 文档包。没有宣称实现平台 API、控制台、Runner 或生产部署。",
+  "lines": 21,
+  "kb": 0.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/Home.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "AI Engineering OS V8 Wiki",
+  "summary": "一套覆盖业务目标、产品规格、AI 工程交付、生产运营与成效评估的项目设计 Wiki。",
+  "lines": 282,
+  "kb": 10.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/SOURCE-NOTES.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "来源与统一说明",
+  "summary": "本包基于用户指定的 ChatGPT 对话《比较三款编程工具》，conversationId 为 6ab7d59b-159c-83ec-8cd5-6486d2211377。已读取最近十轮，包括 AI 编程工作流、V2–V8 演进、V8 统一稿",
+  "lines": 37,
+  "kb": 2.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/reference/AI-Engineering-OS-V8/docs/wiki/_Sidebar.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "导航",
+  "summary": "",
+  "lines": 34,
+  "kb": 1.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/REVIEW-037.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-037：TASK-034 / TASK-031 只读复核",
+  "summary": "$ diff -u /private/tmp/t033-index-final.html 05-素材库/运行时-www/screen/importcj/index.html",
+  "lines": 1525,
+  "kb": 107.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-023/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-023 证据：Qt 轮次管理对话框（摇号玩法）",
+  "summary": "cd server-go && go build -o /tmp/shule-go-mirror .",
+  "lines": 102,
+  "kb": 5.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-031/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-031 normalcj 专属渲染插件 — 交付证据",
+  "summary": "原始证据落在 native-qt/build/e2e/，而 native-qt/.gitignore:1 是 build/ —— 整个目录被 git 忽略。该目录现有 19MB（含其他任务遗留文件），其中本次要留的 7 张图 + 日志共 1",
+  "lines": 84,
+  "kb": 6.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-031/REVIEW-045.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-045 独立复核：TASK-040 阶段图证据（OCR ↔ json ↔ state 三重）",
+  "summary": "同一份脚本既产出证据又校验证据，校验就没有独立性。所以本复核另写一份（附录 A），三处刻意不同：",
+  "lines": 289,
+  "kb": 18.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-031/STAGES.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-040 阶段截图与图外证据",
+  "summary": "$ ./verify-evidence.sh",
+  "lines": 128,
+  "kb": 10.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-032/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-032 导入抽奖配色改造 · 实测验收",
+  "summary": "拍摄条件（两次完全一致，只差页面文件版本）：",
+  "lines": 61,
+  "kb": 3.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-033/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-033 — importcj 剩余硬编码色值收尾",
+  "summary": "范围：只改 05-素材库/运行时-www/screen/importcj/index.html。",
+  "lines": 146,
+  "kb": 9.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-033/RECOUNT.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-033 补录复核（RECOUNT）",
+  "summary": "补录人：主控（Aion CLI）　日期：2026-10-20　状态：补录，不改变 033 原交付内容",
+  "lines": 77,
+  "kb": 3.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-034/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-034 importcj 底部菜单加底板",
+  "summary": "把 .footer-controlBox-main 的底板从 rgba(0,0,0,.5) 提升为 rgba(18,10,13,.72)（暖黑，与 --bg-base 同色相）。在合成亮底上按最差 1/12 分位看，四个候选里只有 .72 ",
+  "lines": 358,
+  "kb": 35.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-039/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-039 证据归档",
+  "summary": "这 8 份日志原本只存在于 native-qt/build/e2e/，而 native-qt/.gitignore:1 忽略了 build/：",
+  "lines": 67,
+  "kb": 3.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-044/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-044 后台内嵌 SPA 重建 A/B 证据",
+  "summary": "日期：2026-10-20",
+  "lines": 108,
+  "kb": 5.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/screenshots/task-062/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-062 后台首页「本地静态舞台预览」+ 短视口高度自适应",
+  "summary": "2026-10-24 留在工作区的 admin-spa/src/views/home/FlagshipHome.vue（+237 / -16），完整补丁存档在同目录",
+  "lines": 62,
+  "kb": 3.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/server-go-未完成审计-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "server-go 未完成与待优化审计（2026-10-26 实测）",
+  "summary": "docs/TASKS.md 状态分布：ACCEPTED 11 ｜ TODO 6 ｜ PENDING 1 ｜ BLOCKED 1 ｜ CANCELLED 1。",
+  "lines": 206,
+  "kb": 9.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/task-005-accept.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-005 四项公共能力 · 验收单（2026-10-28）",
+  "summary": "cd server-go && ./scripts/gate.sh → GATE PASS（gofmt / vet / build / 权限矩阵 / go test 全绿；playwright 步骤因 8790 被 Aegis Factor",
+  "lines": 77,
+  "kb": 4.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/ui-redesign-proposal.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "UI 重构设计提案 · 互动大屏抽奖系统（彩票式体验版）",
+  "summary": "读代码确认的真实链路：",
+  "lines": 189,
+  "kb": 13.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/wf/20261108-大屏皮肤选择器/spec.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "需求：大屏皮肤选择器",
+  "summary": "运营在控制台给当前活动选一套主题皮肤，大屏刷新后整块换脸。",
+  "lines": 30,
+  "kb": 1.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/wf/20261108-大屏皮肤选择器/tasks.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "大屏皮肤选择器",
+  "summary": "",
+  "lines": 16,
+  "kb": 0.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/三版本对比-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "三版本详细对比（2026-10-26 实测）",
+  "summary": "三者不是「同一功能的三种实现」，而是一个后端 + 两种前端形态，外加一个历史遗留的独立渲染器。",
+  "lines": 192,
+  "kb": 8.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/免费模型已接入.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "免费模型已接入 — 实测记录",
+  "summary": "你给了两把，只有一把能用：",
+  "lines": 215,
+  "kb": 5.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/免费模型接入实录.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "接入 OpenHands 免费模型（DeepSeek V4 Flash）— 核实与落地",
+  "summary": "来源：https://docs.openhands.dev/openhands/usage/agent-canvas/llm-profiles",
+  "lines": 176,
+  "kb": 5.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/全部修改方案.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "全部修改方案（已验证）",
+  "summary": "项目相关的一个都没有。",
+  "lines": 381,
+  "kb": 10.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/全面深度了解系统方案.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "全面深度了解系统方案（蜀乐互动抽奖系统）",
+  "summary": "1. 先让它跑起来，别先读代码。 一个在跑的系统 30 秒会告诉你它做什么、用什么端口、数据在哪、界面长什么样；读代码要几小时。",
+  "lines": 151,
+  "kb": 8.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/功能对比-一体化抽奖大舞台-2026-11-07.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "功能对比 · 《一体化互动抽奖大舞台系统 · 完整功能说明书》↔ 现有源码",
+  "summary": "其余大多是已有能力的\"补页/改名/聚合\"，不是从零开发。",
+  "lines": 300,
+  "kb": 28.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/功能对比-思讯互动参考产品-2026-11-07.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "功能对比 · 现有源码 ↔ 在售参考产品（思讯互动 sessionhd.com）",
+  "summary": "抽奖/游戏/签到/上墙能力，但我们是一张扁平 slug 表，没有分组导航、没有账户/发票/付费、",
+  "lines": 176,
+  "kb": 16.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/对标思讯-活动管理数据模型-2026-11-06.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "对标思讯互动：活动管理「数据模型」设计草案（2026-11-06）",
+  "summary": "思讯的「活动管理」是 SaaS 多租户模型：活动（= hdid）是业务主键，",
+  "lines": 282,
+  "kb": 14.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/工作流/交互协议.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "交互协议：一个需求走完要几轮",
+  "summary": "原因：每一轮对话都要重新装载上下文，你每多回一句，就多一次「他是不是忘了前面」的风险。",
+  "lines": 98,
+  "kb": 4.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/技术选型-2026-11.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "2026 年开发一套系统：方法、工具与搭配",
+  "summary": "所以「最好的办法」不是选最新的栈，而是让 AI 干降维护成本的活：",
+  "lines": 194,
+  "kb": 7.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/换项目开局方法论.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "换个项目，第一句该让 AI 干什么",
+  "summary": "换任何项目，都按这四步走。顺序不能变。",
+  "lines": 233,
+  "kb": 6.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/放手模式第一句.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "放手模式：让 AI 自己来，第一句发什么",
+  "summary": "① 授权   你可以自己决定怎么做",
+  "lines": 210,
+  "kb": 6.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/数据一致性检查.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "数据一致性检查（只读）",
+  "summary": "检查对象是一个数据目录（含 app.db 与 activities/），重点是：",
+  "lines": 252,
+  "kb": 11.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/新会话开局指引.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "新会话开局指引 · 一步一步教",
+  "summary": "开新会话之前，先想清楚这一句：",
+  "lines": 219,
+  "kb": 5.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/新会话怎么建.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "OpenHands 新会话怎么建：技能 / 模型 / 工具",
+  "summary": "① 项目在哪     workspace（工作目录）",
+  "lines": 300,
+  "kb": 10.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/旗舰控制台-差异清单-20261025.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "旗舰控制台 · 设计参考差异清单",
+  "summary": "日期：2026-10-25",
+  "lines": 174,
+  "kb": 13.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/本地演示数据.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "本地演示数据（持久 fixture + 一键重置）",
+  "summary": "cd /Users/a123/抽奖系统-干净版",
+  "lines": 331,
+  "kb": 13.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/本机抽奖项目全盘统计-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "本机抽奖相关项目全盘统计",
+  "summary": "真正可用的「抽奖系统」有三类：",
+  "lines": 80,
+  "kb": 4.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/本项目AI环境怎么弄.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "这个项目（抽奖系统）的 AI 环境怎么弄",
+  "summary": "读 ~/.openhands/settings.json → enabledskills：",
+  "lines": 282,
+  "kb": 8.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/权限映射.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "权限映射审计（2026-10-23）",
+  "summary": "1. hConsole 先走本机门禁：",
+  "lines": 276,
+  "kb": 34.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/玩法全盘盘点与对比-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "玩法（游戏）全盘盘点与详细对比",
+  "summary": "以 importcj 为例（差异最具代表性）：",
+  "lines": 194,
+  "kb": 12.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/玩法副本全盘盘点-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "玩法副本全盘盘点（只读调查）",
+  "summary": "玩法数口径：含 <名字>/index.html 的子目录个数（不含 common）。",
+  "lines": 466,
+  "kb": 34.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/系统全景与接手指南-2026-11-05.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统全景与接手指南",
+  "summary": "1. [一句话总览](#1-一句话总览)",
+  "lines": 423,
+  "kb": 15.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/素材库上传实测验收-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "后台面板 + 素材库 + 上传 实测验收（2026-10-26）",
+  "summary": "4 项安全防护全部生效、428 个素材页面正常渲染。",
+  "lines": 149,
+  "kb": 6.3
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/约束解除记录-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "约束解除记录",
+  "summary": "AGENTS.md 规定跨目录改动需报主控。本轮指令明确要求解除约束并给方案，视为已授权。",
+  "lines": 99,
+  "kb": 4.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/统一大屏终版方案-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "统一大屏终版方案（最强）",
+  "summary": "三件事的公共点：都已存在，只是被埋住了。",
+  "lines": 387,
+  "kb": 15.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/进度-大屏外观层.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "进度 · 大屏外观层",
+  "summary": "git archive HEAD 出来的干净树也能独立 go build ./...（不再依赖工作区里别人的未提交文件）",
+  "lines": 135,
+  "kb": 7.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/配置字段状态.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "配置字段状态审计（2026-10-23）",
+  "summary": "SPA /screen/gamecfg",
+  "lines": 291,
+  "kb": 43.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/零文档接手六步法.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "零文档接手一个陌生项目：第一步到底干什么",
+  "summary": "❌ 先装依赖        → 你不知道要装什么",
+  "lines": 253,
+  "kb": 8.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/需求到落地-工作流-2026.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "模糊需求 → AI 落地：2026 年的正确做法",
+  "summary": "2026 年最大的误会是把 spec-driven development 当成瀑布模型复活：写一大堆 markdown 再去生成代码。实测下来这条路在既有代码库上基本不可用（Marmelab 记录过：为了实现「显示当前日期」，spec-k",
+  "lines": 192,
+  "kb": 7.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/项目档案-对话审计与现状.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "项目档案：对话审计 + 现场现状核实",
+  "summary": "主服务 shule：            没跑（ps 无 build/shule-run/shule 进程）",
+  "lines": 191,
+  "kb": 11.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/首页UI审计与优化建议-2026-10-26.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "首页 UI 审计：分布、功能、优化建议（2026-10-26）",
+  "summary": "9 个功能面板、5 个 KPI，全部压在一屏内不滚动。方向对——抽奖是现场操作，",
+  "lines": 226,
+  "kb": 10.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/docs/首页组件拆分方案.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "/console/home 首页组件拆分与多选 UX 方案",
+  "summary": "FlagshipHome.vue 的物理结构：",
+  "lines": 1782,
+  "kb": 90.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/native-qt/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "导入抽奖 · Qt 原生版",
+  "summary": "使用 C++ / Qt Widgets / QPainter / Qt Multimedia 重写现有 /screen/importcj/index 的「网格飞入」（flytype=3）大屏，配套原生控制窗口。程序不包含 HTML、CSS、",
+  "lines": 53,
+  "kb": 4.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/native-qt/docs/BACKEND-DIFF.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "网页后台 vs Qt 原生后台 功能差集盘点（TASK-042）",
+  "summary": "只读盘点，未启动服务、未点界面、未改任何现有文件。结论用于决定 D-005 / TASK-023（内嵌 WebView）是否还有必要。",
+  "lines": 483,
+  "kb": 37.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/native-qt/docs/PLAYALIGN.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "native-qt 玩法覆盖对照表（TASK-006 只读盘点）",
+  "summary": "Qt 玩法 slug 只可能通过以下三条路径进入注册表，因此「全量 grep 三条路径」即可穷尽：",
+  "lines": 122,
+  "kb": 14.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/native-qt/docs/抽奖系统相关会话汇总.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "抽奖系统相关会话汇总",
+  "summary": "整理日期：2026-11-07",
+  "lines": 172,
+  "kb": 13.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/scripts/WORKFLOW.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "自动化工作流",
+  "summary": "一条命令跑完「构建 → 门禁 → 素材体检 → 数据准备 → 起服务 → 大屏真实数据验证」。",
+  "lines": 254,
+  "kb": 12.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/scripts/e2e/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "旗舰首页 E2E（scripts/e2e）",
+  "summary": "把 /console/home 的手工验收固化为一条可复跑命令。零 npm 依赖：直接启动系统 Chrome，",
+  "lines": 113,
+  "kb": 4.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/CFG-INJECTION.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "CFG-INJECTION — 6 个试点玩法配置字段运行时取证",
+  "summary": "数字总表：确认生效 90 / 死字段 40 / 生效但控错对象 1 / 待定 0 / 漏抓 21（详见第 26 节）。",
+  "lines": 710,
+  "kb": 104.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/CONFIG-PAGE-E2E.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "玩法配置页端到端验收（TASK-041）",
+  "summary": "field-survey-before.log、field-survey-after.log、global-impact.log",
+  "lines": 270,
+  "kb": 15.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/PERMISSIONS.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "后台写操作权限矩阵",
+  "summary": "主服务对 /console/m/ 只做「登录态 + 路径白名单」，没有细粒度权限，所以这些必须靠后台：",
+  "lines": 104,
+  "kb": 9.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/REVIEW-041.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-041 — 独立复算 TASK-041 的配置注入结论",
+  "summary": "另有 1 条残留缺陷（不是文档说谎，是它没覆盖到）和 1 条我自己的口径错，都在 §7。",
+  "lines": 716,
+  "kb": 34.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-005-02-draw-engine.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-005 ② 奖品抽取：双引擎确认文档",
+  "summary": "被 neiding.go / roster.go 共用 → 中奖引擎是唯一权威，改抽奖只动这里。",
+  "lines": 43,
+  "kb": 2.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-046/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-046 目录形式的大屏页不注入配置",
+  "summary": "GET /screen/<玩法>/ 走静态通路：页面照发、音量脚本照加，配置不注入、logo 不注入，也不报错。",
+  "lines": 32,
+  "kb": 2.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-047/REVIEW-047.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-047 独立复核：TASK-046 目录形式注入 + `bgmusic` 放开",
+  "summary": "git worktree add /tmp/rev047/wt-old 51ec36a^   → bin-old  (md5 8b4705eb5dd484a7cab18be426facaf2)",
+  "lines": 363,
+  "kb": 20.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-048/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-048 整改 TASK-047 复核查出的两条不一致",
+  "summary": "TASK-047（docs/task-047/REVIEW-047.md）独立复算 TASK-046 + bgmusic 放开，确认了主结论",
+  "lines": 123,
+  "kb": 7.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-049/REVIEW-049.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-049 — TASK-048 裸前缀修复 + 缓存隔离 独立复算",
+  "summary": "按派单配方（SHULEDATA 自建 + SHULEWWW 指真实 www + SHULEREQUIRELOGIN=0 + 位置参数端口）起服务后，",
+  "lines": 485,
+  "kb": 27.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-052/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-052 轮次管理的真实接口契约 + fixture（解开 TASK-023 的「拿不到真实数据」）",
+  "summary": "TASK-023（Qt 原生后台的「轮次管理」）一直被我标成 BLOCKED，理由是「拿不到真实的",
+  "lines": 91,
+  "kb": 4.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-053/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-053 机制 A（JSON 形态方括号键）的裸前缀",
+  "summary": "一句话：方括号键不只有「默认值在页面上裸奔」这一种落点。默认值写在 JSON 字面量里的那些走的是另一条分支（机制 A），而机制 A 当时是 nv = \"/\" + nv 裸拼接，后台一换成上传图就写出站点根裸 /attachment/…。已",
+  "lines": 126,
+  "kb": 8.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-053/REVIEW-053.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-053 — TASK-054 独立复算：机制 A（JSON 形态方括号键）的路径归一",
+  "summary": "复核对象：ba33515「fix(mirror): 机制 A 的方括号键也走路径归一」",
+  "lines": 341,
+  "kb": 22.6
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-055/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-055 macOS / Linux 桌面模式打不开启动器，还甩 Windows 错误提示",
+  "summary": "一句话：desktopMain 在非 Windows 上没有任何界面载体——没有 WebView2，也没有随包的 Qt 启动器，失败后直接 desktopFail，打出「请安装 Microsoft Edge WebView2 运行时」这种平",
+  "lines": 40,
+  "kb": 3.0
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-058/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-058 A 分支（JSON 键值）落点判据换血 + 三类边角",
+  "summary": "日期：2026-10-20",
+  "lines": 148,
+  "kb": 11.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-058/REVIEW-058.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-058 — TASK-058 独立复算：机制 A 改按\"写进去的值\"判落点",
+  "summary": "复核对象：43586f7「fix(mirror): 机制 A 改按\"写进去的值\"判落点，堵住三类错槽」",
+  "lines": 232,
+  "kb": 14.1
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-059/REVIEW-059.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-059 — TASK-059 独立复算：白名单回退 / 完整地址 / 清空连坐",
+  "summary": "复核对象：a18a742「补回复审指出的白名单回退，同时修两个老 bug」",
+  "lines": 328,
+  "kb": 21.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-060/REVIEW-060.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-060 — TASK-058 第三轮独立复核（`53d67c2`：并集判据 / `//` 手滑 / http 短路）",
+  "summary": "复核人：契约评审-v2（01a156f5）｜只读复核，未改任何代码｜2026-10-25",
+  "lines": 249,
+  "kb": 19.7
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-061/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-061 大屏指令按 sid 精准下发",
+  "summary": "收编 2026-10-24 留在工作区、没有归属任务的改动，并补上它缺的验证与一处真缺陷。",
+  "lines": 124,
+  "kb": 6.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-063/REVIEW-063.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "REVIEW-063 — TASK-063 独立复核（`//` A/B 统一 + 消并集的 8 条反向）",
+  "summary": "复核人：契约评审-v2（01a156f5）｜只读复核，未改任何代码｜2026-10-25",
+  "lines": 263,
+  "kb": 20.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/task-066/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "TASK-066 收编 10-25/10-26 工作区遗留（S3 宫格过滤 · importcj 风格 · 旧后台权限与同源）",
+  "summary": "2026-10-26 复核工作区时发现两类东西混在一起：",
+  "lines": 226,
+  "kb": 14.4
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/docs/大屏外观层-接入说明.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "大屏外观层接入说明",
+  "summary": "外观层是新增的，外壳层和玩法层维持原状。三者不互相覆盖，只在外观层做兜底。",
+  "lines": 105,
+  "kb": 4.9
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/server-go/internal/winwebview/webviewloader/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "README",
+  "summary": "",
+  "lines": 3,
+  "kb": 0.2
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/stage-console/README.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "现场操作台（stage-console）",
+  "summary": "基于开源模板 [vue-material-admin](https://github.com/armomu/vue-material-admin)（MIT，原说明见 README.template.md）改的现场抽奖操作台。模板的布局、主题",
+  "lines": 32,
+  "kb": 1.5
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/stage-console/README.template.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "README.template",
+  "summary": "",
+  "lines": 95,
+  "kb": 3.8
+ },
+ {
+  "rel": "01-核心-抽奖系统-干净版/成本告警-OpenRouter.md",
+  "top": "01-核心-抽奖系统-干净版",
+  "title": "成本告警：团队「干净版」",
+  "summary": "1. 最高优先级：立即暂停或限制 Qt 桌面端的 qoder 通道（改走 aionrs/deepseek，或给 qoder key 加 $5 限额）。余额撑不过今天，此条不能等。",
+  "lines": 42,
+  "kb": 2.3
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/capture/inventory.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "接口侦察报告",
+  "summary": "生成时间：2026-11-07 00:58:48",
+  "lines": 26,
+  "kb": 1.6
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/9y.com/sec/strix/report.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "Security Penetration Test Report",
+  "summary": "对 https://h5.9yyl6.com（9Y 代理商平台 H5，业务前缀 /api/platform）完成了授权只读安全自查。按还原的接口清单逐条覆盖，全程遵守硬性约束：仅 GET/HEAD/OPTIONS、单接口 ≤5 次请求、仅边",
+  "lines": 101,
+  "kb": 12.6
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/原站大屏/sec/api-map.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "思讯互动后台（www.sessionhd.com/customer）接口地图",
+  "summary": "抓取时间：2026-11-07 · 登录账号：13800000000（试用版）",
+  "lines": 103,
+  "kb": 3.7
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/原站大屏/sec/screen-conf/mapping.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "官方字段 → 我方落点",
+  "summary": "其余 activity 键（id/name/status/startTime/endTime/customerId…）我方 hdinfo 已有对应，不重复列。",
+  "lines": 89,
+  "kb": 5.5
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/原站大屏/sec/功能清单-思讯106.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "思讯互动 106 个互动功能清单（含价格与图标）",
+  "summary": "",
+  "lines": 150,
+  "kb": 7.0
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/原站大屏/sec/大屏端对照表.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "思讯大屏端 × 我方大屏　对照",
+  "summary": "思讯的大屏不是一个页面，是一个皮肤市场：25 套主题皮肤（每套 7 类资源）、20 条消息气泡、6 套上墙皮肤、4 种头像形状、4 套霸屏底纹、4 组表情包、4 个付费礼物特效、2 种开场动画，还有一个控制这些的全局 skinCode。改一",
+  "lines": 154,
+  "kb": 11.5
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/原站大屏/sec/玩法手册.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "思讯互动 97 个玩法配置手册",
+  "summary": "收费分布：付费 77 个，免费 14 个，询价 4 个，随活动作 2 个",
+  "lines": 1375,
+  "kb": 39.0
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/原站大屏/sec/玩法缺口分档表.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "玩法缺口分档表",
+  "summary": "我方有现成页面可改，主要成本是找素材 + 对齐行为。",
+  "lines": 136,
+  "kb": 8.0
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/data/sites/原站大屏/sec/缺口对照表.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "思讯互动 97 个玩法 vs 我方实现 — 缺口对照表",
+  "summary": "airplane, bigcj, bigmenu, bike, car, cjx, common, dhh, dzp, dzqy, hbwall, horse, importcj, jjb, liuyancj, lottery, mls, ",
+  "lines": 202,
+  "kb": 15.4
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_29d4/penetration_test_report.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "Security Penetration Test Report",
+  "summary": "对 9yyl6 代理平台业务 API（https://h5.9yyl6.com/api/platform）完成授权只读安全自查，覆盖 openapi 清单全部 140 条路径（含 111 条 x-readonly 只读接口），并通过前端 J",
+  "lines": 63,
+  "kb": 5.3
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_29d4/vulnerabilities/vuln-0001.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "Spring 原始异常消息泄露（类型名与用户输入全额回显）",
+  "summary": "多个业务接口在参数类型错误或缺少必填参数时，将 Spring 框架的原始异常消息原样返回给客户端，泄露 Java 类型名（java.lang.String/Long/Integer）并全额回显用户输入（含 500 字符超长字符串），表明全局",
+  "lines": 82,
+  "kb": 4.1
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_a0a3/penetration_test_report.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "Security Penetration Test Report",
+  "summary": "对 https://h5.9yyl6.com 的只读安全自查（全程仅 GET/HEAD/OPTIONS）。总体结论：该域名为纯前端 SPA 静态站（Cloudflare 前置），本身未发现可证实的未鉴权业务数据泄露。注意：环境中未找到 au",
+  "lines": 50,
+  "kb": 3.7
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_b31d/penetration_test_report.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "Security Penetration Test Report",
+  "summary": "A security assessment of https://h5.9yyl6.com was initiated but terminated during the orchestration phase before any rec",
+  "lines": 55,
+  "kb": 5.4
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_d20e/penetration_test_report.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "Security Penetration Test Report",
+  "summary": "本次对 https://h5.9yyl6.com/api/platform 的授权只读安全自查未能在本轮预算内完成实际测试,因此未产生任何已验证的漏洞发现。",
+  "lines": 66,
+  "kb": 5.4
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_e807/penetration_test_report.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "Security Penetration Test Report",
+  "summary": "对 https://h5.9yyl6.com（9Y 代理商平台 H5，业务前缀 /api/platform）完成了授权只读安全自查。按还原的接口清单逐条覆盖，全程遵守硬性约束：仅 GET/HEAD/OPTIONS、单接口 ≤5 次请求、仅边",
+  "lines": 101,
+  "kb": 12.6
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_e807/vulnerabilities/vuln-0001.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "聊天模块状态变更接口以 GET 实现且带数据库写副作用（m-disband/l-exit/r-room-join/s-room-quit/del-z-system-messages/notify-record）",
+  "summary": "聊天模块多个状态变更接口以 GET 方法实现：m-disband/（解散群组）、l-exit/（退出群组）、r-room-join/（加入聊天室）、s-room-quit/（退出聊天室）、del-z-system-messages/（删除系",
+  "lines": 95,
+  "kb": 6.1
+ },
+ {
+  "rel": "03-逆向分析-思讯-hudong-recon/strix_runs/h5-9yyl6-com_e807/vulnerabilities/vuln-0002.md",
+  "top": "03-逆向分析-思讯-hudong-recon",
+  "title": "未鉴权访问 /api/platform/user/home/game/winRecords（回显他人昵称与中奖金额）",
+  "summary": "GET /api/platform/user/home/game/winRecords 无需任何 token 头即返回完整业务数据：约 26 条中奖记录，含其他用户的昵称、中奖金额（prize 12905.30 / 19478.36 等）、",
+  "lines": 55,
+  "kb": 4.1
+ },
+ {
+  "rel": "04-大屏UI原型-shule-ui/vma/README.md",
+  "top": "04-大屏UI原型-shule-ui",
+  "title": "README",
+  "summary": "",
+  "lines": 95,
+  "kb": 3.8
+ },
+ {
+  "rel": "04-大屏UI原型-shule-ui/vma/public/RobotExpressive/README.md",
+  "top": "04-大屏UI原型-shule-ui",
+  "title": "RobotExpressive",
+  "summary": "Model by [Tomás Laulhé](https://www.patreon.com/quaternius). Before using this",
+  "lines": 10,
+  "kb": 0.4
+ },
+ {
+  "rel": "05-stargather-v2/docs/gohudong-deep-analysis.md",
+  "top": "05-stargather-v2",
+  "title": "gohudong 最底层深度分析报告",
+  "summary": "设计画布：1926 × 1080 px",
+  "lines": 552,
+  "kb": 19.5
+ },
+ {
+  "rel": "05-stargather-v2/docs/gohudong-vue-extraction.md",
+  "top": "05-stargather-v2",
+  "title": "gohudong Vue 2 运行时源码提取报告",
+  "summary": "State: spm, logo, showMenu, menus, theme, bgImg, bgEffect, bgMusic,",
+  "lines": 316,
+  "kb": 9.9
+ },
+ {
+  "rel": "05-stargather-v2/docs/openhands/README.md",
+  "top": "05-stargather-v2",
+  "title": "StarGather v2 — 模块并行开发计划",
+  "summary": "Phase 1 目标: P0 的 45 个模块，覆盖 gohudong 核心功能。",
+  "lines": 162,
+  "kb": 4.7
+ },
+ {
+  "rel": "05-stargather-v2/docs/openhands/batch-advanced.md",
+  "top": "05-stargather-v2",
+  "title": "高级功能模块（Advanced）— X01-X17",
+  "summary": "",
+  "lines": 131,
+  "kb": 3.4
+ },
+ {
+  "rel": "05-stargather-v2/docs/openhands/batch-atmosphere.md",
+  "top": "05-stargather-v2",
+  "title": "氛围互动模块（Atmosphere）— A01-A16",
+  "summary": "",
+  "lines": 209,
+  "kb": 4.8
+ },
+ {
+  "rel": "05-stargather-v2/docs/openhands/batch-checkin.md",
+  "top": "05-stargather-v2",
+  "title": "签到入场模块（Checkin）— C01-C13",
+  "summary": "参考插件，已在 Phase 0 实现。",
+  "lines": 170,
+  "kb": 4.5
+ },
+ {
+  "rel": "05-stargather-v2/docs/openhands/batch-game.md",
+  "top": "05-stargather-v2",
+  "title": "互动游戏模块（Game）— P0: G01-G08, P1: G09-G33+",
+  "summary": "waiting → countdown → playing → settling → leaderboard",
+  "lines": 181,
+  "kb": 5.5
+ },
+ {
+  "rel": "05-stargather-v2/docs/openhands/batch-lottery.md",
+  "top": "05-stargather-v2",
+  "title": "抽奖系统模块（Lottery）— P0: L01-L20",
+  "summary": "所有抽奖模块的 controller 遵循统一状态机：",
+  "lines": 299,
+  "kb": 7.2
+ },
+ {
+  "rel": "05-stargather-v2/docs/openhands/batch-vote.md",
+  "top": "05-stargather-v2",
+  "title": "投票评分模块（Vote）— V01-V08",
+  "summary": "",
+  "lines": 116,
+  "kb": 2.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/MEMORY.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Memory Index",
+  "summary": "",
+  "lines": 1,
+  "kb": 0.0
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/memory/2026-09-30.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "2026-09-30",
+  "summary": "",
+  "lines": 27,
+  "kb": 1.5
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/projects/proj_31d52b77/MEMORY.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Project Memory Index",
+  "summary": "",
+  "lines": 1,
+  "kb": 0.0
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/projects/proj_895194c6/MEMORY.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Project Memory Index",
+  "summary": "",
+  "lines": 1,
+  "kb": 0.0
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/projects/proj_d9e9f02a/MEMORY.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Project Memory Index",
+  "summary": "",
+  "lines": 1,
+  "kb": 0.0
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/rules/00-project.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "项目总规则",
+  "summary": "这是一个\"视频转游戏源码\"的自动化工程，最终生成：",
+  "lines": 65,
+  "kb": 1.7
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/rules/10-video-pipeline.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "视频处理规则",
+  "summary": "视频文件位于：",
+  "lines": 72,
+  "kb": 1.5
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/rules/20-ai-api.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "AI API 规则",
+  "summary": "使用 OpenAI Responses API。",
+  "lines": 42,
+  "kb": 1.0
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/rules/30-electron.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Electron 规则",
+  "summary": "必须使用两个独立窗口：",
+  "lines": 51,
+  "kb": 0.9
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/rules/40-testing.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "测试规则",
+  "summary": "每次代码修改后按顺序运行：",
+  "lines": 39,
+  "kb": 0.6
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/.qoder/sessions/redacted/da1938e2-9dc1-40b0-ab1a-dbba412c9d12.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "da1938e2-9dc1-40b0-ab1a-dbba412c9d12",
+  "summary": "",
+  "lines": 245,
+  "kb": 13.1
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/CHANGELOG.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "版本记录",
+  "summary": "每轮优化开始前先备份当前版本（git 标签 + ~/Downloads/星聚版本备份/<版本>/ 源码包、演示数据库、完整历史），完成后升版本号并记在这里。",
+  "lines": 1042,
+  "kb": 103.6
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/PROVENANCE.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "素材来源说明（仅仓库内部记录，**不进交付包**）",
+  "summary": "此前 public/assets/three-card/ 下的三个文件",
+  "lines": 76,
+  "kb": 7.1
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/README.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "星聚互动 · 活动大屏",
+  "summary": "年会 / 活动现场互动系统：签到、抽奖、即开福利、游戏、投票评分，一个后台连接大屏与所有参与者的手机。",
+  "lines": 229,
+  "kb": 21.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/TEAM-KICKOFF.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "团队启动简报 · 抽奖系统",
+  "summary": "一句话：这是年会/活动现场互动大屏系统，竞品「思讯互动」的独立复刻实现，抽奖只是其中一块（61 个入口里的 15 个）。",
+  "lines": 179,
+  "kb": 13.2
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/VIDEO_PIPELINE.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "视频转代码流水线",
+  "summary": "npm install",
+  "lines": 100,
+  "kb": 1.9
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/data-filter-notes.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "数据过滤（敏感词拦截）· 匹配规则与已知限制",
+  "summary": "对齐参考产品 活动设置 → 数据过滤（docs/reference/sessionhd-后台结构-2026-09-28.md §8）。",
+  "lines": 42,
+  "kb": 3.6
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/exe-构建说明.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "PC 端 exe 封装说明（Electron 方案）",
+  "summary": "1. 本项目的体积瓶颈不是「应用代码」而是「运行时」：无论哪条路，都要带 dist/ + nodemodules（≈75MB）。",
+  "lines": 380,
+  "kb": 26.6
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/hudong-settings-notes.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "互动设置 · tab1「互动功能」（模块总开关）—— 落地说明",
+  "summary": "后台新增一页始终可见的「互动设置」（不依赖当前抽奖变体），tab1 =「互动功能」：",
+  "lines": 92,
+  "kb": 8.1
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/list-prize-limit.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "名单抽奖：奖品名的硬上界与实测可读上限（T26）",
+  "summary": "",
+  "lines": 97,
+  "kb": 8.4
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/listdraw-operator-notes.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "名单抽奖 · 运营与主持人说明",
+  "summary": "面向现场主持人与后台运营的行为说明。这里写的都是「临场必须知道」的事，",
+  "lines": 149,
+  "kb": 10.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/reference/A-照片抽奖+头像抽奖+帮助FAQ.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "A-照片抽奖+头像抽奖+帮助FAQ",
+  "summary": "",
+  "lines": 486,
+  "kb": 15.7
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/reference/B-3D抽奖+名单抽奖+炫光抽奖.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "B-3D抽奖+名单抽奖+炫光抽奖",
+  "summary": "",
+  "lines": 522,
+  "kb": 17.5
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/reference/sessionhd-3D抽奖-解剖式分析-2026-09-28.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "sessionhd 大屏「3D抽奖」解剖式分析",
+  "summary": "对象：https://screen.sessionhd.com/screen/index.html?preview=browser&type=default#/three",
+  "lines": 344,
+  "kb": 23.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/reference/sessionhd-3D抽奖-轮次字段-2026-09-28.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "sessionhd 3D 抽奖 · 轮次字段实测（2026-09-28，用户本人登录后查看，只记功能，不含对方素材）",
+  "summary": "下载模板 → 选 Excel → 可勾「覆盖原有数据」（会清空所有中奖记录）；模板不支持奖品图片与多奖品。",
+  "lines": 36,
+  "kb": 2.6
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/reference/sessionhd-互动设置页-2026-09-28.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "参考产品「互动设置」页测绘 —— `#/activity/setup/hudong`",
+  "summary": "互动设置 = 本活动所有互动功能的总开关目录，分两个 tab：",
+  "lines": 230,
+  "kb": 11.7
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/reference/sessionhd-后台结构-2026-09-28.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "参考产品（sessionhd / 思讯互动）后台结构测绘",
+  "summary": "活动设置   ├ 活动概览  ├ 基础信息  ├ 活动链接  ├ 活动分享  ├ 签到设置  ├ 数据展示  ├ 数据过滤  ├ 数据推送",
+  "lines": 224,
+  "kb": 15.2
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/screen-visual-spec.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "大屏视觉规范（UI/UX · T8）",
+  "summary": "适用：年会现场互动大屏（控制台 / 大屏 / 手机端三端）。",
+  "lines": 246,
+  "kb": 13.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/style-naming.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "大屏风格命名清单（唯一事实来源）",
+  "summary": "总风格数：9 + 6 + 18 + 22 = 55。",
+  "lines": 125,
+  "kb": 5.7
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/t25-strong-on-card.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "T25 · `--s-strong` 画在卡面/半透明罩上的**用量级**审计",
+  "summary": "scripts/check-style-contrast.mjs 量的是 token 与 token 的配对（55/55 全绿），但 T25 的缺陷不在配对、在落点：",
+  "lines": 72,
+  "kb": 5.2
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/t25-tornado-console.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "T25 · 炫光（tornado）控制台的落点审计 —— 「半透明罩 + 浅字」压**深色舞台底**",
+  "summary": "--s-panel-strong = color-mix(in srgb, var(--s-accent) 22%, transparent) —— 它是半透明罩，",
+  "lines": 103,
+  "kb": 7.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/three-draw-operator-notes.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "3D 抽奖大屏 · 运营与主持人说明",
+  "summary": "面向现场主持人与后台运营的行为说明，只写「临场必须知道」的事。",
+  "lines": 134,
+  "kb": 9.1
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/tornado-prize-name-limit.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "炫光抽奖（module 25）超长奖品名：能显示多少字，以及为什么不会再被裁",
+  "summary": "这是产品的显示上限（1920×1080 圆环 346px 时 11px 字号放得下约 217 字，留余量取 200）。",
+  "lines": 135,
+  "kb": 10.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/单机版使用说明.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "年会抽奖单机版 · 使用说明（v0.5.10）",
+  "summary": "单机版在一台电脑上完成全部工作：后台、导播台、大屏都在这台电脑上，只监听本机，不需要联网，也没有手机扫码。",
+  "lines": 165,
+  "kb": 18.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/大屏背景视频-内嵌文字筛查.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "大屏背景视频「内嵌文字」筛查",
+  "summary": "大屏会自己叠一行活动标题。如果背景视频嘴里也含着自己的一句大字标题，投影到现场就是两行标题打架。",
+  "lines": 118,
+  "kb": 7.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/游戏补齐索引与开发清单.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "游戏补齐索引与开发清单",
+  "summary": "launch · countdown · book · wall · tree · sphere · mosaic · region · messages · luck · draw · bubble · maps · esign · ba",
+  "lines": 482,
+  "kb": 39.9
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/玩法动态预览.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "玩法动态预览（录制 + 接入）",
+  "summary": "public/game-previews/<id>.mp4 里的动态预览是分两批录出来的，走的是两条不同的路径：",
+  "lines": 436,
+  "kb": 29.4
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/画面验证与工具补全计划.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "画面验证与工具补全计划",
+  "summary": "开发这一侧（人 + AI）有四个结构性盲区，靠\"多看一眼\"补不上：",
+  "lines": 270,
+  "kb": 17.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/离线部署说明.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "离线部署说明（星聚互动 · 年会现场互动大屏系统）",
+  "summary": "1. 解压交付包（如 iep-offline-slim-0.1.0-2026-09-28.zip）到任意本地目录。",
+  "lines": 232,
+  "kb": 13.9
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/素材导入清单.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "素材导入清单：哪些该导、哪些不能导",
+  "summary": "public/ 共 201 个文件：48 个自有 + 72 个来自 04-SVG图标（AI 生成，合规）+ 18 个来自 03-奖品海报（Unsplash，合规），",
+  "lines": 120,
+  "kb": 9.4
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/素材清单.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "素材清单：每个位置现在用的是什么、怎么换",
+  "summary": "后台 / 大屏 / 手机上每个「看得见的素材位」都在这里对账。表格里的文件路径都相对仓库根目录，",
+  "lines": 108,
+  "kb": 8.1
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/视觉规格.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "视觉规格（星聚互动 · 活动大屏）",
+  "summary": "我们的揭晓瞬间动感峰值 13.8%，参考系 16.2% —— 基本齐平；但平均动感只有 0.78%，参考系 4.37%",
+  "lines": 329,
+  "kb": 25.9
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/docs/项目开发步骤档案.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "星聚互动 · 活动大屏 —— 项目开发步骤档案",
+  "summary": "用户原话：「先构建完功能，在打包exe啊」 ⇒ 功能没构建完不许打包。",
+  "lines": 381,
+  "kb": 27.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/extracted_params/manifest.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "批量逆向解析报告",
+  "summary": "",
+  "lines": 53,
+  "kb": 2.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/spark-output/frame/mandatangcai-standalone.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Frame — 满堂彩·单机版互动大屏抽奖系统",
+  "summary": "1. 导播台作为唯一操作入口确实比多窗口方案更高效（v0.5.7 真人走查已部分验证）",
+  "lines": 94,
+  "kb": 5.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/spark-output/scope/mandatangcai-standalone.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Scope — 满堂彩·单机版互动大屏抽奖系统",
+  "summary": "单机版互动大屏抽奖系统「满堂彩 · FULL HOUSE」，面向活动导播与主持人，在一台电脑+投影/LED 场景下完成抽奖全流程，不依赖网络。支持品牌定制、导播台实时控制、翻页笔操作、多平台直播推流输出、28 种原创抽奖玩法。",
+  "lines": 106,
+  "kb": 10.0
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/spark-output/test/mandatangcai-standalone.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "Test — 满堂彩·单机版互动大屏抽奖系统",
+  "summary": "验证导播从打开软件到完成第一次开奖的完整流程是否顺畅，定位卡点和误操作风险。",
+  "lines": 238,
+  "kb": 8.4
+ },
+ {
+  "rel": "07-星聚互动-完整系统/01-系统源码/参考分析.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "思讯互动年会大屏：完整功能与产品深度分析",
+  "summary": "分析对象：https://screen.sessionhd.com/screen/index.html?preview=browser&type=annual#/",
+  "lines": 344,
+  "kb": 32.7
+ },
+ {
+  "rel": "07-星聚互动-完整系统/03-交付产物/Windows-验收清单.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "星聚互动 · Windows 验收清单（T50 · 2026-09-28）",
+  "summary": "把 zip 放到任意目录，在该目录打开 命令提示符（Win+R → 输入 cmd → 回车），然后执行：",
+  "lines": 159,
+  "kb": 9.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/03-交付产物/交付清单.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "星聚互动 · 离线交付清单",
+  "summary": "400c09b50043e4b244382bbb9a866d12f755897b50f05d38b4ec879e67997d5b  iep-exe-win32-x64-44.4.5.zip",
+  "lines": 317,
+  "kb": 21.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/09-互动生产版/技术分析报告.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "思讯互动生产版 - 技术分析报告",
+  "summary": "思讯互动是一个面向线下活动现场的大屏互动平台，支持签到、抽奖、竞技游戏、仪式等多种互动场景。参与者通过手机扫码加入，实时与大屏互动。",
+  "lines": 858,
+  "kb": 30.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/12-已停用玩法/Batch4-翻牌抽奖-2D版/恢复方法.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "已停用：翻牌抽奖（2D 版，Batch4.jsx）",
+  "summary": "src/screen/games/Batch4.jsx 的归档副本，实现 variant flip（2D 翻牌）。",
+  "lines": 116,
+  "kb": 4.2
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/13-游戏补齐/README.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "13-游戏补齐 · 唯一入口",
+  "summary": "给「星聚互动 · 活动大屏」补齐缺失的玩法/环节。你在这能一次性看到：",
+  "lines": 91,
+  "kb": 6.7
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/13-游戏补齐/开发清单.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "游戏补齐索引与开发清单",
+  "summary": "launch · countdown · book · wall · tree · sphere · mosaic · region · messages · luck · draw · bubble · maps · esign · ba",
+  "lines": 423,
+  "kb": 31.6
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/13-游戏补齐/改动记录/改动记录.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "改动记录",
+  "summary": "高光 1.4% → 1.57%；边缘 15.6% → 16.7%。",
+  "lines": 335,
+  "kb": 36.6
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/13-游戏补齐/玩法动态预览.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "玩法动态预览（录制 + 接入）",
+  "summary": "public/game-previews/<id>.mp4 里的动态预览是分两批录出来的，走的是两条不同的路径：",
+  "lines": 310,
+  "kb": 21.1
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/13-游戏补齐/视频对照索引.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "参考视频 ↔ 我方模块 对照索引",
+  "summary": "参考产品「蜀乐互动」的这 77 个风格演示视频（其中 2 个与其它目录重复，",
+  "lines": 193,
+  "kb": 15.4
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/13-游戏补齐/进度.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "进度看板",
+  "summary": "1. 边缘 16.7%（目标 22–28%）、高光 1.57%（目标 3–5%） —— 推幕补不了这两项，要逐模块加内容细节（#4）与亮点（#3）。",
+  "lines": 205,
+  "kb": 18.5
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/README.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "游戏源码库",
+  "summary": "这里是本系统全部游戏源代码的集中整理（471 个文件，40 M）。",
+  "lines": 85,
+  "kb": 4.8
+ },
+ {
+  "rel": "07-星聚互动-完整系统/05-游戏源码库/游戏核心模块清单.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "游戏核心模块清单",
+  "summary": "采集时间：2026-09-30",
+  "lines": 191,
+  "kb": 6.9
+ },
+ {
+  "rel": "07-星聚互动-完整系统/README.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "星聚互动 · 活动大屏 —— 完整系统（整理包）",
+  "summary": "整理时间：2026-10-02",
+  "lines": 132,
+  "kb": 5.3
+ },
+ {
+  "rel": "07-星聚互动-完整系统/游戏源码图谱.md",
+  "top": "07-星聚互动-完整系统",
+  "title": "游戏源代码全景图谱",
+  "summary": "整理时间：2026-10-02 ｜ 系统版本：v0.5.30",
+  "lines": 244,
+  "kb": 12.3
+ },
+ {
+  "rel": "10-游戏合集/G-玩法演示素材/G-组素材与游戏映射.md",
+  "top": "10-游戏合集",
+  "title": "G 组素材 ↔ K 组游戏 映射表",
+  "summary": "1. 命中数最高的基本就是它的归属；",
+  "lines": 117,
+  "kb": 8.6
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/00-先读我-目录勿拆开.md",
+  "top": "10-游戏合集",
+  "title": "⚠️ 先读我：这个目录**不要拆开**",
+  "summary": "两个还原环境要跑起来，都同时依赖两处：",
+  "lines": 70,
+  "kb": 3.2
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/_后台还原环境/说明.md",
+  "top": "10-游戏合集",
+  "title": "后台还原环境（`_后台还原环境/`）说明",
+  "summary": "双击  后台还原环境/启动后台.command",
+  "lines": 141,
+  "kb": 5.6
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/_归档-旧骨架环境/README-为什么被归档.md",
+  "top": "10-游戏合集",
+  "title": "这里为什么被归档？",
+  "summary": "2026-10-02 复查时发现：那次抓取用的 hdid（会话标识）是过期的，",
+  "lines": 36,
+  "kb": 1.8
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/_归档-旧骨架环境/_复原运行环境（结论已被推翻）/复原说明.md",
+  "top": "10-游戏合集",
+  "title": "复原说明",
+  "summary": "本目录把 K 组（蜀乐互动大屏游戏源码） 从\"只有 JS 逻辑 + 素材\"复原成一个可以加载、可以运行的离线环境。",
+  "lines": 115,
+  "kb": 6.5
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/_改动留痕_20261002/验证记录.md",
+  "top": "10-游戏合集",
+  "title": "改动留痕：5 个变体模板兜底等价化（2026-10-02）",
+  "summary": "1. {{dump $data}} 占位符 → 5 个等价兜底模板",
+  "lines": 89,
+  "kb": 3.9
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/_效果预览/README-怎么看.md",
+  "top": "10-游戏合集",
+  "title": "效果预览怎么看",
+  "summary": "一句话：双击本目录的 index.html（或在浏览器里打开它），就能看到 51 个游戏的首屏截图；",
+  "lines": 57,
+  "kb": 2.6
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/_真还原环境/说明.md",
+  "top": "10-游戏合集",
+  "title": "蜀乐互动大屏游戏 · 真还原环境",
+  "summary": "两个环境共用同一份 server.py，不要单独拆开搬走。",
+  "lines": 123,
+  "kb": 5.4
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/_线上一致性核对_20261002/README-结论.md",
+  "top": "10-游戏合集",
+  "title": "本地镜像 vs 线上实测（2026-10-02）",
+  "summary": "唯一一处真实内容差异：",
+  "lines": 96,
+  "kb": 4.4
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/蜀乐互动整站镜像/完整性审计.md",
+  "top": "10-游戏合集",
+  "title": "完整性审计 —— 「还缺不？」",
+  "summary": "审计时间：2026-10-02 18:55　　方法：三重核对（不靠感觉）",
+  "lines": 145,
+  "kb": 6.2
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/蜀乐互动整站镜像/接口清单.md",
+  "top": "10-游戏合集",
+  "title": "接口清单（离线环境里都能\"响\"，但响法不同）",
+  "summary": "server.py 按顺序做三件事：",
+  "lines": 97,
+  "kb": 4.6
+ },
+ {
+  "rel": "10-游戏合集/K-蜀乐互动大屏游戏源码/蜀乐互动整站镜像/镜像说明.md",
+  "top": "10-游戏合集",
+  "title": "蜀乐互动整站镜像 · 说明",
+  "summary": "蜀乐互动整站镜像/",
+  "lines": 159,
+  "kb": 8.1
+ },
+ {
+  "rel": "10-游戏合集/README-总览.md",
+  "top": "10-游戏合集",
+  "title": "游戏合集 · 总览",
+  "summary": "本目录把本机（macOS）上找到的全部游戏相关代码与素材集中整理到一处。",
+  "lines": 136,
+  "kb": 9.5
+ },
+ {
+  "rel": "10-游戏合集/缺口说明.md",
+  "top": "10-游戏合集",
+  "title": "缺口说明（2026-10-02 核实 · 16:55 重大更正）",
+  "summary": "本文件记录「蜀乐互动大屏游戏」归集产物的实际缺口与各组目录的对账口径。",
+  "lines": 438,
+  "kb": 23.1
+ },
+ {
+  "rel": "11-导入游戏/CHANGELOG.md",
+  "top": "11-导入游戏",
+  "title": "更新记录",
+  "summary": "",
+  "lines": 10,
+  "kb": 0.7
+ },
+ {
+  "rel": "11-导入游戏/CHANGELOG3.md",
+  "top": "11-导入游戏",
+  "title": "更新记录",
+  "summary": "",
+  "lines": 19,
+  "kb": 1.3
+ },
+ {
+  "rel": "11-导入游戏/README.md",
+  "top": "11-导入游戏",
+  "title": "一体化互动抽奖大舞台系统",
+  "summary": "这是一个可继续扩展的全栈工程基线，不是单页抽奖 Demo。项目共享 Vue 3 前端、Node.js 本地业务 API、SQLite 数据库与 Socket.IO 实时事件；浏览器端和 Electron Windows 桌面端使用同一套业务",
+  "lines": 198,
+  "kb": 11.1
+ },
+ {
+  "rel": "11-导入游戏/README2.md",
+  "top": "11-导入游戏",
+  "title": "一体化互动抽奖大舞台系统",
+  "summary": "这是一个可继续扩展的全栈工程基线，不是单页抽奖 Demo。项目共享 Vue 3 前端、Node.js 本地业务 API、SQLite 数据库与 Socket.IO 实时事件；浏览器端和 Electron Windows 桌面端使用同一套业务",
+  "lines": 205,
+  "kb": 11.6
+ },
+ {
+  "rel": "11-导入游戏/README3.md",
+  "top": "11-导入游戏",
+  "title": "一体化互动抽奖大舞台系统",
+  "summary": "这是一个可继续扩展的全栈工程基线，不是单页抽奖 Demo。项目共享 Vue 3 前端、Node.js 本地业务 API、SQLite 数据库与 Socket.IO 实时事件；浏览器端和 Electron Windows 桌面端使用同一套业务",
+  "lines": 224,
+  "kb": 14.0
+ },
+ {
+  "rel": "11-导入游戏/validation-status.md",
+  "top": "11-导入游戏",
+  "title": "工程验证状态（v0.1.0）",
+  "summary": "当前生成环境访问 https://registry.npmjs.org 时发生 DNS 错误（EAIAGAIN），依赖安装未完成，且不存在 nodemodules/。因此以下工作尚未执行成功，不应视为通过：",
+  "lines": 39,
+  "kb": 1.9
+ },
+ {
+  "rel": "11-导入游戏/validation-status2.md",
+  "top": "11-导入游戏",
+  "title": "工程验证状态（v0.2.0）",
+  "summary": "当前生成环境访问 https://registry.npmjs.org 时发生 DNS 错误（EAIAGAIN），第三方依赖安装未完成，且不存在 nodemodules/。因此以下工作尚未执行成功，不应视为通过：",
+  "lines": 42,
+  "kb": 2.3
+ },
+ {
+  "rel": "11-导入游戏/validation-status3.md",
+  "top": "11-导入游戏",
+  "title": "工程验证状态（v0.3.0）",
+  "summary": "当前生成环境访问 https://registry.npmjs.org 时发生 DNS 错误（EAIAGAIN），第三方依赖安装未完成，且不存在 nodemodules/。因此以下工作尚未执行成功，不应视为通过：",
+  "lines": 61,
+  "kb": 4.0
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-像素级独立版/README.md",
+  "top": "11-导入游戏",
+  "title": "导入抽奖 · 像素级独立单游戏",
+  "summary": "从独立复原包里抽出的单个游戏：原件 DOM、CSS、screenimportcj.js 引擎原样保留，只剥掉平台页面和数据，补上 6 个风格入口。",
+  "lines": 90,
+  "kb": 3.7
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/README.md",
+  "top": "11-导入游戏",
+  "title": "导入抽奖（importcj）· 前后端完整复原",
+  "summary": "从「蜀乐离屏镜像 / 演示厅-52玩法」中抽离出来的独立、可运行、可维护的导入抽奖玩法源码。",
+  "lines": 207,
+  "kb": 15.6
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/data/README.md",
+  "top": "11-导入游戏",
+  "title": "data/ 数据层说明",
+  "summary": "独立服务的全部状态都放在这里，进程启动时一次性读入内存，写接口修改后原子落盘（先写 .tmp 再 replace），重启不丢。",
+  "lines": 31,
+  "kb": 1.6
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/docs/原站架构还原.md",
+  "top": "11-导入游戏",
+  "title": "原站架构还原：这套「导入抽奖」到底是怎么搭起来的",
+  "summary": "浏览器那头只有 7 个 JS 库、一堆 art-template 模板、和一层可选的 CSS3D 飘落层。",
+  "lines": 352,
+  "kb": 18.9
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/docs/多活动与登录设计.md",
+  "top": "11-导入游戏",
+  "title": "多活动（hdid 切换）与后台登录 —— 设计",
+  "summary": "大屏和后台的每一条读写都要落到「当前活动」的数据文件上。如果只在几个接口里做判断，",
+  "lines": 162,
+  "kb": 9.1
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/docs/拆解指南.md",
+  "top": "11-导入游戏",
+  "title": "从 52 个玩法里摘出 1 个：完整拆解",
+  "summary": "演示厅-52玩法/",
+  "lines": 541,
+  "kb": 22.4
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/docs/接口文档.md",
+  "top": "11-导入游戏",
+  "title": "导入抽奖（importcj）后端接口文档",
+  "summary": "独立服务：python3 server.py 8790 8791",
+  "lines": 574,
+  "kb": 26.4
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/docs/验证报告.md",
+  "top": "11-导入游戏",
+  "title": "导入抽奖 · 后端验证报告",
+  "summary": "启动方式：",
+  "lines": 343,
+  "kb": 20.5
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-完整复原/www/backend/docs/后台自测报告.md",
+  "top": "11-导入游戏",
+  "title": "导入抽奖 · 后台管理端 自测报告",
+  "summary": "测试时间：2026-10-18",
+  "lines": 95,
+  "kb": 6.8
+ },
+ {
+  "rel": "11-导入游戏/导入抽奖-裸游戏-纯JS-2026-10-24/README.md",
+  "top": "11-导入游戏",
+  "title": "导入抽奖 · 裸游戏纯 JS 源码",
+  "summary": "单个游戏的裸实现：原生 JS，无 React/Vue/RequireJS，无平台外壳。",
+  "lines": 54,
+  "kb": 2.3
+ },
+ {
+  "rel": "12-lottery-admin/README.md",
+  "top": "12-lottery-admin",
+  "title": "抽奖互动后台管理系统",
+  "summary": "lottery-admin/",
+  "lines": 124,
+  "kb": 3.8
+ },
+ {
+  "rel": "12-lottery-admin/scripts/README.md",
+  "top": "12-lottery-admin",
+  "title": "采集脚本 — 目标站点数据抓取",
+  "summary": "用于从 m.sessionhd.com 后台抓取菜单结构、页面截图、接口 HAR，供 1:1 还原使用。",
+  "lines": 43,
+  "kb": 1.2
+ },
+ {
+  "rel": "13-red-gold-lottery/README.md",
+  "top": "13-red-gold-lottery",
+  "title": "红金年会抽奖大屏复刻版",
+  "summary": "根据上传视频中的画面独立重写，不是原作者未公开源代码。",
+  "lines": 22,
+  "kb": 0.6
+ },
+ {
+  "rel": "14-purple-lottery/README.md",
+  "top": "14-purple-lottery",
+  "title": "紫色星空互动抽奖大屏（视频效果复刻版）",
+  "summary": "这是根据用户提供的视频画面独立重做的可运行前端项目，不是原游戏的官方/未公开源代码。",
+  "lines": 45,
+  "kb": 1.0
+ }
+]

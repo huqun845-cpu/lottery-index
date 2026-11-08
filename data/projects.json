@@ -1,0 +1,1311 @@
+[
+ {
+  "name": "choujiang-core-go",
+  "cn": "抽奖后端",
+  "tag": "服务端 / Go",
+  "what": "整个自研体系唯一的后端。管活动、名单、奖项、轮次、中奖、二维码和配置下发。",
+  "inside": [
+   "`server-go/` Go 主程序，13 个 internal 包",
+   "`server-go/internal/mirror/` 思讯 API 镜像层，265 文件 8.1 万行，占后端 59%",
+   "`server-go/internal/store/migrations/0001_init.sql` 全部建表语句",
+   "`shared/games.json` 玩法清单，`check_games.py` 校验脚本",
+   "`tools/` 69 个审计脚本（权限探测、并发、会话）",
+   "`scripts/` 部署、演示、e2e、工作流"
+  ],
+  "stack": [
+   "Go 1.27.1，模块名 `shule-admin`",
+   "SQLite，用 `modernc.org/sqlite`（纯 Go，无 CGO）",
+   "Windows 端用 `jchv/go-winloader` + WebView2 宿主"
+  ],
+  "entry": [
+   "`server-go/main.go`（105 行）",
+   "`internal/web/` 路由与权限",
+   "`internal/store/migrations/0001_init.sql`"
+  ],
+  "run": "`cd server-go && go run .`　需要先准备 SQLite 空库，首次启动自动迁移",
+  "worth": [
+   "8 张表的数据模型，含 3 条硬约束：同奖项同一人只中一次、抽奖请求幂等、中奖可撤销",
+   "`raw_json` 字段是迁移期安全网，字段没确认前不丢源数据",
+   "`pyrand` 包说明随机数要和某个 Python 实现对齐，否则历史中奖对不上"
+  ],
+  "pitfall": [
+   "`mirror` 占 59% 代码，是为老前端做的兼容层。重写前端就不需要它，别一上来就照抄",
+   "`desktop_*.go` 有 `_windows` / `_other` 两份，是平台条件编译",
+   "`rsrc_windows_*.syso` 是 Windows 资源，mac 上编译不到，别误删"
+  ],
+  "related": [
+   "choujiang-docs",
+   "choujiang-admin-vue"
+  ],
+  "files": 1129,
+  "mb": 20.057131,
+  "paths": [
+   "01-核心-抽奖系统-干净版/server-go",
+   "01-核心-抽奖系统-干净版/shared",
+   "01-核心-抽奖系统-干净版/tools",
+   "01-核心-抽奖系统-干净版/scripts"
+  ],
+  "local": "/Users/a123/lottery-repos/choujiang-core-go",
+  "url": "https://github.com/huqun845-cpu/choujiang-core-go"
+ },
+ {
+  "name": "choujiang-screen-web",
+  "cn": "大屏运行时",
+  "tag": "前端 / 55 个玩法",
+  "what": "用户看到的所有抽奖动画。55 个玩法页面共用一套壳，靠 `gametype` 分流。",
+  "inside": [
+   "`05-素材库/运行时-www/screen/` 55 个玩法目录，每个一个 `index.html`",
+   "`static/js/screen/` 玩法逻辑（require.js 模块）",
+   "`static/css/screen/` 样式",
+   "`_api/*.json` 离线初始数据，`offline:true` 时读这里",
+   "`可浏览素材库/` 素材索引页，`启动仪式视频/` 视频素材"
+  ],
+  "stack": [
+   "jQuery + require.js，**没有构建步骤**",
+   "WebSocket 固定端口 8791（大屏与手机的唯一通道）",
+   "离线双模：`offline:true` 读 `_api`，`false` 走 HTTP 接口"
+  ],
+  "entry": [
+   "`screen/dzp/index.html` 里的 `XCV3Config` 就是一切玩法的入口",
+   "关键四字段：`gametype` / `wsAddress` / `offline` / `staticurl`"
+  ],
+  "run": "任意静态服务器指向 `运行时-www/` 即可打开任意玩法",
+  "worth": [
+   "一个玩法最小只有 4 个文件：HTML 壳 + 玩法 JS + CSS + `_api` 数据",
+   "55 个玩法里有 16 个竞速页互相相似度 1.6%–14%，说明是独立实现不是同源",
+   "`cjx` 与 `zjd` 只差 68 行（3.5%）"
+  ],
+  "pitfall": [
+   "16 个竞速玩法（airplane/bike/car/horse 等）**不在思讯 97 个清单里**，是另一条血脉",
+   "`_api` 里的手机号全是 `138000000xx` 假号，别拿它测抽奖去重逻辑"
+  ],
+  "related": [
+   "choujiang-core-go",
+   "games-e-prod"
+  ],
+  "files": 939,
+  "mb": 41.763797,
+  "paths": [
+   "01-核心-抽奖系统-干净版/05-素材库"
+  ],
+  "local": "/Users/a123/lottery-repos/choujiang-screen-web",
+  "url": "https://github.com/huqun845-cpu/choujiang-screen-web"
+ },
+ {
+  "name": "choujiang-admin-vue",
+  "cn": "管理后台三套",
+  "tag": "前端 / Vue3",
+  "what": "配活动、导名单、设奖项、现场控台、看中奖。",
+  "inside": [
+   "`admin-spa/` 主后台（30 项配置）",
+   "`stage-console/` 舞台控制台（现场抽奖操作台）",
+   "`web-console-site/` 站点前台（只有 assets / index.html / screenshots）",
+   "`admin-spa/console-lab/` 自研的控制台实验室模块"
+  ],
+  "stack": [
+   "Vue3 + Vite + TypeScript + Pinia",
+   "UI 用 `naive-ui`，图标 `@iconify/vue`，图表 `echarts`",
+   "底座是开源模板 **soybean-admin**（`package.json` 的 name 还叫这个名字）",
+   "路由用 `@elegant-router/vue` 自动生成"
+  ],
+  "entry": [
+   "`admin-spa/src/service/` 接口层（换后端只改这里）",
+   "`admin-spa/src/router/`（自动生成，别手改）",
+   "`stage-console/index.html`"
+  ],
+  "run": "`cd admin-spa && pnpm i && pnpm dev`　三套各自独立构建",
+  "worth": [
+   "套壳思路：登录/权限/菜单/主题/i18n 模板全给了，复刻时不要重写",
+   "接口契约集中在 `service/`，这是唯一需要改的层",
+   "三套前端共用一个后端，`stage-console` 才是现场真正用的那个"
+  ],
+  "pitfall": [
+   "`@elegant-router` 是自动路由，找页面去 `views/`，别去 `router/`",
+   "模板自带 i18n 但**不是多语种系统**，只是模板默认能力",
+   "`stage-console` 和 `admin-spa` 都会连大屏 ws，同时连同一活动会抢连接"
+  ],
+  "related": [
+   "choujiang-core-go"
+  ],
+  "files": 571,
+  "mb": 27.411069,
+  "paths": [
+   "01-核心-抽奖系统-干净版/admin-spa",
+   "01-核心-抽奖系统-干净版/stage-console",
+   "01-核心-抽奖系统-干净版/web-console-site"
+  ],
+  "local": "/Users/a123/lottery-repos/choujiang-admin-vue",
+  "url": "https://github.com/huqun845-cpu/choujiang-admin-vue"
+ },
+ {
+  "name": "choujiang-native-qt",
+  "cn": "桌面端",
+  "tag": "原生 / C++ Qt6",
+  "what": "不依赖浏览器的原生大屏程序，一套程序跑所有玩法。",
+  "inside": [
+   "`src/` 第一代静态插件：`game_airplane.cpp` `game_dzp.cpp` 等",
+   "`plugins/<slug>/` 第二代插件：清单 + 大屏绘制 + 专属 UI 放同一目录",
+   "`assets/` `brand/` 素材与品牌，`tests/` 测试，`tools/` 构建工具",
+   "`packaging/` 打包：`build_installer.py` `make_icons.py` `pack_standalone_win.py`"
+  ],
+  "stack": [
+   "CMake ≥ 3.21，C++17，`CMAKE_AUTOMOC ON`",
+   "**Qt6 ≥ 6.5**，组件：Widgets / Network / Multimedia / **WebSockets**",
+   "产物 `ShuleLottery`，macOS bundle 名「导入抽奖·原生版」"
+  ],
+  "entry": [
+   "`CMakeLists.txt`（两代插件的注册方式都写在这里）",
+   "`src/game_plugin.cpp` 插件基类",
+   "`build-mac.command` / `build-windows.ps1`"
+  ],
+  "run": "mac：`./build-mac.command`　Win：`powershell build-windows.ps1`",
+  "worth": [
+   "`CONFIGURE_DEPENDS` + GLOB：新增 `plugins/<slug>/` **不用改构建配置**",
+   "两代插件并存，老的不删新的加，是渐进重构的范本",
+   "桌面端和 Web 端共用同一个 ws 端口 8791，协议一致"
+  ],
+  "pitfall": [
+   "Homebrew 的 Qt6 把 WebSockets 拆成独立 formula，`find_package(Qt6 COMPONENTS WebSockets)` 会失败，必须显式加路径",
+   "`rsrc_windows_*.syso` 在 mac 上编译不到，别误删"
+  ],
+  "related": [
+   "choujiang-screen-web",
+   "stargather-v2"
+  ],
+  "files": 127,
+  "mb": 12.748456,
+  "paths": [
+   "01-核心-抽奖系统-干净版/native-qt",
+   "01-核心-抽奖系统-干净版/packaging"
+  ],
+  "local": "/Users/a123/lottery-repos/choujiang-native-qt",
+  "url": "https://github.com/huqun845-cpu/choujiang-native-qt"
+ },
+ {
+  "name": "choujiang-docs",
+  "cn": "方案文档库",
+  "tag": "文档 / 107 份",
+  "what": "整个项目踩过的所有坑，都写在这里。**动手前先读它。**",
+  "inside": [
+   "`docs/` 107 份文档，含 `AI-避坑手册.md` `AI-使用指南.md`",
+   "`ARCHITECTURE-COLLISION-2026-10-29.md` 架构冲突分析",
+   "`AUDIT-*` 系列：后端后台安全、数据库双轨现状、需求基线对照",
+   "`CONTRACTS.md` 接口契约，`BUILD-QT.md` 构建说明",
+   "`CLEANUP-旧副本清理-2026-11-06.md` 清理记录"
+  ],
+  "stack": [
+   "纯 Markdown",
+   "按 `日期-主题` 命名，可追溯"
+  ],
+  "entry": [
+   "`docs/AI-避坑手册.md`",
+   "`docs/CONTRACTS.md`",
+   "`docs/ARCHITECTURE-COLLISION-2026-10-29.md`"
+  ],
+  "run": "直接读，或 `grep -r 关键词 docs/`",
+  "worth": [
+   "426 个文件里，文档是最便宜的知识转移方式",
+   "避坑手册里的每一条都是有人真踩过",
+   "架构冲突文档说明了为什么会有双轨数据库"
+  ],
+  "pitfall": [
+   "文档有日期，会和代码脱节。以代码为准，文档当线索"
+  ],
+  "related": [
+   "choujiang-core-go"
+  ],
+  "files": 426,
+  "mb": 79.663217,
+  "paths": [
+   "01-核心-抽奖系统-干净版/docs"
+  ],
+  "local": "/Users/a123/lottery-repos/choujiang-docs",
+  "url": "https://github.com/huqun845-cpu/choujiang-docs"
+ },
+ {
+  "name": "choujiang-history-archive",
+  "cn": "历史备份",
+  "tag": "归档 / 6 个快照",
+  "what": "2026-11-06 那一刻的 6 个历史状态，用于回滚和对照。",
+  "inside": [
+   "`Archive-shule-cleanup-20261019`",
+   "`Archive-shule-native-qt-phase1-backup-20261016`（Qt 第一阶段）",
+   "`Desktop-20261024-旗舰控制台还原备份`",
+   "`Desktop-shule-wip-backup-20261026-1112`",
+   "`agent-worktrees-shule-live-mode`",
+   "`抽奖系统-干净源码-20261029`、`抽奖系统-归档`"
+  ],
+  "stack": [
+   "混合：tar.gz / zip / 目录快照"
+  ],
+  "entry": [
+   "各快照目录的 README（如有）"
+  ],
+  "run": "只解压对照，不建议运行",
+  "worth": [
+   "每个快照记录了一个决策点，能回答「当时为什么这么改」",
+   "Qt 第一阶段备份是理解插件架构演进的关键"
+  ],
+  "pitfall": [
+   "快照之间大量重复，体积 307 MB 里有相当部分冗余",
+   "单文件超过 100 MB 的已排除（242 MB 的 `qt-artifacts-evidence.tar.zst` 留在原目录）"
+  ],
+  "related": [
+   "choujiang-native-qt"
+  ],
+  "files": 294,
+  "mb": 320.776307,
+  "paths": [
+   "02-历史备份-干净版-20261106"
+  ],
+  "local": "/Users/a123/lottery-repos/choujiang-history-archive",
+  "url": "https://github.com/huqun845-cpu/choujiang-history-archive"
+ },
+ {
+  "name": "desktop-local-test",
+  "cn": "桌面端界面留证",
+  "tag": "截图 / 界面证据",
+  "what": "**不是可执行包，是 11 张界面截图。**记录 2026-11-04/05 桌面端当时的真实样子。",
+  "inside": [
+   "根目录 5 张：`当前首页-2026-11-05.png` `返回首页` `点击抽奖控制` `8777-驾驶舱` `home.png`",
+   "`gamecfg.png` 玩法配置页，`decor.png` 装饰页",
+   "`prod/` 三张（home / gamecfg / decor，生产态）",
+   "`aud/backup-page.png` 备份页"
+  ],
+  "stack": [
+   "PNG 截图"
+  ],
+  "entry": [
+   "`当前首页-2026-11-05.png`",
+   "`prod/` 下同名三张（与根目录对照）"
+  ],
+  "run": "看图，不需要运行",
+  "worth": [
+   "**根目录 vs `prod/` 同名文件是「开发态 vs 生产态」的对照**，比文字描述可靠",
+   "带日期命名，能定位到具体版本"
+  ],
+  "pitfall": [
+   "只有图，没有可执行文件；我一开始按库名以为是安装包，核实后更正了",
+   "截图不能证明功能，只能证明界面"
+  ],
+  "related": [
+   "choujiang-native-qt"
+  ],
+  "files": 11,
+  "mb": 5.73745,
+  "paths": [
+   "06-桌面本地测试-20261104"
+  ],
+  "local": "/Users/a123/lottery-repos/desktop-local-test",
+  "url": "https://github.com/huqun845-cpu/desktop-local-test"
+ },
+ {
+  "name": "recon-siixun-hudong",
+  "cn": "思讯逆向",
+  "tag": "分析 / Python",
+  "what": "不是为了跑，是为了看清对手。思讯互动的路由、chunk、97 篇玩法手册、缺口分档全在这。",
+  "inside": [
+   "`app.py` `harvest.py` `drive.py` `cipher.py` `hook_crypto.py` 分析工具链",
+   "`browser_daemon.py` + `daemon.json` CDP 常驻浏览器",
+   "`capture/` 抓包数据（10 个 sqlite）",
+   "`data/sites/原站大屏/sec/玩法手册.md` 97 个玩法，每个一节",
+   "`sec/大屏端对照表.md` 思讯路由 ↔ 我方目录（26 条）",
+   "`sec/玩法缺口分档表.md` 64 个缺口，A/B/C/D 四档，合计 104.5 人天"
+  ],
+  "stack": [
+   "Python + CDP（Chrome DevTools Protocol）",
+   "MinHash（128 排列，k=7 shingle）做 chunk 相似度",
+   "抓包落 SQLite"
+  ],
+  "entry": [
+   "`data/sites/原站大屏/sec/玩法手册.md`（最该读的一份）",
+   "`sec/玩法缺口分档表.md`",
+   "`app.py`"
+  ],
+  "run": "读文档为主；重跑采集需要 Playwright 环境和站点可达",
+  "worth": [
+   "**chunk 相似度中位数只有 5.5%**（5,436 对里只有 14 对 ≥80%）→ 思讯是 97 份独立实现，不是「一个引擎渲染 97 玩法」",
+   "SPA 壳 `scr-index.js` 216 KB + 86 个命名路由 + 104 个 chunk（5.9 MB）",
+   "玩法手册是唯一的中文名 ↔ 代码桥"
+  ],
+  "pitfall": [
+   "不要用 chunk 相似度去推「哪些玩法能复用」，中位数 5.5% 已经证明它们互不相干",
+   "中文名里含中点符号，正则要按「三个井号 + 名称 + 中点 + 反引号代码」切，直接按中点 split 会切错",
+   "`data/sites/*/profile/` 是浏览器配置（Cookies / Login Data），已删除，重跑会产生新的"
+  ],
+  "related": [
+   "choujiang-screen-web",
+   "xingju-game-lib"
+  ],
+  "files": 917,
+  "mb": 45.303547,
+  "paths": [
+   "03-逆向分析-思讯-hudong-recon"
+  ],
+  "local": "/Users/a123/lottery-repos/recon-siixun-hudong",
+  "url": "https://github.com/huqun845-cpu/recon-siixun-hudong"
+ },
+ {
+  "name": "prototype-screen-ui",
+  "cn": "大屏 UI 原型",
+  "tag": "前端 / Vite",
+  "what": "不管业务，只做外观。大屏视觉复刻的试验田。",
+  "inside": [
+   "`vma/` 一个标准 Vite 应用（`index.html` + `src/` + `vite.config`）"
+  ],
+  "stack": [
+   "Vite + 现代前端"
+  ],
+  "entry": [
+   "`vma/index.html`",
+   "`vma/vite.config.*`"
+  ],
+  "run": "`cd vma && npm i && npm run dev`",
+  "worth": [
+   "大屏视觉的三要素在这里试：配色、字号层级、动效曲线",
+   "原型阶段快，但数值不是最终值"
+  ],
+  "pitfall": [
+   "原型里的间距字号是视觉稿转的，上线前要按真实分辨率（1920×1080 / 3840×2160）重校"
+  ],
+  "related": [
+   "choujiang-screen-web"
+  ],
+  "files": 770,
+  "mb": 28.445282,
+  "paths": [
+   "04-大屏UI原型-shule-ui"
+  ],
+  "local": "/Users/a123/lottery-repos/prototype-screen-ui",
+  "url": "https://github.com/huqun845-cpu/prototype-screen-ui"
+ },
+ {
+  "name": "stargather-v2",
+  "cn": "插件化宿主",
+  "tag": "前端 / 45 个插件",
+  "what": "另一种组织方式：不是 55 个页面，而是 1 个宿主 + N 个插件。",
+  "inside": [
+   "`plugins/` 45 个目录，其中 `_lottery-shared` `_lottery-3d-shared` `_game-shared` 是**共享包**（下划线打头）",
+   "20+ 个 `lottery-*` 业务插件",
+   "单个插件内部固定四件套：`engine.js`（逻辑）+ `gohudong-screen.jsx`（大屏）+ `score-game.js`（计分）+ `ui.jsx`（后台 UI）",
+   "`server/` 后端，`migrations/` 数据库迁移，`tests/` 测试"
+  ],
+  "stack": [
+   "Node + Vite，前后端同仓",
+   "Three.js 走 `_lottery-3d-shared` 封装"
+  ],
+  "entry": [
+   "`plugins/` 下任意一个插件的 `engine.js`",
+   "`vite.config.js`",
+   "`server/`"
+  ],
+  "run": "`npm i && npm run dev`（`package.json` 里有完整 scripts）",
+  "worth": [
+   "**一个插件同时提供四件东西**：逻辑、大屏、计分、后台 UI —— 比「一个玩法一个 HTML」高一层抽象",
+   "把玩法从「页面」变成「产品」的关键就在这四件套"
+  ],
+  "pitfall": [
+   "扫描插件时必须跳过 `_` 开头的目录，否则会把共享包当业务插件加载"
+  ],
+  "related": [
+   "choujiang-native-qt",
+   "games-a-fun"
+  ],
+  "files": 473,
+  "mb": 17.002472,
+  "paths": [
+   "05-stargather-v2"
+  ],
+  "local": "/Users/a123/lottery-repos/stargather-v2",
+  "url": "https://github.com/huqun845-cpu/stargather-v2"
+ },
+ {
+  "name": "xingju-system-src",
+  "cn": "星聚整站",
+  "tag": "全栈 / Express + React",
+  "what": "一套完整的活动平台服务端 + 前端，技术栈最现代的一份。",
+  "inside": [
+   "`server/index.js` 入口，44 项顶层配置",
+   "`server/engine.js` 玩法引擎，`hub.js` WebSocket 中枢",
+   "`server/store.js` 存储、`backup.js` 备份、`avatars.js` 头像、`assets.js` 素材",
+   "`server/people.js` `roster.js` `namelist.js` `listrounds.js` `bless.js`",
+   "`public/` 前端静态资源（assets / game-previews / game-thumbs / fonts）",
+   "`Dockerfile` + `deploy/`，`audit.html` 审计页"
+  ],
+  "stack": [
+   "Node + **Express**",
+   "前端 **React + three**（3D）",
+   "`exceljs` / `xlsx` 处理 Excel，`jszip` / `archiver` 打离线包，`qrcode` 生成码",
+   "4 个 SQLite 分片"
+  ],
+  "entry": [
+   "`server/index.js`",
+   "`server/engine.js`",
+   "`server/hub.js`",
+   "`package.json` 的 scripts"
+  ],
+  "run": "`npm i && npm run doctor:dev && npm run dev`　生产 `npm run build && npm start`",
+  "worth": [
+   "`engine.js` 算 + `hub.js` 推，职责切得很干净",
+   "`freeze:dist` 冻结构建产物，`pack:offline` 生成离线包 —— 重视可复现交付",
+   "`backup.js` 整库导出，是「数据可带走」的设计"
+  ],
+  "pitfall": [
+   "4 个 sqlite 说明数据分了片，别假设是一个库",
+   "先跑 `doctor:dev` 环境自检再跑 `dev`",
+   "560 MB 里大量是 `public/` 素材，克隆慢"
+  ],
+  "related": [
+   "xingju-game-lib",
+   "xingju-demo-data"
+  ],
+  "files": 1852,
+  "mb": 723.942525,
+  "paths": [
+   "07-星聚互动-完整系统/01-系统源码"
+  ],
+  "local": "/Users/a123/lottery-repos/xingju-system-src",
+  "url": "https://github.com/huqun845-cpu/xingju-system-src"
+ },
+ {
+  "name": "xingju-demo-data",
+  "cn": "星聚演示库",
+  "tag": "数据 / SQLite",
+  "what": "4 万个文件的演示数据库。不是给人读的，是给程序跑的。",
+  "inside": [
+   "`02-演示数据/演示数据/` 全部内容"
+  ],
+  "stack": [
+   "SQLite"
+  ],
+  "entry": [
+   "`演示数据/` 下的 `.sqlite` 文件"
+  ],
+  "run": "直接拷进 `xingju-system-src` 对应目录，用来本地跑通",
+  "worth": [
+   "拿它当**测试数据集**：4 万个文件足够压出性能问题和边界 bug",
+   "单独成库的原因就是它会把任何仓拖慢"
+  ],
+  "pitfall": [
+   "是演示数据，不是真实业务数据，别拿来验证业务规则"
+  ],
+  "related": [
+   "xingju-system-src"
+  ],
+  "files": 40024,
+  "mb": 676.03029,
+  "paths": [
+   "07-星聚互动-完整系统/02-演示数据"
+  ],
+  "local": "/Users/a123/lottery-repos/xingju-demo-data",
+  "url": "https://github.com/huqun845-cpu/xingju-demo-data"
+ },
+ {
+  "name": "xingju-game-lib",
+  "cn": "星聚游戏源码库",
+  "tag": "源码 / 32 万行",
+  "what": "星聚互动的游戏实现合集，按「代」和「媒介」分 12 档。**最值得逐个读的一份材料。**",
+  "inside": [
+   "`01-年会版模块JS`、`02-原版平台JS`（`screen<code>.js` 一玩法一文件）",
+   "`03-Three.js引擎库`、`05-现代平台-3D引擎`、`06-现代平台-其他引擎`",
+   "`04-现代平台-抽奖变体`、`07-手机端交互`（大屏的另一半）",
+   "`08-3D音效`、`09-互动生产版`、`12-已停用玩法`、`13-游戏补齐`",
+   "`catalog.js` `assets.js` 元数据索引，先读这两个"
+  ],
+  "stack": [
+   "JavaScript 为主，含 Three.js 3D"
+  ],
+  "entry": [
+   "`catalog.js`",
+   "`assets.js`",
+   "`13-游戏补齐/开发清单.md`"
+  ],
+  "run": "读为主。压缩代码先 `npx prettier --write` 再读",
+  "worth": [
+   "`02-原版平台JS/screen<code>.js` 的 `<code>` 和 `09/admin/config<code>.html`、`10/K/pages/<code>.html` **完全对齐** —— 这是把 2 GB 材料串起来的唯一线索",
+   "32 万行里真正的游戏逻辑只占一小部分，大头是第三方库"
+  ],
+  "pitfall": [
+   "`12-已停用玩法` 不要照着做，可能是踩过坑才停的",
+   "`13-游戏补齐` 的清单和实际代码不一定同步，以代码为准",
+   "压缩产物直接读会疯，先格式化"
+  ],
+  "related": [
+   "shule-site-mirror",
+   "shule-source-code"
+  ],
+  "files": 471,
+  "mb": 40.953463,
+  "paths": [
+   "07-星聚互动-完整系统/05-游戏源码库"
+  ],
+  "local": "/Users/a123/lottery-repos/xingju-game-lib",
+  "url": "https://github.com/huqun845-cpu/xingju-game-lib"
+ },
+ {
+  "name": "xingju-archive",
+  "cn": "星聚交付归档",
+  "tag": "归档 / 交付物",
+  "what": "交付产物和历史归档，含校验和验收工具。",
+  "inside": [
+   "`03-交付产物/`：`SHA256SUMS.txt` `Windows-验收清单.md` `交付清单.md` `说明.txt`",
+   "`04-历史与独有归档/`：`git-bundle` `版本演示数据库` `独有脚本` `验收工具-xjverify`"
+  ],
+  "stack": [
+   "混合：文档 + git bundle + 数据库"
+  ],
+  "entry": [
+   "`03-交付产物/交付清单.md`",
+   "`Windows-验收清单.md`"
+  ],
+  "run": "只读。`git-bundle` 可以 `git clone <bundle>` 恢复历史",
+  "worth": [
+   "`SHA256SUMS.txt` + 验收清单 = 交付可复现的完整证据链",
+   "`xjverify` 是自研验收工具，比口头说「测过了」强"
+  ],
+  "pitfall": [
+   "改任何文件后 `SHA256SUMS.txt` 就失效，要重算"
+  ],
+  "related": [
+   "xingju-system-src"
+  ],
+  "files": 63,
+  "mb": 344.159322,
+  "paths": [
+   "07-星聚互动-完整系统/03-交付产物",
+   "07-星聚互动-完整系统/04-历史与独有归档"
+  ],
+  "local": "/Users/a123/lottery-repos/xingju-archive",
+  "url": "https://github.com/huqun845-cpu/xingju-archive"
+ },
+ {
+  "name": "xingju-magiccube",
+  "cn": "魔方大屏效果",
+  "tag": "素材 / 视觉验证",
+  "what": "魔方类 3D 大屏效果的比对材料。**不是代码，是证据。**",
+  "inside": [
+   "`3D抽奖-参考9风格形态总览.png` 参考侧",
+   "`对照-参考49vs我们26-重录后.png` 我方 26 版 vs 参考 49 版",
+   "`108帧自动检测联系表.png` 逐帧检测",
+   "`galaxy-run.mp4` 运行录像，`run-4.png` 单帧"
+  ],
+  "stack": [
+   "PNG 联系表 + MP4 录像"
+  ],
+  "entry": [
+   "`对照-默认风格-参考vs我们.png`"
+  ],
+  "run": "看图，不需要运行",
+  "worth": [
+   "这是「怎么证明复刻到位」的范本：录像 + 帧表 + 并排对照",
+   "108 帧自动检测比人眼看靠谱"
+  ],
+  "pitfall": [
+   "是视觉证据，不含可运行代码"
+  ],
+  "related": [
+   "prototype-screen-ui"
+  ],
+  "files": 10,
+  "mb": 27.691759,
+  "paths": [
+   "08-星聚互动-魔方效果"
+  ],
+  "local": "/Users/a123/lottery-repos/xingju-magiccube",
+  "url": "https://github.com/huqun845-cpu/xingju-magiccube"
+ },
+ {
+  "name": "shule-site-mirror",
+  "cn": "蜀乐整站镜像",
+  "tag": "镜像 / HTML",
+  "what": "把蜀乐互动的线上站整个抓下来，能离线跑。**80 个配置页是宝。**",
+  "inside": [
+   "`hd.shulehudong.com/` 原始站点镜像",
+   "`admin/config<game>.html` **80 个玩法的后台配置页**",
+   "`admin-pages/` 后台其他页",
+   "`api-data/` 接口数据快照",
+   "`游戏全品类协议总览.html`（36 KB）",
+   "`游戏配置字段总览.html`（**76 KB，把所有玩法的配置字段汇总了**）",
+   "`游戏全链路流程图-飞机大战.html`"
+  ],
+  "stack": [
+   "HTML / JavaScript 纯静态镜像"
+  ],
+  "entry": [
+   "`游戏配置字段总览.html`（做后台表单的最快路径）",
+   "`admin/configdzp.html` 等任意一个配置页"
+  ],
+  "run": "任意静态服务器指向该目录",
+  "worth": [
+   "**76 KB 的字段总览比反推接口快十倍**：写一个 JSON Schema 表单生成器，就能覆盖 80 个玩法",
+   "每个 `config<code>.html` 就是该玩法的完整参数集"
+  ],
+  "pitfall": [
+   "`admin/config*.html` 里硬编码了售后电话（548 个文件都有），是公开号码不是隐私，但别原样抄进自己的产品",
+   "镜像里接口地址是绝对路径，换域名全线 404，要批量改",
+   "这是抓下来的，不是授权源码"
+  ],
+  "related": [
+   "shule-source-code",
+   "xingju-game-lib"
+  ],
+  "files": 1130,
+  "mb": 99.673304,
+  "paths": [
+   "09-蜀乐互动整站-hd-shulehudong"
+  ],
+  "local": "/Users/a123/lottery-repos/shule-site-mirror",
+  "url": "https://github.com/huqun845-cpu/shule-site-mirror"
+ },
+ {
+  "name": "games-a-fun",
+  "cn": "趣味游戏 24 项",
+  "tag": "前端 / 极简契约",
+  "what": "**整套材料里最干净的架构。**24 个玩法，每个 4 个文件，契约只有 6 个字段。",
+  "inside": [
+   "24 个玩法目录，命名 `编号-中文名（engine·交互）`",
+   "每目录固定 4 文件：`玩法.json` + `大屏·X.jsx` + `大屏·x.css` + `手机交互.jsx`",
+   "玩法如：灵蛇竞渡、万马奔腾、财源滚滚、水果忍者、消灭年兽、驱赶年兽"
+  ],
+  "stack": [
+   "React JSX（大屏与手机两端都是 JSX）",
+   "24 个玩法只用了 **4,190 行**，平均 175 行/个"
+  ],
+  "entry": [
+   "任意一个 `玩法.json`（全文 6 行）",
+   "对应目录的 `大屏·X.jsx` / `手机交互.jsx`"
+  ],
+  "run": "需要一个宿主来跑（本库只有玩法，没有宿主）",
+  "worth": [
+   "`玩法.json` 六字段：`engine`（引擎）、`view`（大屏视图）、`input`（手机交互）、`goal`（阈值）、`name`、`id`",
+   "**4,190 行做 24 个玩法 → 真正的逻辑在宿主和 input 库里，玩法里没有东西**",
+   "所以复刻顺序必须是先宿主、后玩法"
+  ],
+  "pitfall": [
+   "这些玩法**不在思讯 97 个清单里**，是另一条血脉，别按思讯标准核",
+   "JSX 文件名含 `·` 和中文，部分工具链会挂，复刻时建议改 ASCII"
+  ],
+  "related": [
+   "stargather-v2",
+   "games-b-instant"
+  ],
+  "files": 152,
+  "mb": 39.59637,
+  "paths": [
+   "10-游戏合集/A-趣味游戏"
+  ],
+  "local": "/Users/a123/lottery-repos/games-a-fun",
+  "url": "https://github.com/huqun845-cpu/games-a-fun"
+ },
+ {
+  "name": "games-b-instant",
+  "cn": "即开福利 10 项",
+  "tag": "前端 / 极简契约",
+  "what": "10 个轻量玩法，和 A 组同构，但新增了 8 种手机交互。",
+  "inside": [
+   "摇大奖（shake）、红包雨（rain）、刮刮乐（scratch）、喊红包（voice）",
+   "黄金矿工（miner）、码上有礼（claim）、恭喜发财（tap）",
+   "幸运大转盘（wheel）、开盲盒（box）、弹珠机（pinball）"
+  ],
+  "stack": [
+   "同 A 组的 4 文件契约",
+   "10 个玩法共 **1,123 行**，平均 112 行/个"
+  ],
+  "entry": [
+   "任意一个玩法目录"
+  ],
+  "run": "需要 A 组或自建宿主",
+  "worth": [
+   "`input` 扩展到 rain / scratch / voice / miner / claim / wheel / box / pinball 八种，是 A 组之外的新增",
+   "`scratch`（刮刮乐）必须用 Canvas 合成，不是 DOM",
+   "`voice`（喊红包）需要麦克风权限 + 音量检测"
+  ],
+  "pitfall": [
+   "`voice` 浏览器策略限制多，是最容易卡的一个",
+   "`scratch` 用 DOM 做不出来，别走弯路"
+  ],
+  "related": [
+   "games-a-fun"
+  ],
+  "files": 60,
+  "mb": 12.427167,
+  "paths": [
+   "10-游戏合集/B-即开福利"
+  ],
+  "local": "/Users/a123/lottery-repos/games-b-instant",
+  "url": "https://github.com/huqun845-cpu/games-b-instant"
+ },
+ {
+  "name": "games-c-annual",
+  "cn": "年会版玩法模块",
+  "tag": "前端 / Vue + JS",
+  "what": "年会场景的玩法模块，两端分开放。",
+  "inside": [
+   "`大屏玩法模块/`：`puzzle.js` `shake.js` `rating.js` `egg.js` `photowall.js` `esign.js` `money.js` `lucky.js` `yaohao.js` `msgwall.js` 等",
+   "`手机游戏组件/`：`GameView.vue` `Puzzle.vue` `Scratch.vue` `CanvasGame.vue`",
+   "`_运行时/` 运行时支撑"
+  ],
+  "stack": [
+   "大屏侧纯 JS 模块，手机侧 Vue 组件"
+  ],
+  "entry": [
+   "`大屏玩法模块/lucky.js`",
+   "`手机游戏组件/GameView.vue`"
+  ],
+  "run": "读代码，组装进自己的宿主",
+  "worth": [
+   "大屏（JS）与手机（Vue）**分目录放**，是一个清晰的分层示范",
+   "模块粒度小，适合当「玩法零件库」用"
+  ],
+  "pitfall": [
+   "`_运行时` 是外部依赖，缺它这些模块跑不起来"
+  ],
+  "related": [
+   "games-a-fun"
+  ],
+  "files": 67,
+  "mb": 1.463982,
+  "paths": [
+   "10-游戏合集/C-年会版·玩法模块"
+  ],
+  "local": "/Users/a123/lottery-repos/games-c-annual",
+  "url": "https://github.com/huqun845-cpu/games-c-annual"
+ },
+ {
+  "name": "games-d-original-js",
+  "cn": "原版平台 JS",
+  "tag": "源码 / 67 个文件",
+  "what": "原版平台里的 JS 文件摊平放，一玩法一文件。",
+  "inside": [
+   "`screenairplane.js` `screenanswerbs.js` `screenbigcj.js` `screenbike.js` 等 `screen<code>.js`",
+   "工具类：`anime.js` `TagCloud.js` `autoscroll.js` `bgscreen.js` `danmuku.js` `dragqr.js` `fulldm.js` `msgs.js` `rightboxslider.js`"
+  ],
+  "stack": [
+   "JavaScript + jQuery 插件"
+  ],
+  "entry": [
+   "`screen<code>.js` 里挑一个"
+  ],
+  "run": "读代码",
+  "worth": [
+   "`screen<code>.js` 的 `<code>` 与 `xingju-game-lib/02` 重复，读一份即可",
+   "文件名即路由名，是定位玩法最快的索引"
+  ],
+  "pitfall": [
+   "与 `xingju-game-lib/02-原版平台JS` 内容重叠，别当两套"
+  ],
+  "related": [
+   "xingju-game-lib",
+   "shule-site-mirror"
+  ],
+  "files": 67,
+  "mb": 1.387147,
+  "paths": [
+   "10-游戏合集/D-原版平台JS"
+  ],
+  "local": "/Users/a123/lottery-repos/games-d-original-js",
+  "url": "https://github.com/huqun845-cpu/games-d-original-js"
+ },
+ {
+  "name": "games-e-prod",
+  "cn": "互动生产版",
+  "tag": "产物 / 压缩代码",
+  "what": "原版平台的生产构建产物。**没有源码结构，但可以当标准答案。**",
+  "inside": [
+   "`js/` 编译后的脚本（20.9 万行）",
+   "`css/` 样式",
+   "`audio/` 音频",
+   "`headimages/` 头像素材"
+  ],
+  "stack": [
+   "压缩后的 JS/CSS，无 sourcemap"
+  ],
+  "entry": [
+   "`js/` 下任意文件"
+  ],
+  "run": "当参照物，不改不跑",
+  "worth": [
+   "可以对照自己的实现，验证行为一致",
+   "压缩后仍有中文文案、接口路径、字段名，靠字符串常量定位"
+  ],
+  "pitfall": [
+   "变量名全是 a/b/c，没 sourcemap 只能靠字符串找",
+   "不要试图复刻，它是产物不是源"
+  ],
+  "related": [
+   "choujiang-screen-web"
+  ],
+  "files": 248,
+  "mb": 19.984751,
+  "paths": [
+   "10-游戏合集/E-互动生产版"
+  ],
+  "local": "/Users/a123/lottery-repos/games-e-prod",
+  "url": "https://github.com/huqun845-cpu/games-e-prod"
+ },
+ {
+  "name": "games-f-standalone",
+  "cn": "独立抽奖 6 项",
+  "tag": "前端 / 单页",
+  "what": "6 个可以单独打开就用的抽奖页，最小的完整形态。",
+  "inside": [
+   "`01-扇形转盘抽奖（滚动到中奖位）`",
+   "`02-扇形转盘抽奖（中奖项置顶）`",
+   "`03-头像球抽奖`",
+   "`04-新春盛典大屏抽奖`",
+   "`05-紫色抽奖复刻`",
+   "`06-红金抽奖复刻`"
+  ],
+  "stack": [
+   "原生 HTML + JS，14 个文件，0.2 MB"
+  ],
+  "entry": [
+   "各目录的 `index.html`"
+  ],
+  "run": "直接双击 `index.html`",
+  "worth": [
+   "同一个转盘的两种中奖呈现（滚动到中奖位 / 中奖项置顶），是很好的对照",
+   "体量极小，适合当学习入口"
+  ],
+  "pitfall": [
+   "无后端，数据写死"
+  ],
+  "related": [
+   "regold-lottery",
+   "purple-lottery"
+  ],
+  "files": 12,
+  "mb": 0.198066,
+  "paths": [
+   "10-游戏合集/F-独立抽奖游戏"
+  ],
+  "local": "/Users/a123/lottery-repos/games-f-standalone",
+  "url": "https://github.com/huqun845-cpu/games-f-standalone"
+ },
+ {
+  "name": "games-g-demo-assets",
+  "cn": "演示素材 45 项",
+  "tag": "素材 / 录像",
+  "what": "45 个玩法的演示录像与截图，按玩法中文名分目录。",
+  "inside": [
+   "`G-组素材与游戏映射.md`（**素材目录 ↔ 玩法路由的映射表**）",
+   "`3D抽奖` `3D签到` `3D赛马` `一跃千里` `上墙` `业绩报单` `击鼓纳福`",
+   "`切水果` `动感摇一摇` `卡通摇一摇` `地图签到` `大屏菜单` `大转盘抽奖` 等"
+  ],
+  "stack": [
+   "视频 / 图片素材为主"
+  ],
+  "entry": [
+   "`G-组素材与游戏映射.md`（先读它）"
+  ],
+  "run": "看图看录像",
+  "worth": [
+   "**映射表是把素材对回玩法的唯一索引**",
+   "做复刻时用它对照「原版长什么样」"
+  ],
+  "pitfall": [
+   "只是素材，不含代码",
+   "447 MB，占了整个归档的一大块"
+  ],
+  "related": [
+   "choujiang-screen-web"
+  ],
+  "files": 181,
+  "mb": 235.013392,
+  "paths": [
+   "10-游戏合集/G-玩法演示素材"
+  ],
+  "local": "/Users/a123/lottery-repos/games-g-demo-assets",
+  "url": "https://github.com/huqun845-cpu/games-g-demo-assets"
+ },
+ {
+  "name": "games-h-dice",
+  "cn": "骰子游戏 4 套",
+  "tag": "全栈 / Telegram Bot",
+  "what": "4 个围绕 Telegram 骰子做的赌博类小系统。",
+  "inside": [
+   "`H-01-极速单骰（Telegram骰子机器人）`",
+   "`H-02-控TG骰子（Telegram骰子机器人）`",
+   "`H-03-旺博骰子`（含 `.env` / `index.js` / `routes/admin.js` / `config.js`）",
+   "`H-04-骰子争霸赛（机器人+Vue后台）` 最完整"
+  ],
+  "stack": [
+   "Node.js",
+   "Telegram Bot API（`sendDice` + `message.dice.value`）",
+   "H-04 带 Vue 后台 + MySQL"
+  ],
+  "entry": [
+   "`H-04/server/.env`（token 已脱敏为 `__REDACTED_TELEGRAM_BOT_TOKEN__`）",
+   "`H-03/index.js`",
+   "`H-04` 的 `routes/admin.js`"
+  ],
+  "run": "先申请自己的 Bot Token，填进 `.env`，`npm i && node index.js`",
+  "worth": [
+   "用 Telegram 的骰子动画做「不可篡改开奖」：点数由服务端定，客户端只见动画",
+   "H-04 是四套里唯一有完整后台的，当基线"
+  ],
+  "pitfall": [
+   "**Telegram 骰子是中心化信任，不是真随机**，宣传口径要注意",
+   "`.env` 里的真实 Bot Token 已脱敏，要自己申请",
+   "`MYSQL_PASSWORD=cscs` 是本地演示值"
+  ],
+  "related": [
+   "games-i-standalone"
+  ],
+  "files": 1334,
+  "mb": 43.093939,
+  "paths": [
+   "10-游戏合集/H-骰子游戏"
+  ],
+  "local": "/Users/a123/lottery-repos/games-h-dice",
+  "url": "https://github.com/huqun845-cpu/games-h-dice"
+ },
+ {
+  "name": "games-i-standalone",
+  "cn": "独立抽奖 4 套",
+  "tag": "全栈 / 多栈对照",
+  "what": "4 个能单独跑的年会抽奖系统，正好用来对比「轻量 vs 完整」。",
+  "inside": [
+   "`I-01-年会抽奖系统-nianhui` 原生 JS",
+   "`I-02-抽奖系统-Node复刻（3D抽奖+签到+弹幕）`",
+   "`I-03-年会抽奖-AnnualRaffle（Vue3+Pinia）`",
+   "`I-04-抽奖管理后台-lottery-admin` 前后端分离"
+  ],
+  "stack": [
+   "I-01 原生 JS",
+   "I-02 Node + 3D",
+   "I-03 Vue3 + Pinia",
+   "I-04 Node + 前端"
+  ],
+  "entry": [
+   "`I-03/src/`（最现代的一套）",
+   "`I-02` 的 3D 抽奖实现"
+  ],
+  "run": "各子目录独立 `npm i && npm run dev`（I-01 直接开 HTML）",
+  "worth": [
+   "**同一需求的四种实现**，是选型的活教材",
+   "I-03 是 Vue3 + Pinia 的规范写法，当基线最合适"
+  ],
+  "pitfall": [
+   "`I-04` 与独立库 `lottery-admin` **是同一份的两个拷贝**，别当两套做"
+  ],
+  "related": [
+   "lottery-admin",
+   "games-h-dice"
+  ],
+  "files": 363,
+  "mb": 6.592809,
+  "paths": [
+   "10-游戏合集/I-独立抽奖系统"
+  ],
+  "local": "/Users/a123/lottery-repos/games-i-standalone",
+  "url": "https://github.com/huqun845-cpu/games-i-standalone"
+ },
+ {
+  "name": "games-j-video-rebuild",
+  "cn": "视频重建抽奖",
+  "tag": "前端 / 视频驱动",
+  "what": "用视频做抽奖动画，而不是写动画代码。",
+  "inside": [
+   "`J-01-金色年会抽奖·视频重建版`：`index.html` `build_assets.py` `test.mjs`",
+   "`J-01/verification/` 验证截图（`live-check.png` `viewport-390.png` `result.png` `comparison.jpg`）",
+   "`J-02-特等奖Macbook·1比1视频回放`：`index.html` + `assets/game.mp4`"
+  ],
+  "stack": [
+   "HTML + Python 构建脚本 + 视频素材"
+  ],
+  "entry": [
+   "`J-01/index.html`",
+   "`J-01/verification/comparison.jpg`"
+  ],
+  "run": "直接开 `index.html`",
+  "worth": [
+   "**用视频代替动画代码**：效果上限高、开发成本低，但要处理「视频帧与结果对齐」",
+   "J-01 带完整 verification 截图，是「怎么证明做到了 1:1」的范本",
+   "`build_assets.py` 说明素材是构建出来的，不是手摆的"
+  ],
+  "pitfall": [
+   "视频播放时机和抽奖结果必须严格对齐，否则看起来像假抽",
+   "大视频文件会拖慢首屏"
+  ],
+  "related": [
+   "games-f-standalone"
+  ],
+  "files": 26,
+  "mb": 16.767926,
+  "paths": [
+   "10-游戏合集/J-视频重建抽奖网页"
+  ],
+  "local": "/Users/a123/lottery-repos/games-j-video-rebuild",
+  "url": "https://github.com/huqun845-cpu/games-j-video-rebuild"
+ },
+ {
+  "name": "shule-source-code",
+  "cn": "蜀乐大屏源码",
+  "tag": "源码 / 165 万行",
+  "what": "体积最大、代码最多的一档。80 个玩法页面 + 51 条路由。",
+  "inside": [
+   "`00-先读我-目录勿拆开.md`（**先读这个**）",
+   "`_真还原环境/`（**能跑的那一份**，`pages/<code>.html` 80 个页面）",
+   "`_后台还原环境/` `_效果预览/`",
+   "`_归档-旧骨架环境/` `_改动留痕_20261002/` `_线上一致性核对_20261002/`",
+   "`static（依赖库+游戏JS+样式）/`",
+   "`蜀乐互动整站镜像/`",
+   "`游戏路由清单.txt` 51 条路由"
+  ],
+  "stack": [
+   "JavaScript + 静态 HTML"
+  ],
+  "entry": [
+   "`00-先读我-目录勿拆开.md`",
+   "`_真还原环境/pages/<code>.html`",
+   "`游戏路由清单.txt`"
+  ],
+  "run": "静态服务器指向 `_真还原环境/`",
+  "worth": [
+   "**80 个页面 > 51 条路由**，说明有子页，别按路由数推算页面数",
+   "`_线上一致性核对_20261002` 是「这份和线上一不一样」的证据",
+   "1,655,740 行里绝大部分是第三方库"
+  ],
+  "pitfall": [
+   "目录名叫「**勿拆开**」，作者踩过拆散后对不上的坑，重组要保持相对路径",
+   "`_改动留痕_` 和 `_线上一致性核对_` 删了就没法验证一致性",
+   "只认 `_真还原环境`，其他四个是历史与核对记录"
+  ],
+  "related": [
+   "shule-site-mirror",
+   "xingju-game-lib"
+  ],
+  "files": 4362,
+  "mb": 809.659471,
+  "paths": [
+   "10-游戏合集/K-蜀乐互动大屏游戏源码"
+  ],
+  "local": "/Users/a123/lottery-repos/shule-source-code",
+  "url": "https://github.com/huqun845-cpu/shule-source-code"
+ },
+ {
+  "name": "import-games-full",
+  "cn": "导入抽奖完整复原",
+  "tag": "Python / 教学复原",
+  "what": "用 Python 从零复原「导入抽奖」，能跑，且有自测脚本。",
+  "inside": [
+   "`server.py` 1,295 行：HTTP + WebSocket 一体",
+   "`gamews.py` 240 行：游戏 ws 协议",
+   "`material.py` 497 行：素材处理",
+   "`xlsreader.py` 331 行：Excel 读取",
+   "`自测.py` **484 行：端到端自测**",
+   "`www/` 前端，`data/` 数据，`tools/` 工具，`docs/` 文档",
+   "`启动.command` 一键启动"
+  ],
+  "stack": [
+   "Python 标准库为主，无框架",
+   "前端 `www/`"
+  ],
+  "entry": [
+   "`自测.py`（**先读它，里面是验收标准**）",
+   "`gamews.py`（被识别出的核心协议）"
+  ],
+  "run": "双击 `启动.command`，或 `python3 server.py`",
+  "worth": [
+   "**484 行自测脚本是最值钱的部分**：把「什么算做对了」写成了代码",
+   "`server.py` 一个文件扛 HTTP + WS，说明这是教学复原不是产物",
+   "`gamews.py` 单独抽出，说明协议被识别为核心"
+  ],
+  "pitfall": [
+   "没有依赖清单文件，靠 import 反推",
+   "`启动.command` 里可能有硬编码路径"
+  ],
+  "related": [
+   "import-games-pixel",
+   "import-games-bare-js"
+  ],
+  "files": 666,
+  "mb": 164.178531,
+  "paths": [
+   "11-导入游戏/导入抽奖-完整复原"
+  ],
+  "local": "/Users/a123/lottery-repos/import-games-full",
+  "url": "https://github.com/huqun845-cpu/import-games-full"
+ },
+ {
+  "name": "import-games-pixel",
+  "cn": "导入抽奖像素级版",
+  "tag": "Python / 像素级",
+  "what": "同一个复原，但目标是「和原版像素级一致」，带哈希清单和验收截图。",
+  "inside": [
+   "`server.py` `gamews.py` `material.py` `xlsreader.py` 与完整版同名同结构",
+   "`MANIFEST.sha256` 全文件哈希",
+   "`验收截图/` 像素比对证据",
+   "`data/` `www/` `启动.command`"
+  ],
+  "stack": [
+   "Python + 前端 www/"
+  ],
+  "entry": [
+   "`MANIFEST.sha256`",
+   "`验收截图/`"
+  ],
+  "run": "同上，`启动.command`",
+  "worth": [
+   "**`MANIFEST.sha256` + 验收截图 = 可验证的「没改过、且一样」**",
+   "「像素级」是个可量化的验收标准，比『看起来一样』强"
+  ],
+  "pitfall": [
+   "改任何文件后 `MANIFEST.sha256` 就失效，要重算，否则它成了误导",
+   "截图比对要固定分辨率，否则结论不成立"
+  ],
+  "related": [
+   "import-games-full"
+  ],
+  "files": 318,
+  "mb": 45.800224,
+  "paths": [
+   "11-导入游戏/导入抽奖-像素级独立版"
+  ],
+  "local": "/Users/a123/lottery-repos/import-games-pixel",
+  "url": "https://github.com/huqun845-cpu/import-games-pixel"
+ },
+ {
+  "name": "import-games-bare-js",
+  "cn": "裸游戏纯 JS",
+  "tag": "前端 / 无后端",
+  "what": "剥到最干净的一版：没有后端，数据写死在 JS 里。",
+  "inside": [
+   "`index.html` 单页",
+   "`js/` 逻辑",
+   "`css/` 样式",
+   "`assets/` 素材",
+   "`MANIFEST.sha256`"
+  ],
+  "stack": [
+   "原生 HTML + JS"
+  ],
+  "entry": [
+   "`index.html`"
+  ],
+  "run": "直接双击 `index.html`",
+  "worth": [
+   "回答「这个玩法最少需要多少东西」—— 答案就是一个 HTML 目录",
+   "3,678 行，是最小的可运行样本"
+  ],
+  "pitfall": [
+   "抽奖结果是预设的，是演示不是逻辑，别当真实实现读"
+  ],
+  "related": [
+   "import-games-full"
+  ],
+  "files": 25,
+  "mb": 6.001314,
+  "paths": [
+   "11-导入游戏/导入抽奖-裸游戏-纯JS-2026-10-24"
+  ],
+  "local": "/Users/a123/lottery-repos/import-games-bare-js",
+  "url": "https://github.com/huqun845-cpu/import-games-bare-js"
+ },
+ {
+  "name": "lottery-admin",
+  "cn": "第三方抽奖后台",
+  "tag": "全栈 / 最小",
+  "what": "最小的完整前后端：47 个文件，1,679 行。",
+  "inside": [
+   "`backend/` 后端",
+   "`frontend/` 前端",
+   "`scripts/` 脚本",
+   "根 `package.json`（workspace 配置）"
+  ],
+  "stack": [
+   "Node.js 前后端分离"
+  ],
+  "entry": [
+   "根 `package.json`",
+   "`backend/` 入口"
+  ],
+  "run": "`npm i && npm run dev`",
+  "worth": [
+   "**0.2 MB 就能有一个完整抽奖后台**，改造成本低于重写",
+   "适合当「最小可用」的起点"
+  ],
+  "pitfall": [
+   "与 `games-i-standalone/I-04` 是同一份的两个拷贝"
+  ],
+  "related": [
+   "games-i-standalone"
+  ],
+  "files": 47,
+  "mb": 0.230698,
+  "paths": [
+   "12-lottery-admin"
+  ],
+  "local": "/Users/a123/lottery-repos/lottery-admin",
+  "url": "https://github.com/huqun845-cpu/lottery-admin"
+ },
+ {
+  "name": "regold-lottery",
+  "cn": "红金抽奖页",
+  "tag": "前端 / 单页",
+  "what": "红金风格的单页抽奖复刻。",
+  "inside": [
+   "`index.html`",
+   "`src/main.js`",
+   "`src/style.css`"
+  ],
+  "stack": [
+   "原生 JS + CSS"
+  ],
+  "entry": [
+   "`index.html`"
+  ],
+  "run": "直接双击",
+  "worth": [
+   "7 个文件讲清一个抽奖页的最小结构"
+  ],
+  "pitfall": [
+   "无后端，数据写死"
+  ],
+  "related": [
+   "games-f-standalone"
+  ],
+  "files": 5,
+  "mb": 0.010379,
+  "paths": [
+   "13-red-gold-lottery"
+  ],
+  "local": "/Users/a123/lottery-repos/regold-lottery",
+  "url": "https://github.com/huqun845-cpu/regold-lottery"
+ },
+ {
+  "name": "purple-lottery",
+  "cn": "紫色抽奖页",
+  "tag": "前端 / 单页",
+  "what": "紫色风格的单页抽奖复刻，与红金版对照。",
+  "inside": [
+   "`index.html`",
+   "`src/`",
+   "`package-lock.json`"
+  ],
+  "stack": [
+   "原生 JS + CSS"
+  ],
+  "entry": [
+   "`index.html`"
+  ],
+  "run": "直接双击",
+  "worth": [
+   "和红金版成对，适合对比配色与动效差异"
+  ],
+  "pitfall": [
+   "无后端，数据写死"
+  ],
+  "related": [
+   "regold-lottery"
+  ],
+  "files": 6,
+  "mb": 0.053283,
+  "paths": [
+   "14-purple-lottery"
+  ],
+  "local": "/Users/a123/lottery-repos/purple-lottery",
+  "url": "https://github.com/huqun845-cpu/purple-lottery"
+ }
+]

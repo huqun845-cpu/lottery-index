@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>抽奖系统档案</title>
+<meta name="description" content="本机抽奖与互动大屏系统的归档索引：33 个仓库、385 条玩法记录、64 个缺口分档">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <h1>抽奖系统档案</h1>
+    <p class="sub">本机全部抽奖 / 互动大屏材料的归档索引。内容在 33 个私有仓库里，这里只放目录。</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="wrap">
+    <button class="tab active" data-view="repos">仓库 <span class="n" id="n-repos"></span></button>
+    <button class="tab" data-view="plays">玩法 <span class="n" id="n-plays"></span></button>
+    <button class="tab" data-view="gaps">缺口 <span class="n" id="n-gaps"></span></button>
+    <button class="tab" data-view="docs">文档 <span class="n" id="n-docs"></span></button>
+  </div>
+</nav>
+
+<div class="searchbar">
+  <div class="wrap">
+    <input id="q" type="search" placeholder="搜索…" autocomplete="off">
+    <div class="chips" id="chips"></div>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="view-project" class="view hidden"></section>
+  <section id="view-repos" class="view"></section>
+  <section id="view-plays" class="view hidden"></section>
+  <section id="view-gaps" class="view hidden"></section>
+  <section id="view-docs" class="view hidden"></section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>归档本体：<code>lottery-systems-archive</code> · 索引由脚本生成，改内容请改归档再重跑生成器</p>
+    <p class="dim">内容多为第三方商业产品产物，仅供自查与复刻学习，不得商业分发。</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

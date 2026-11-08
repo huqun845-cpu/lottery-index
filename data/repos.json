@@ -1,0 +1,405 @@
+[
+ {
+  "name": "choujiang-core-go",
+  "group": "本体 01",
+  "desc": "抽奖系统 · Go 后端与工具链",
+  "lang": "Go / Python",
+  "files": 1129,
+  "mb": 20.1,
+  "paths": [
+   "01-核心-抽奖系统-干净版/server-go",
+   "01-核心-抽奖系统-干净版/shared",
+   "01-核心-抽奖系统-干净版/tools",
+   "01-核心-抽奖系统-干净版/scripts"
+  ],
+  "url": "https://github.com/huqun845-cpu/choujiang-core-go"
+ },
+ {
+  "name": "choujiang-screen-web",
+  "group": "本体 01",
+  "desc": "抽奖系统 · 大屏运行时（55 个玩法页面）",
+  "lang": "JavaScript / HTML",
+  "files": 939,
+  "mb": 41.8,
+  "paths": [
+   "01-核心-抽奖系统-干净版/05-素材库"
+  ],
+  "url": "https://github.com/huqun845-cpu/choujiang-screen-web"
+ },
+ {
+  "name": "choujiang-admin-vue",
+  "group": "本体 01",
+  "desc": "抽奖系统 · 管理后台三套（主后台 / 舞台控制台 / 站点前台）",
+  "lang": "Vue / TypeScript",
+  "files": 571,
+  "mb": 27.4,
+  "paths": [
+   "01-核心-抽奖系统-干净版/admin-spa",
+   "01-核心-抽奖系统-干净版/stage-console",
+   "01-核心-抽奖系统-干净版/web-console-site"
+  ],
+  "url": "https://github.com/huqun845-cpu/choujiang-admin-vue"
+ },
+ {
+  "name": "choujiang-native-qt",
+  "group": "本体 01",
+  "desc": "抽奖系统 · 桌面端与打包",
+  "lang": "C++ / Qt",
+  "files": 127,
+  "mb": 12.7,
+  "paths": [
+   "01-核心-抽奖系统-干净版/native-qt",
+   "01-核心-抽奖系统-干净版/packaging"
+  ],
+  "url": "https://github.com/huqun845-cpu/choujiang-native-qt"
+ },
+ {
+  "name": "choujiang-docs",
+  "group": "本体 01",
+  "desc": "抽奖系统 · 方案、对照与工作流文档",
+  "lang": "Markdown",
+  "files": 426,
+  "mb": 79.7,
+  "paths": [
+   "01-核心-抽奖系统-干净版/docs"
+  ],
+  "url": "https://github.com/huqun845-cpu/choujiang-docs"
+ },
+ {
+  "name": "choujiang-history-archive",
+  "group": "备份与逆向",
+  "desc": "抽奖系统 · 2026-11-06 历史状态备份（6 个快照包）",
+  "lang": "压缩包",
+  "files": 294,
+  "mb": 320.8,
+  "paths": [
+   "02-历史备份-干净版-20261106"
+  ],
+  "url": "https://github.com/huqun845-cpu/choujiang-history-archive"
+ },
+ {
+  "name": "recon-siixun-hudong",
+  "group": "备份与逆向",
+  "desc": "思讯互动 · 逆向分析（路由、chunk、玩法手册、缺口分档）",
+  "lang": "Python / JavaScript / 数据",
+  "files": 917,
+  "mb": 45.3,
+  "paths": [
+   "03-逆向分析-思讯-hudong-recon"
+  ],
+  "url": "https://github.com/huqun845-cpu/recon-siixun-hudong"
+ },
+ {
+  "name": "prototype-screen-ui",
+  "group": "外围件",
+  "desc": "大屏外观层 · UI 复刻原型",
+  "lang": "Vue / HTML",
+  "files": 770,
+  "mb": 28.4,
+  "paths": [
+   "04-大屏UI原型-shule-ui"
+  ],
+  "url": "https://github.com/huqun845-cpu/prototype-screen-ui"
+ },
+ {
+  "name": "stargather-v2",
+  "group": "外围件",
+  "desc": "抽奖系统 · 插件化宿主（20+ lottery 插件）",
+  "lang": "JavaScript",
+  "files": 473,
+  "mb": 17.0,
+  "paths": [
+   "05-stargather-v2"
+  ],
+  "url": "https://github.com/huqun845-cpu/stargather-v2"
+ },
+ {
+  "name": "desktop-local-test",
+  "group": "外围件",
+  "desc": "抽奖系统 · 桌面本地测试包",
+  "lang": "可执行",
+  "files": 11,
+  "mb": 5.7,
+  "paths": [
+   "06-桌面本地测试-20261104"
+  ],
+  "url": "https://github.com/huqun845-cpu/desktop-local-test"
+ },
+ {
+  "name": "xingju-system-src",
+  "group": "星聚互动",
+  "desc": "星聚互动 · 整站系统源码",
+  "lang": "JavaScript / TypeScript / Python",
+  "files": 1852,
+  "mb": 723.9,
+  "paths": [
+   "07-星聚互动-完整系统/01-系统源码"
+  ],
+  "url": "https://github.com/huqun845-cpu/xingju-system-src"
+ },
+ {
+  "name": "xingju-demo-data",
+  "group": "星聚互动",
+  "desc": "星聚互动 · 演示数据库（4 万个文件，仅供本地跑通）",
+  "lang": "SQLite",
+  "files": 40024,
+  "mb": 676.0,
+  "paths": [
+   "07-星聚互动-完整系统/02-演示数据"
+  ],
+  "url": "https://github.com/huqun845-cpu/xingju-demo-data"
+ },
+ {
+  "name": "xingju-game-lib",
+  "group": "星聚互动",
+  "desc": "星聚互动 · 游戏源码库（原版平台 JS、互动生产版、补齐档）",
+  "lang": "JavaScript",
+  "files": 471,
+  "mb": 41.0,
+  "paths": [
+   "07-星聚互动-完整系统/05-游戏源码库"
+  ],
+  "url": "https://github.com/huqun845-cpu/xingju-game-lib"
+ },
+ {
+  "name": "xingju-archive",
+  "group": "星聚互动",
+  "desc": "星聚互动 · 交付产物与历史归档",
+  "lang": "归档",
+  "files": 63,
+  "mb": 344.2,
+  "paths": [
+   "07-星聚互动-完整系统/03-交付产物",
+   "07-星聚互动-完整系统/04-历史与独有归档"
+  ],
+  "url": "https://github.com/huqun845-cpu/xingju-archive"
+ },
+ {
+  "name": "xingju-magiccube",
+  "group": "星聚互动",
+  "desc": "星聚互动 · 魔方大屏效果",
+  "lang": "素材/效果",
+  "files": 10,
+  "mb": 27.7,
+  "paths": [
+   "08-星聚互动-魔方效果"
+  ],
+  "url": "https://github.com/huqun845-cpu/xingju-magiccube"
+ },
+ {
+  "name": "shule-site-mirror",
+  "group": "蜀乐互动",
+  "desc": "蜀乐互动 · 整站镜像（前台 + 后台 + API 数据）",
+  "lang": "HTML / JavaScript",
+  "files": 1130,
+  "mb": 99.7,
+  "paths": [
+   "09-蜀乐互动整站-hd-shulehudong"
+  ],
+  "url": "https://github.com/huqun845-cpu/shule-site-mirror"
+ },
+ {
+  "name": "games-a-fun",
+  "group": "游戏合集",
+  "desc": "游戏合集 A · 趣味游戏（引擎·交互 24 项）",
+  "lang": "JavaScript",
+  "files": 152,
+  "mb": 39.6,
+  "paths": [
+   "10-游戏合集/A-趣味游戏"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-a-fun"
+ },
+ {
+  "name": "games-b-instant",
+  "group": "游戏合集",
+  "desc": "游戏合集 B · 即开福利（10 项）",
+  "lang": "JavaScript",
+  "files": 60,
+  "mb": 12.4,
+  "paths": [
+   "10-游戏合集/B-即开福利"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-b-instant"
+ },
+ {
+  "name": "games-c-annual",
+  "group": "游戏合集",
+  "desc": "游戏合集 C · 年会版玩法模块",
+  "lang": "JavaScript",
+  "files": 67,
+  "mb": 1.5,
+  "paths": [
+   "10-游戏合集/C-年会版·玩法模块"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-c-annual"
+ },
+ {
+  "name": "games-d-original-js",
+  "group": "游戏合集",
+  "desc": "游戏合集 D · 原版平台 JS",
+  "lang": "JavaScript",
+  "files": 67,
+  "mb": 1.4,
+  "paths": [
+   "10-游戏合集/D-原版平台JS"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-d-original-js"
+ },
+ {
+  "name": "games-e-prod",
+  "group": "游戏合集",
+  "desc": "游戏合集 E · 互动生产版",
+  "lang": "JavaScript",
+  "files": 248,
+  "mb": 20.0,
+  "paths": [
+   "10-游戏合集/E-互动生产版"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-e-prod"
+ },
+ {
+  "name": "games-f-standalone",
+  "group": "游戏合集",
+  "desc": "游戏合集 F · 独立抽奖游戏（6 项）",
+  "lang": "JavaScript",
+  "files": 12,
+  "mb": 0.2,
+  "paths": [
+   "10-游戏合集/F-独立抽奖游戏"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-f-standalone"
+ },
+ {
+  "name": "games-g-demo-assets",
+  "group": "游戏合集",
+  "desc": "游戏合集 G · 玩法演示素材（45 项）",
+  "lang": "素材",
+  "files": 181,
+  "mb": 235.0,
+  "paths": [
+   "10-游戏合集/G-玩法演示素材"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-g-demo-assets"
+ },
+ {
+  "name": "games-h-dice",
+  "group": "游戏合集",
+  "desc": "游戏合集 H · 骰子游戏（含机器人后台）",
+  "lang": "Node / Vue",
+  "files": 1334,
+  "mb": 43.1,
+  "paths": [
+   "10-游戏合集/H-骰子游戏"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-h-dice"
+ },
+ {
+  "name": "games-i-standalone",
+  "group": "游戏合集",
+  "desc": "游戏合集 I · 独立抽奖系统",
+  "lang": "Node / Vue",
+  "files": 363,
+  "mb": 6.6,
+  "paths": [
+   "10-游戏合集/I-独立抽奖系统"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-i-standalone"
+ },
+ {
+  "name": "games-j-video-rebuild",
+  "group": "游戏合集",
+  "desc": "游戏合集 J · 视频重建抽奖网页",
+  "lang": "HTML / JavaScript",
+  "files": 26,
+  "mb": 16.8,
+  "paths": [
+   "10-游戏合集/J-视频重建抽奖网页"
+  ],
+  "url": "https://github.com/huqun845-cpu/games-j-video-rebuild"
+ },
+ {
+  "name": "shule-source-code",
+  "group": "蜀乐互动",
+  "desc": "蜀乐互动 · 大屏游戏源码与真还原环境",
+  "lang": "JavaScript / 整站",
+  "files": 4362,
+  "mb": 809.7,
+  "paths": [
+   "10-游戏合集/K-蜀乐互动大屏游戏源码"
+  ],
+  "url": "https://github.com/huqun845-cpu/shule-source-code"
+ },
+ {
+  "name": "import-games-full",
+  "group": "导入游戏",
+  "desc": "导入抽奖 · 完整复原版",
+  "lang": "PHP / JavaScript",
+  "files": 666,
+  "mb": 164.2,
+  "paths": [
+   "11-导入游戏/导入抽奖-完整复原"
+  ],
+  "url": "https://github.com/huqun845-cpu/import-games-full"
+ },
+ {
+  "name": "import-games-pixel",
+  "group": "导入游戏",
+  "desc": "导入抽奖 · 像素级独立版",
+  "lang": "JavaScript",
+  "files": 318,
+  "mb": 45.8,
+  "paths": [
+   "11-导入游戏/导入抽奖-像素级独立版"
+  ],
+  "url": "https://github.com/huqun845-cpu/import-games-pixel"
+ },
+ {
+  "name": "import-games-bare-js",
+  "group": "导入游戏",
+  "desc": "导入抽奖 · 裸游戏纯 JS 版",
+  "lang": "JavaScript",
+  "files": 25,
+  "mb": 6.0,
+  "paths": [
+   "11-导入游戏/导入抽奖-裸游戏-纯JS-2026-10-24"
+  ],
+  "url": "https://github.com/huqun845-cpu/import-games-bare-js"
+ },
+ {
+  "name": "lottery-admin",
+  "group": "零散复刻",
+  "desc": "第三方开源抽奖管理后台",
+  "lang": "Vue / Node",
+  "files": 47,
+  "mb": 0.2,
+  "paths": [
+   "12-lottery-admin"
+  ],
+  "url": "https://github.com/huqun845-cpu/lottery-admin"
+ },
+ {
+  "name": "regold-lottery",
+  "group": "零散复刻",
+  "desc": "红金风格抽奖页复刻",
+  "lang": "HTML / JavaScript",
+  "files": 5,
+  "mb": 0.0,
+  "paths": [
+   "13-red-gold-lottery"
+  ],
+  "url": "https://github.com/huqun845-cpu/regold-lottery"
+ },
+ {
+  "name": "purple-lottery",
+  "group": "零散复刻",
+  "desc": "紫色风格抽奖页复刻",
+  "lang": "HTML / JavaScript",
+  "files": 6,
+  "mb": 0.1,
+  "paths": [
+   "14-purple-lottery"
+  ],
+  "url": "https://github.com/huqun845-cpu/purple-lottery"
+ }
+]
