@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>验收清单 · 抽奖系统档案索引站</title>
+<style>
+:root{--bg:#0f1115;--card:#171a21;--line:#262b36;--fg:#e6e9ef;--dim:#8b93a7;
+--ok:#38b26b;--todo:#d5a02c;--risk:#d9822b;--fail:#d0453e;--acc:#5b8def}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.7 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 24px 80px}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+h1{font-size:26px;margin:0 0 6px}
+.sub{color:var(--dim);font-size:13px;margin-bottom:26px}
+.sub code{background:#1e222b;padding:2px 6px;border-radius:4px;color:#c3cadb}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 28px}
+.pill{padding:6px 14px;border-radius:999px;font-size:13px;border:1px solid var(--line);background:var(--card)}
+.pill b{font-size:15px;margin-left:6px}
+.pill.ok b{color:var(--ok)}.pill.todo b{color:var(--todo)}
+.pill.risk b{color:var(--risk)}.pill.fail b{color:var(--fail)}
+h2{font-size:17px;margin:34px 0 12px;padding-left:10px;border-left:3px solid var(--acc)}
+table{width:100%;border-collapse:collapse;background:var(--card);
+border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:8px}
+th,td{padding:11px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);
+font-size:13.5px}
+th{background:#1c202a;color:var(--dim);font-weight:600;font-size:12.5px;
+letter-spacing:.04em}
+tr:last-child td{border-bottom:none}
+td.id{color:var(--dim);font-family:ui-monospace,Menlo,monospace;white-space:nowrap;width:52px}
+td.item{font-weight:600;min-width:150px}
+td.ev{color:#a9b1c3;font-size:12.8px;line-height:1.65}
+.tag{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;
+font-weight:600;white-space:nowrap}
+.tag.ok{background:rgba(56,178,107,.16);color:var(--ok)}
+.tag.todo{background:rgba(213,160,44,.16);color:var(--todo)}
+.tag.risk{background:rgba(217,130,43,.16);color:var(--risk)}
+.tag.fail{background:rgba(208,69,62,.16);color:var(--fail)}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);
+color:var(--dim);font-size:12.5px}
+@media(max-width:720px){td.item{min-width:0}th:nth-child(2),td:nth-child(2){display:none}}
+</style>
+</head>
+<body><div class=wrap>
+<p class=sub><a href="../">← 返回档案首页</a></p>
+<h1>验收清单</h1>
+<p class=sub>抽奖系统档案索引站 · 第 1 轮 · 更新 2026-11-08 · 仓库 <code>github.com/huqun845-cpu/lottery-index</code>（main）</p>
+<p class=sub>线上地址 <a href="https://huqun845-cpu.github.io/lottery-index/">https://huqun845-cpu.github.io/lottery-index/</a></p>
+<div class=bar>
+<div class="pill ok">已通过<b>12</b></div>
+<div class="pill todo">待验证<b>2</b></div>
+<div class="pill risk">风险<b>1</b></div>
+<div class="pill fail">未通过<b>2</b></div>
+<div class=pill>合计<b>17</b></div>
+</div>
+<h2>A. 部署产物</h2>
+<table>
+<tr><th>编号</th><th>项目</th><th>标准</th><th>状态</th><th>证据</th></tr>
+<tr>
+<td class=id>A1</td>
+<td class=item>干净部署包构建</td>
+<td class=ev>只含运行时文件，不含生成脚本与 README</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>find 输出 10 个文件（index.html app.js style.css .nojekyll + data/ 5 个 json），du -sh = 340 KB</td>
+</tr>
+<tr>
+<td class=id>A2</td>
+<td class=item>本地静态服务可跑通</td>
+<td class=ev>8 个路径全部 200</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>python3 -m http.server 8899 后逐个 curl：/ /app.js /style.css /data/{repos,plays,gaps,docs,projects}.json 均 200</td>
+</tr>
+<tr>
+<td class=id>A3</td>
+<td class=item>前端脚本语法</td>
+<td class=ev>node --check 通过</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>node --check app.js 无输出退出码 0</td>
+</tr>
+<tr>
+<td class=id>A4</td>
+<td class=item>无构建、无依赖</td>
+<td class=ev>目录内不存在 package.json / node_modules</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>find 结果中只有 5 个运行时文件 + data/ 5 个 json，无 package.json</td>
+</tr>
+</table>
+<h2>B. GitHub Pages</h2>
+<table>
+<tr><th>编号</th><th>项目</th><th>标准</th><th>状态</th><th>证据</th></tr>
+<tr>
+<td class=id>B1</td>
+<td class=item>仓库创建</td>
+<td class=ev>gh repo create 成功，未被建仓限流拦截</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>gh repo create lottery-index --public --source=. --push 成功；此前阻塞 3 小时的 too many repositories 限流已解除</td>
+</tr>
+<tr>
+<td class=id>B2</td>
+<td class=item>Pages 构建</td>
+<td class=ev>status 从 building 变为 built</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>轮询 gh api repos/.../pages：第 1 次 building，第 2 次（约 15 秒后）built</td>
+</tr>
+<tr>
+<td class=id>B3</td>
+<td class=item>公网 8 路径可达</td>
+<td class=ev>HTTP 200 且字节数与本地一致</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>curl -L 八个路径全部 200；字节数 / 1971、app.js 10380、style.css 7810、repos.json 10289、plays.json 94774、gaps.json 10533、docs.json 154402、projects.json 44510，与本地逐一对齐</td>
+</tr>
+<tr>
+<td class=id>B4</td>
+<td class=item>首页标题正确</td>
+<td class=ev>抓取到 &lt;title&gt;抽奖系统档案&lt;/title&gt;</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>curl -sL 首页 | grep -o '&lt;title&gt;[^&lt;]*&lt;/title&gt;' → &lt;title&gt;抽奖系统档案&lt;/title&gt;</td>
+</tr>
+<tr>
+<td class=id>B5</td>
+<td class=item>详情页路由可达</td>
+<td class=ev>hash 路由地址返回 200</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>#/p/a-choujiang 与 #/p/games-a-fun 各 200；注意 hash 片段不发给服务器，返回的是 SPA 外壳，真实渲染发生在浏览器</td>
+</tr>
+</table>
+<h2>C. 数据质量</h2>
+<table>
+<tr><th>编号</th><th>项目</th><th>标准</th><th>状态</th><th>证据</th></tr>
+<tr>
+<td class=id>C1</td>
+<td class=item>项目条目数</td>
+<td class=ev>33 条，与 33 个库一一对应</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>projects.json 解析出 33 条；远端抓取同样 33 条</td>
+</tr>
+<tr>
+<td class=id>C2</td>
+<td class=item>字段完整性</td>
+<td class=ev>name/cn/tag/what/inside/worth/pitfall 七字段无空值</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>校验脚本输出「缺字段的条目: 无」；inside 138 条、worth 76 条、pitfall 60 条（合计 274 条正文）</td>
+</tr>
+<tr>
+<td class=id>C3</td>
+<td class=item>无重名条目</td>
+<td class=ev>name 唯一</td>
+<td><span class="tag ok">已通过</span></td>
+<td class=ev>len(d) - len(set(name)) = 0</td>
+</tr>
+<tr>
+<td class=id>C4</td>
+<td class=item>浏览器实际渲染</td>
+<td class=ev>真实浏览器打开详情页，8 个段落均可见、相关库可点击跳转</td>
+<td><span class="tag todo">待验证</span></td>
+<td class=ev>本轮只做了 curl 级验证，未跑 headless 浏览器。测法：npx playwright 打开 #/p/a-choujiang，断言 8 个 section 存在且 .related a 数量 &gt; 0</td>
+</tr>
+</table>
+<h2>D. 尚未完成</h2>
+<table>
+<tr><th>编号</th><th>项目</th><th>标准</th><th>状态</th><th>证据</th></tr>
+<tr>
+<td class=id>D1</td>
+<td class=item>33 个细分库上传</td>
+<td class=ev>33/33 全部推到 GitHub</td>
+<td><span class="tag fail">未通过</span></td>
+<td class=ev>停在 21/33，被建仓限流阻断后未续跑。修复动作：限流现已解除，重跑 /tmp/push_*.py 或按 13 库方案继续</td>
+</tr>
+<tr>
+<td class=id>D2</td>
+<td class=item>5 个主干系统仓上传</td>
+<td class=ev>a-choujiang / b-stargather / c-shule / d-siixun / e-import-games 全部上线</td>
+<td><span class="tag fail">未通过</span></td>
+<td class=ev>本地 /Users/a123/lottery-systems-5 已就绪 52,523 文件 / 3,490.8 MB，推送 0 个。修复动作：限流已解除，可立即按 5-7 分钟间隔续推</td>
+</tr>
+<tr>
+<td class=id>D3</td>
+<td class=item>旧仓库清理</td>
+<td class=ev>确认新仓内容齐全后删除 33 + 13 中间仓，避免 36 个仓库并存</td>
+<td><span class="tag todo">待验证</span></td>
+<td class=ev>尚未开始。测法：先逐仓比对新旧文件数与 sha1，一致后再 gh repo delete</td>
+</tr>
+<tr>
+<td class=id>D4</td>
+<td class=item>站点只覆盖 33 库口径</td>
+<td class=ev>站点应能体现「33 → 13 → 5」的三种口径切换</td>
+<td><span class="tag risk">风险</span></td>
+<td class=ev>当前 projects.json 仍按 33 库组织，13 库与 5 主干仓上线后站点与实际仓库结构不一致。影响：打开站点看到的仓库名可能已不存在。规避：D2 完成前不改口径</td>
+</tr>
+</table>
+<div class=foot>本页由 <code>tools/gen_checklist_page.py</code> 从 <code>docs/验收清单.json</code> 生成，请勿手改 HTML。状态只有四种：已通过 / 待验证 / 风险 / 未通过，且必须带证据。</div>
+</div></body></html>
